@@ -1,0 +1,22 @@
+header:
+  schema-version: '1.0.0'
+  parent-security-yaml: https://blah.com/ossf-security.yaml
+  last-updated: '2021-09-01'
+  last-reviewed: '2022-09-01'
+  commit-hash: 4dbf78ebc006ee5f668c0a74876ef8d6db9485be
+  project-url: https://github.com/foo/bar
+project-lifecycle:
+  stage: active
+  bug-fixes-only: false
+security-artifacts:
+  threat-model:
+    threat-model-created: false
+distribution-points:
+- package-url: https://foo.bar/package
+security-contacts:
+- type: email
+  value: joe.bob@email.com
+contribution-policy:
+  accepts-pull-requests: true
+vulnerability-reporting:
+  accepts-vulnerability-reports: true

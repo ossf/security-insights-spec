@@ -103,6 +103,20 @@ properties:
                 $id: '#/properties/project-lifecycle/properties/stage'
                 type: string
                 enum: ['active', 'inactive']
+        if:
+            properties:
+                stage:
+                    const: true
+        then:
+            required:
+            - core-maintainers
+        if:
+            properties:
+                bug-fixes-only:
+                    const: true
+        then:
+            required:
+            - core-maintainers
         required:
         - stage
         - bug-fixes-only

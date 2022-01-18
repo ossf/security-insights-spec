@@ -8,6 +8,8 @@ header:
 project-lifecycle:
   stage: active
   bug-fixes-only: false
+  core-maintainers:
+  - https://github.com/scovetta
 security-artifacts:
   threat-model:
     threat-model-created: false

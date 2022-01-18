@@ -106,7 +106,7 @@ properties:
         if:
             properties:
                 stage:
-                    const: true
+                    const: "active"
         then:
             required:
             - core-maintainers

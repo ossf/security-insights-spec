@@ -128,6 +128,13 @@ properties:
                     threat-model-created:
                         $id: '#/properties/security-artifacts/properties/threat-model/properties/threat-model-created'
                         type: boolean
+                if:
+                    properties:
+                        threat-model-created:
+                            const: true
+                then:
+                    required:
+                    - evidence-url
                 required:
                 - threat-model-created
                 type: object
@@ -263,7 +270,7 @@ properties:
                 $id: '#/properties/vulnerability-reporting/properties/email-contact'
                 type: string
                 pattern: '^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$'
-            more-information:
+            security-policy:
                 $id: '#/properties/vulnerability-reporting/properties/more-information'
                 type: string
                 pattern: 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
@@ -271,6 +278,14 @@ properties:
                 $id: '#/properties/vulnerability-reporting/properties/pgp-key'
                 type: string
                 pattern: '^(-----BEGIN PGP PUBLIC KEY BLOCK-----).*([a-zA-Z0-9//\n\/\.\:\+\ \=]+).*(-----END PGP PUBLIC KEY BLOCK-----)$'
+        if:
+            properties:
+                accepts-vulnerability-reports:
+                    const: true
+        then:
+            required:
+            - email-contact
+            - security-policy
         required:
         - accepts-vulnerability-reports
         type: object

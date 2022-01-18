@@ -19,4 +19,4 @@ security-contacts:
 contribution-policy:
   accepts-pull-requests: true
 vulnerability-reporting:
-  accepts-vulnerability-reports: true
+  accepts-vulnerability-reports: false

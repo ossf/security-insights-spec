@@ -34,7 +34,7 @@ contribution-policy:
 vulnerability-reporting:
   accepts-vulnerability-reports: true
   email-contact: security@something.com
-  more-information: https://foo.bar/reporting.html
+  security-policy: https://foo.bar/reporting.html
   bug-bounty-available: true
   bug-bounty-url: https://foo.bar/bugs.html
 security-testing:

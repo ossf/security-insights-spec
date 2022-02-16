@@ -3,74 +3,54 @@ $schema: http://json-schema.org/draft-07/schema
 additionalProperties: false
 description: YAML schema for security-insights.yml
 properties:
-    contribution-policy:
-        $id: '#/properties/contribution-policy'
-        additionalProperties: false
-        properties:
-            accepts-pull-requests:
-                $id: '#/properties/contribution-policy/properties/accepts-pull-requests'
-                type: boolean
-            maintainer-policy:
-                $id: '#/properties/contribution-policy/properties/maintainer-policy'
-                type: string
-                pattern: 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
-        required:
-        - accepts-pull-requests
-        type: object
-    distribution-points:
-        $id: '#/properties/distribution-points'
-        additionalItems: false
-        items:
-            $id: '#/properties/distribution-points/items'
-            anyOf:
-            -   $id: '#/properties/distribution-points/items/anyOf/0'
-                additionalProperties: false
-                properties:
-                    ecosystem:
-                        $id: '#/properties/distribution-points/items/anyOf/0/properties/ecosystem'
-                        type: string
-                    package-name:
-                        $id: '#/properties/distribution-points/items/anyOf/0/properties/package-name'
-                        type: string
-                    package-url:
-                        $id: '#/properties/distribution-points/items/anyOf/0/properties/package-url'
-                        type: string
-                        pattern: 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
-                required:
-                - package-url
-                type: object
-        type: array
     header:
         $id: '#/properties/header'
         additionalProperties: false
         properties:
-            commit-hash:
-                $id: '#/properties/header/properties/commit-hash'
+            schema-version:
+                $id: '#/properties/header/properties/schema-version'
+                description: 'Version of the SECURITY-INSIGHTS YAML Schema.'
                 type: string
-                pattern: '^\b[0-9a-f]{5,40}\b$'
-            last-reviewed:
-                $id: '#/properties/header/properties/last-reviewed'
-                type: string
-                pattern: '^\d{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])$'
-            last-updated:
-                $id: '#/properties/header/properties/last-updated'
-                type: string
-                pattern: '^\d{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])$'
+                pattern: '^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$'
             parent-security-yaml:
                 $id: '#/properties/header/properties/parent-security-yaml'
+                description: 'Link to SECURITY-INSIGHTS.yml'
                 type: string
                 pattern: 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
+            last-updated:
+                $id: '#/properties/header/properties/last-updated'
+                description: 'Last time the SECURITY-INSIGHTS.yml was updated, excluding the properties `commit-hash` and `last-reviewed`.'
+                type: string
+                pattern: '^\d{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])$'
+            last-reviewed:
+                $id: '#/properties/header/properties/last-reviewed'
+                description: 'Last time the SECURITY-INSIGHTS.yml was reviewed. Updating this property requires updating the property `commit-hash`.'
+                type: string
+                pattern: '^\d{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])$'
+            commit-hash:
+                $id: '#/properties/header/properties/commit-hash'
+                description: 'The last commit to which the SECURITY-INSIGHTS.yml refers.'
+                type: string
+                pattern: '^\b[0-9a-f]{5,40}\b$'
             project-url:
                 $id: '#/properties/header/properties/project-url'
+                description: 'Link to the open-source project.'
                 type: string
                 pattern: 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
             project-release:
-                $id: '#/properties/header/properties/release'
+                $id: '#/properties/header/properties/project-release'
+                description: 'Release version to which the SECURITY-INSIGHTS.yml refers.'
                 type: string
-            schema-version:
-                $id: '#/properties/header/properties/release'
+            changelog:
+                $id: '#/properties/header/properties/changelog'
+                description: 'Link to the project changelog.'
                 type: string
-                pattern: '^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$'
+                pattern: 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
+            license:
+                $id: '#/properties/header/properties/license'
+                description: 'Link to the project license.'
+                type: string
+                pattern: 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
         required:
         - parent-security-yaml
         - last-updated
@@ -85,9 +65,11 @@ properties:
         properties:
             bug-fixes-only:
                 $id: '#/properties/project-lifecycle/properties/bug-fixes-only'
+                description: 'Maintainers fix bugs without implementing new features. The project is in Maintenance Mode.'
                 type: boolean
             core-maintainers:
                 $id: '#/properties/project-lifecycle/properties/core-maintainers'
+                description: 'Maintainers contacts (e-mail, Twitter, etc).'
                 additionalItems: false
                 items:
                     $id: '#/properties/project-lifecycle/properties/core-maintainers/items'
@@ -97,10 +79,12 @@ properties:
                 type: array
             roadmap:
                 $id: '#/properties/project-lifecycle/properties/roadmap'
+                description: 'Link to the project roadmap.'
                 type: string
                 pattern: 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
             stage:
                 $id: '#/properties/project-lifecycle/properties/stage'
+                description: 'Define if the project is still active or not.'
                 type: string
                 enum: ['active', 'inactive']
         if:
@@ -121,6 +105,59 @@ properties:
         - stage
         - bug-fixes-only
         type: object
+    contribution-policy:
+        $id: '#/properties/contribution-policy'
+        additionalProperties: false
+        properties:
+            accepts-pull-requests:
+                $id: '#/properties/contribution-policy/properties/accepts-pull-requests'
+                description: 'Define if the maintainers accept pull-requests or not from external contributors.'
+                type: boolean
+            contributing-policy:
+                $id: '#/properties/contribution-policy/properties/contributing-policy'
+                description: 'Link to the contributing policy.'
+                type: string
+                pattern: 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
+        required:
+        - accepts-pull-requests
+        type: object
+    documentation:
+        $id: '#/properties/documentation'
+        additionalItems: false
+        items:
+            $id: '#/properties/documentation/items'
+            anyOf:
+            -   $id: '#/properties/documentation/items/anyOf/0'
+                description: 'Link to the project documentation.'
+                type: string
+                pattern: 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
+        type: array
+    distribution-points:
+        $id: '#/properties/distribution-points'
+        additionalItems: false
+        items:
+            $id: '#/properties/distribution-points/items'
+            anyOf:
+            -   $id: '#/properties/distribution-points/items/anyOf/0'
+                additionalProperties: false
+                properties:
+                    ecosystem:
+                        $id: '#/properties/distribution-points/items/anyOf/0/properties/ecosystem'
+                        description: 'The package manager in which the package is deployed.'
+                        type: string
+                    package-name:
+                        $id: '#/properties/distribution-points/items/anyOf/0/properties/package-name'
+                        description: 'Name of the package in the package manager.'
+                        type: string
+                    package-url:
+                        $id: '#/properties/distribution-points/items/anyOf/0/properties/package-url'
+                        description: 'Link to the package.'
+                        type: string
+                        pattern: 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
+                required:
+                - package-url
+                type: object
+        type: array
     security-artifacts:
         $id: '#/properties/security-artifacts'
         additionalProperties: false
@@ -129,6 +166,10 @@ properties:
                 $id: '#/properties/security-artifacts/properties/threat-model'
                 additionalProperties: false
                 properties:
+                    threat-model-created:
+                        $id: '#/properties/security-artifacts/properties/threat-model/properties/threat-model-created'
+                        description: 'Define if the threat model for the project has been created.'
+                        type: boolean
                     evidence-url:
                         $id: '#/properties/security-artifacts/properties/threat-model/properties/evidence-url'
                         additionalItems: false
@@ -136,12 +177,10 @@ properties:
                             $id: '#/properties/security-artifacts/properties/threat-model/properties/evidence-url/items'
                             anyOf:
                             -   $id: '#/properties/security-artifacts/properties/threat-model/properties/evidence-url/items/anyOf/0'
+                                description: 'Link to the evidence of the threat model.'
                                 type: string
                                 pattern: 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
                         type: array
-                    threat-model-created:
-                        $id: '#/properties/security-artifacts/properties/threat-model/properties/threat-model-created'
-                        type: boolean
                 if:
                     properties:
                         threat-model-created:
@@ -155,6 +194,71 @@ properties:
         required:
         - threat-model
         type: object
+    security-testing:
+        $id: '#/properties/security-testing'
+        additionalItems: false
+        items:
+            $id: '#/properties/security-testing/items'
+            anyOf:
+            -   $id: '#/properties/security-testing/items/anyOf/0'
+                additionalProperties: false
+                properties:
+                    integration:
+                        $id: '#/properties/security-testing/items/anyOf/0/properties/integration'
+                        additionalProperties: false
+                        properties:
+                            ad-hoc:
+                                $id: '#/properties/security-testing/items/anyOf/0/properties/integration/properties/ad-hoc'
+                                description: 'Define if the test is an ad-hoc security test.'
+                                type: boolean
+                            before-release:
+                                $id: '#/properties/security-testing/items/anyOf/0/properties/integration/properties/before-release'
+                                description: 'Define if the security test runs before the release.'
+                                type: boolean
+                            ci:
+                                $id: '#/properties/security-testing/items/anyOf/0/properties/integration/properties/ci'
+                                description: 'Define if the security test is part of the CI.'
+                                type: boolean
+                        required:
+                        - ad-hoc
+                        - ci
+                        - before-release
+                        type: object
+                    tool-name:
+                        $id: '#/properties/security-testing/items/anyOf/0/properties/tool-name'
+                        description: 'Name of the tool used to scan or analyze the project.'
+                        type: string
+                    tool-rulesets:
+                        $id: '#/properties/security-testing/items/anyOf/0/properties/tool-rulesets'
+                        additionalItems: false
+                        items:
+                            $id: '#/properties/security-testing/items/anyOf/0/properties/tool-rulesets/items'
+                            anyOf:
+                            -   $id: '#/properties/security-testing/items/anyOf/0/properties/tool-rulesets/items/anyOf/0'
+                                description: 'Tool rules used to scan or analyze the project.'
+                                type: string
+                        type: array
+                    tool-type:
+                        $id: '#/properties/security-testing/items/anyOf/0/properties/tool-type'
+                        description: 'Type of security test: `sast`, `dast`, `iast` or `fuzzer`.'
+                        type: string
+                        enum: ['sast', 'dast', 'iast', 'fuzzer']
+                    tool-url:
+                        $id: '#/properties/security-testing/items/anyOf/0/properties/tool-url'
+                        description: 'Link to the security test.'
+                        type: string
+                        pattern: 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
+                    tool-version:
+                        $id: '#/properties/security-testing/items/anyOf/0/properties/tool-version'
+                        description: 'Version of the used tool.'
+                        type: string
+                required:
+                - tool-type
+                - tool-name
+                - tool-version
+                - integration
+                type: object
+        type: array
     security-assessments:
         $id: '#/properties/security-assessments'
         additionalItems: false
@@ -166,17 +270,21 @@ properties:
                 properties:
                     auditor-name:
                         $id: '#/properties/security-assessments/items/anyOf/0/properties/auditor-name'
+                        description: 'Name of the third-party security auditor.'
                         type: string
                     auditor-report:
                         $id: '#/properties/security-assessments/items/anyOf/0/properties/auditor-report'
+                        description: 'Link to the security report provided by the auditor.'
                         type: string
                         pattern: 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
                     auditor-url:
                         $id: '#/properties/security-assessments/items/anyOf/0/properties/auditor-url'
+                        description: 'Link to the auditor website.'
                         type: string
                         pattern: 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
                     report-year:
                         $id: '#/properties/security-assessments/items/anyOf/0/properties/report-year'
+                        description: 'Year of the report.'
                         type: integer
                 required:
                 - auditor-name
@@ -195,75 +303,21 @@ properties:
                 properties:
                     primary:
                         $id: '#/properties/security-contacts/items/anyOf/0/properties/primary'
+                        description: 'Define if the provided contact is the primary one or not.'
                         type: boolean
                     type:
                         $id: '#/properties/security-contacts/items/anyOf/0/properties/type'
+                        description: 'Type of contact: `email`, `phone`, or `url`.'
                         type: string
                         enum: ['email', 'phone', 'url']
                     value:
                         $id: '#/properties/security-contacts/items/anyOf/0/properties/value'
+                        description: 'Security contact.'
                         type: string
                         pattern: '^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}|https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)|[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$'
                 required:
                 - type
                 - value
-                type: object
-        type: array
-    security-testing:
-        $id: '#/properties/security-testing'
-        additionalItems: false
-        items:
-            $id: '#/properties/security-testing/items'
-            anyOf:
-            -   $id: '#/properties/security-testing/items/anyOf/0'
-                additionalProperties: false
-                properties:
-                    integration:
-                        $id: '#/properties/security-testing/items/anyOf/0/properties/integration'
-                        additionalProperties: false
-                        properties:
-                            ad-hoc:
-                                $id: '#/properties/security-testing/items/anyOf/0/properties/integration/properties/ad-hoc'
-                                type: boolean
-                            before-release:
-                                $id: '#/properties/security-testing/items/anyOf/0/properties/integration/properties/before-release'
-                                type: boolean
-                            ci:
-                                $id: '#/properties/security-testing/items/anyOf/0/properties/integration/properties/ci'
-                                type: boolean
-                        required:
-                        - ad-hoc
-                        - ci
-                        - before-release
-                        type: object
-                    tool-name:
-                        $id: '#/properties/security-testing/items/anyOf/0/properties/tool-name'
-                        type: string
-                    tool-rulesets:
-                        $id: '#/properties/security-testing/items/anyOf/0/properties/tool-rulesets'
-                        additionalItems: true
-                        items:
-                            $id: '#/properties/security-testing/items/anyOf/0/properties/tool-rulesets/items'
-                            anyOf:
-                            -   $id: '#/properties/security-testing/items/anyOf/0/properties/tool-rulesets/items/anyOf/0'
-                                type: string
-                        type: array
-                    tool-type:
-                        $id: '#/properties/security-testing/items/anyOf/0/properties/tool-type'
-                        type: string
-                        enum: ['sast', 'dast', 'iast', 'fuzzer']
-                    tool-url:
-                        $id: '#/properties/security-testing/items/anyOf/0/properties/tool-url'
-                        type: string
-                        pattern: 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
-                    tool-version:
-                        $id: '#/properties/security-testing/items/anyOf/0/properties/tool-version'
-                        type: string
-                required:
-                - tool-type
-                - tool-name
-                - tool-version
-                - integration
                 type: object
         type: array
     vulnerability-reporting:
@@ -272,24 +326,30 @@ properties:
         properties:
             accepts-vulnerability-reports:
                 $id: '#/properties/vulnerability-reporting/properties/accepts-vulnerability-reports'
+                description: 'Define if the maintainers or security team accept security reports or not.'
                 type: boolean
             bug-bounty-available:
                 $id: '#/properties/vulnerability-reporting/properties/bug-bounty-available'
+                description: 'Define if a bug bounty program is in-place or not.'
                 type: boolean
             bug-bounty-url:
                 $id: '#/properties/vulnerability-reporting/properties/bug-bounty-url'
+                description: 'Link to the bug bounty program.'
                 type: string
                 pattern: 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
             email-contact:
                 $id: '#/properties/vulnerability-reporting/properties/email-contact'
+                description: 'E-mail contact to report vulnerabilities or other related information.'
                 type: string
                 pattern: '^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$'
             security-policy:
                 $id: '#/properties/vulnerability-reporting/properties/more-information'
+                description: 'Link to the security policy.'
                 type: string
                 pattern: 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
             pgp-key:
                 $id: '#/properties/vulnerability-reporting/properties/pgp-key'
+                description: 'PGP Public Key.'
                 type: string
                 pattern: '^(-----BEGIN PGP PUBLIC KEY BLOCK-----).*([a-zA-Z0-9//\n\/\.\:\+\ \=]+).*(-----END PGP PUBLIC KEY BLOCK-----)$'
         if:
@@ -303,12 +363,41 @@ properties:
         required:
         - accepts-vulnerability-reports
         type: object
+    dependencies:
+        $id: '#/properties/dependencies'
+        additionalProperties: false
+        properties:
+            third-party-packages:
+                $id: '#/properties/dependencies/properties/third-party-packages'
+                description: 'Define if the project uses third-party packages.'
+                type: boolean
+            dependencies-lists:
+                $id: '#/properties/dependencies/properties/dependencies-lists'
+                additionalItems: false
+                items:
+                    $id: '#/properties/dependencies/properties/dependencies-lists/items'
+                    anyOf:
+                    -   $id: '#/properties/dependencies/properties/dependencies-lists/items/anyOf/0'
+                        description: 'Link to the dependencies file (`package.json`, `requirements.txt`, etc).'
+                        type: string
+                        pattern: 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
+        if:
+            properties:
+                third-party-packages:
+                    const: true
+        then:
+            required:
+            - dependencies-lists
+        required:
+        - third-party-packages
+        type: object
 required:
 - header
 - project-lifecycle
+- contribution-policy
 - distribution-points
 - security-artifacts
 - security-contacts
-- contribution-policy
 - vulnerability-reporting
+- dependencies
 type: object

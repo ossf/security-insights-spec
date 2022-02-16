@@ -10,15 +10,19 @@ project-lifecycle:
   bug-fixes-only: false
   core-maintainers:
   - https://github.com/scovetta
+contribution-policy:
+  accepts-pull-requests: true
+distribution-points:
+- package-url: https://foo.bar/package
 security-artifacts:
   threat-model:
     threat-model-created: false
-distribution-points:
-- package-url: https://foo.bar/package
 security-contacts:
 - type: email
   value: joe.bob@email.com
-contribution-policy:
-  accepts-pull-requests: true
 vulnerability-reporting:
   accepts-vulnerability-reports: false
+dependencies:
+  third-party-packages: true
+  dependencies-lists:
+  - https://github.com/foo/packages.json

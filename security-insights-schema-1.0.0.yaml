@@ -17,6 +17,11 @@ properties:
                 description: 'Link to SECURITY-INSIGHTS.yml'
                 type: string
                 pattern: 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
+            expiration-date:
+                $id: '#/properties/header/properties/expiration-date'
+                description: 'Expiration date (ISO8601) for the SECURITY-INSIGHTS.yml. At most a year later the `last-reviewed` date.'
+                type: string
+                pattern: '^(-?(?:[1-9][0-9]*)?[0-9]{4})-(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9])T(2[0-3]|[01][0-9]):([0-5][0-9]):([0-5][0-9]).([0-9][0-9][0-9])?(Z)?$'
             last-updated:
                 $id: '#/properties/header/properties/last-updated'
                 description: 'Last time the SECURITY-INSIGHTS.yml was updated, excluding the properties `commit-hash` and `last-reviewed`.'
@@ -53,6 +58,7 @@ properties:
                 pattern: 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
         required:
         - parent-security-yaml
+        - expiration-date
         - last-updated
         - last-reviewed
         - commit-hash
@@ -181,6 +187,11 @@ properties:
                                 type: string
                                 pattern: 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
                         type: array
+                    comment:
+                        $id: '#/properties/security-artifacts/properties/threat-model/properties/comment'
+                        description: 'Additional comment to describe the threat models, giving more context. Maximum length 560 chars.'
+                        type: string
+                        pattern: '^(.|\n){1,560}$'
                 if:
                     properties:
                         threat-model-created:
@@ -252,6 +263,11 @@ properties:
                         $id: '#/properties/security-testing/items/anyOf/0/properties/tool-version'
                         description: 'Version of the used tool.'
                         type: string
+                    comment:
+                        $id: '#/properties/security-testing/items/anyOf/0/properties/comment'
+                        description: 'Additional comment to describe the used tool, giving more context. Maximum length 560 chars.'
+                        type: string
+                        pattern: '^(.|\n){1,560}$'
                 required:
                 - tool-type
                 - tool-name
@@ -286,6 +302,11 @@ properties:
                         $id: '#/properties/security-assessments/items/anyOf/0/properties/report-year'
                         description: 'Year of the report.'
                         type: integer
+                    comment:
+                        $id: '#/properties/security-assessments/items/anyOf/0/properties/comment'
+                        description: 'Additional comment to describe the report giving more context. Maximum length 560 chars.'
+                        type: string
+                        pattern: '^(.|\n){1,560}$'
                 required:
                 - auditor-name
                 - auditor-url

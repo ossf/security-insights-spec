@@ -1,6 +1,7 @@
 header:
   schema-version: 1.0.0
   parent-security-yaml: https://blah.com/ossf-security.yaml
+  expiration-date: '2023-08-31T10:10:09.000Z'
   last-updated: '2021-09-01'
   last-reviewed: '2022-09-01'
   commit-hash: 4dbf78ebc006ee5f668c0a74876ef8d6db9485be
@@ -29,6 +30,14 @@ security-artifacts:
     threat-model-created: true
     evidence-url:
     - https://foo.com/model.html
+    comment: |
+      Lorem ipsum dolor sit amet, consectetur adipisci elit,
+      sed do eiusmod tempor incidunt ut labore et dolore magna aliqua.
+      Ut enim ad minim veniam, quis nostrum exercitationem ullamco laboriosam,
+      nisi ut aliquid ex ea commodi consequatur. Duis aute irure reprehenderit
+      in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+      sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt
+      mollit anim id est laborum
 security-testing:
 - tool-type: sast
   tool-name: CodeQL
@@ -40,11 +49,27 @@ security-testing:
     ad-hoc: false
     ci: true
     before-release: true
+  comment: |
+    Lorem ipsum dolor sit amet, consectetur adipisci elit,
+    sed do eiusmod tempor incidunt ut labore et dolore magna aliqua.
+    Ut enim ad minim veniam, quis nostrum exercitationem ullamco laboriosam,
+    nisi ut aliquid ex ea commodi consequatur. Duis aute irure reprehenderit
+    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+    sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt
+    mollit anim id est laborum
 security-assessments:
 - auditor-name: third-party auditor
   auditor-url: https://auditor.foo.bar.com
   auditor-report: https://foo.bar/report.pdf
   report-year: 2021
+  comment: |
+    Lorem ipsum dolor sit amet, consectetur adipisci elit,
+    sed do eiusmod tempor incidunt ut labore et dolore magna aliqua.
+    Ut enim ad minim veniam, quis nostrum exercitationem ullamco laboriosam,
+    nisi ut aliquid ex ea commodi consequatur. Duis aute irure reprehenderit
+    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+    sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt
+    mollit anim id est laborum
 security-contacts:
 - type: email
   value: joe.bob@email.com

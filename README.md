@@ -92,7 +92,7 @@ INSIGHTS to evaluate the project.
 
 **Mitigation:** Scanners could introduce some additional checks (e.g. check if URLs 
 return 200 OK status) and a weighted score to reduce the risks. In addition, the open-source
-community can read the le and report false information (or just information without clear evidence).
+community can read the YAML file and report false information (or just information without clear evidence).
 
 ### Private information sharing
 

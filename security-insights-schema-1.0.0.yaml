@@ -16,22 +16,23 @@ properties:
                 $id: '#/properties/header/properties/parent-security-yaml'
                 description: 'Link to SECURITY-INSIGHTS.yml'
                 type: string
-                pattern: 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
+                format: iri
+                pattern: '^https?:\/\/'
             expiration-date:
                 $id: '#/properties/header/properties/expiration-date'
-                description: 'Expiration date (ISO8601) for the SECURITY-INSIGHTS.yml. At most a year later the `last-reviewed` date.'
+                description: 'Expiration date for the SECURITY-INSIGHTS.yml. At most a year later the `last-reviewed` date.'
                 type: string
-                pattern: '^(-?(?:[1-9][0-9]*)?[0-9]{4})-(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9])T(2[0-3]|[01][0-9]):([0-5][0-9]):([0-5][0-9]).([0-9][0-9][0-9])?(Z)?$'
+                format: date-time
             last-updated:
                 $id: '#/properties/header/properties/last-updated'
                 description: 'Last time the SECURITY-INSIGHTS.yml was updated, excluding the properties `commit-hash` and `last-reviewed`.'
                 type: string
-                pattern: '^\d{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])$'
+                format: date
             last-reviewed:
                 $id: '#/properties/header/properties/last-reviewed'
                 description: 'Last time the SECURITY-INSIGHTS.yml was reviewed. Updating this property requires updating the property `commit-hash`.'
                 type: string
-                pattern: '^\d{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])$'
+                format: date
             commit-hash:
                 $id: '#/properties/header/properties/commit-hash'
                 description: 'The last commit to which the SECURITY-INSIGHTS.yml refers.'
@@ -41,7 +42,8 @@ properties:
                 $id: '#/properties/header/properties/project-url'
                 description: 'Link to the open-source project.'
                 type: string
-                pattern: 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
+                format: iri
+                pattern: '^https?:\/\/'
             project-release:
                 $id: '#/properties/header/properties/project-release'
                 description: 'Release version to which the SECURITY-INSIGHTS.yml refers.'
@@ -50,12 +52,14 @@ properties:
                 $id: '#/properties/header/properties/changelog'
                 description: 'Link to the project changelog.'
                 type: string
-                pattern: 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
+                format: iri
+                pattern: '^https?:\/\/'
             license:
                 $id: '#/properties/header/properties/license'
                 description: 'Link to the project license.'
                 type: string
-                pattern: 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
+                format: iri
+                pattern: '^https?:\/\/'
         required:
         - parent-security-yaml
         - expiration-date
@@ -87,7 +91,8 @@ properties:
                 $id: '#/properties/project-lifecycle/properties/roadmap'
                 description: 'Link to the project roadmap.'
                 type: string
-                pattern: 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
+                format: iri
+                pattern: '^https?:\/\/'
             stage:
                 $id: '#/properties/project-lifecycle/properties/stage'
                 description: 'Define if the project is still active or not.'
@@ -123,7 +128,8 @@ properties:
                 $id: '#/properties/contribution-policy/properties/contributing-policy'
                 description: 'Link to the contributing policy.'
                 type: string
-                pattern: 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
+                format: iri
+                pattern: '^https?:\/\/'
         required:
         - accepts-pull-requests
         type: object
@@ -136,7 +142,8 @@ properties:
             -   $id: '#/properties/documentation/items/anyOf/0'
                 description: 'Link to the project documentation.'
                 type: string
-                pattern: 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
+                format: iri
+                pattern: '^https?:\/\/'
         type: array
     distribution-points:
         $id: '#/properties/distribution-points'
@@ -159,7 +166,8 @@ properties:
                         $id: '#/properties/distribution-points/items/anyOf/0/properties/package-url'
                         description: 'Link to the package.'
                         type: string
-                        pattern: 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
+                        format: iri
+                        pattern: '^https?:\/\/'
                 required:
                 - package-url
                 type: object
@@ -185,7 +193,8 @@ properties:
                             -   $id: '#/properties/security-artifacts/properties/threat-model/properties/evidence-url/items/anyOf/0'
                                 description: 'Link to the evidence of the threat model.'
                                 type: string
-                                pattern: 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
+                                format: iri
+                                pattern: '^https?:\/\/'
                         type: array
                     comment:
                         $id: '#/properties/security-artifacts/properties/threat-model/properties/comment'
@@ -258,7 +267,8 @@ properties:
                         $id: '#/properties/security-testing/items/anyOf/0/properties/tool-url'
                         description: 'Link to the security test.'
                         type: string
-                        pattern: 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
+                        format: iri
+                        pattern: '^https?:\/\/'
                     tool-version:
                         $id: '#/properties/security-testing/items/anyOf/0/properties/tool-version'
                         description: 'Version of the used tool.'
@@ -292,12 +302,14 @@ properties:
                         $id: '#/properties/security-assessments/items/anyOf/0/properties/auditor-report'
                         description: 'Link to the security report provided by the auditor.'
                         type: string
-                        pattern: 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
+                        format: iri
+                        pattern: '^https?:\/\/'
                     auditor-url:
                         $id: '#/properties/security-assessments/items/anyOf/0/properties/auditor-url'
                         description: 'Link to the auditor website.'
                         type: string
-                        pattern: 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
+                        format: iri
+                        pattern: '^https?:\/\/'
                     report-year:
                         $id: '#/properties/security-assessments/items/anyOf/0/properties/report-year'
                         description: 'Year of the report.'
@@ -357,17 +369,19 @@ properties:
                 $id: '#/properties/vulnerability-reporting/properties/bug-bounty-url'
                 description: 'Link to the bug bounty program.'
                 type: string
-                pattern: 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
+                format: iri
+                pattern: '^https?:\/\/'
             email-contact:
                 $id: '#/properties/vulnerability-reporting/properties/email-contact'
                 description: 'E-mail contact to report vulnerabilities or other related information.'
                 type: string
-                pattern: '^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$'
+                format: idn-email
             security-policy:
                 $id: '#/properties/vulnerability-reporting/properties/more-information'
                 description: 'Link to the security policy.'
                 type: string
-                pattern: 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
+                format: iri
+                pattern: '^https?:\/\/'
             pgp-key:
                 $id: '#/properties/vulnerability-reporting/properties/pgp-key'
                 description: 'PGP Public Key.'
@@ -401,7 +415,8 @@ properties:
                     -   $id: '#/properties/dependencies/properties/dependencies-lists/items/anyOf/0'
                         description: 'Link to the dependencies file (`package.json`, `requirements.txt`, etc).'
                         type: string
-                        pattern: 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
+                        format: iri
+                        pattern: '^https?:\/\/'
         if:
             properties:
                 third-party-packages:

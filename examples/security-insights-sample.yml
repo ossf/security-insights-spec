@@ -83,6 +83,15 @@ vulnerability-reporting:
   security-policy: https://foo.bar/reporting.html
   bug-bounty-available: true
   bug-bounty-url: https://foo.bar/bugs.html
+  in-scope:
+  - broken access control
+  - other
+  in-scope-comment: |
+    Read the security policy.
+  out-scope:
+  - other
+  out-scope-comment: |
+    Read the security policy.
 dependencies:
   third-party-packages: true
   dependencies-lists:

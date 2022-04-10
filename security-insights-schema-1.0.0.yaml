@@ -87,6 +87,7 @@ properties:
                     -   $id: '#/properties/project-lifecycle/properties/core-maintainers/items/anyOf/0'
                         type: string
                 type: array
+                uniqueItems: true
             roadmap:
                 $id: '#/properties/project-lifecycle/properties/roadmap'
                 description: 'Link to the project roadmap.'
@@ -105,13 +106,14 @@ properties:
         then:
             required:
             - core-maintainers
-        if:
-            properties:
-                bug-fixes-only:
-                    const: true
-        then:
-            required:
-            - core-maintainers
+        else:
+            if:
+                properties:
+                    bug-fixes-only:
+                        const: true
+            then:
+                required:
+                - core-maintainers
         required:
         - stage
         - bug-fixes-only
@@ -145,6 +147,7 @@ properties:
                 format: iri
                 pattern: '^https?:\/\/'
         type: array
+        uniqueItems: true
     distribution-points:
         $id: '#/properties/distribution-points'
         additionalItems: false
@@ -172,6 +175,7 @@ properties:
                 - package-url
                 type: object
         type: array
+        uniqueItems: true
     security-artifacts:
         $id: '#/properties/security-artifacts'
         additionalProperties: false
@@ -196,6 +200,7 @@ properties:
                                 format: iri
                                 pattern: '^https?:\/\/'
                         type: array
+                        uniqueItems: true
                     comment:
                         $id: '#/properties/security-artifacts/properties/threat-model/properties/comment'
                         description: 'Additional comment to describe the threat models, giving more context. Maximum length 560 chars.'
@@ -258,6 +263,7 @@ properties:
                                 description: 'Tool rules used to scan or analyze the project.'
                                 type: string
                         type: array
+                        uniqueItems: true
                     tool-type:
                         $id: '#/properties/security-testing/items/anyOf/0/properties/tool-type'
                         description: 'Type of security test: `sast`, `dast`, `iast` or `fuzzer`.'
@@ -325,6 +331,7 @@ properties:
                 - report-year
                 type: object
         type: array
+        uniqueItems: true
     security-contacts:
         $id: '#/properties/security-contacts'
         additionalItems: false
@@ -353,6 +360,7 @@ properties:
                 - value
                 type: object
         type: array
+        uniqueItems: true
     vulnerability-reporting:
         $id: '#/properties/vulnerability-reporting'
         additionalProperties: false
@@ -387,6 +395,60 @@ properties:
                 description: 'PGP Public Key.'
                 type: string
                 pattern: '^(-----BEGIN PGP PUBLIC KEY BLOCK-----).*([a-zA-Z0-9//\n\/\.\:\+\ \=]+).*(-----END PGP PUBLIC KEY BLOCK-----)$'
+            in-scope:
+                $id: '#/properties/project-lifecycle/properties/in-scope'
+                description: 'In-scope vulnerability categories, according to OWASP Top 10 2021. It is recommended to specify a better in-scope list in the security policy.'
+                additionalItems: false
+                items:
+                    $id: '#/properties/project-lifecycle/properties/in-scope/items'
+                    anyOf:
+                    -   $id: '#/properties/project-lifecycle/properties/in-scope/items/anyOf/0'
+                        type: string
+                        enum: ['broken access control', 
+                            'cryptographic failures',
+                            'injection',
+                            'insecure design', 
+                            'security misconfiguration',
+                            'vulnerable and outdated components',
+                            'identification and authentication failures', 
+                            'software and data integrity failures',
+                            'security logging and monitoring failures',
+                            'ssrf', 
+                            'other']
+                type: array
+                uniqueItems: true
+            in-scope-comment:
+                $id: '#/properties/security-artifacts/properties/threat-model/properties/comment'
+                description: 'Additional comment to describe the in-scope list, giving more context. Maximum length 560 chars.'
+                type: string
+                pattern: '^(.|\n){1,560}$'
+            out-scope:
+                $id: '#/properties/project-lifecycle/properties/out-scope'
+                description: 'Out-of-scope vulnerability categories, according to OWASP Top 10 2021. It is recommended to specify a better out-of-scope list in the security policy.'
+                additionalItems: false
+                items:
+                    $id: '#/properties/project-lifecycle/properties/out-scope/items'
+                    anyOf:
+                    -   $id: '#/properties/project-lifecycle/properties/out-scope/items/anyOf/0'
+                        type: string
+                        enum: ['broken access control', 
+                            'cryptographic failures',
+                            'injection',
+                            'insecure design', 
+                            'security misconfiguration',
+                            'vulnerable and outdated components',
+                            'identification and authentication failures', 
+                            'software and data integrity failures',
+                            'security logging and monitoring failures',
+                            'ssrf', 
+                            'other']
+                type: array
+                uniqueItems: true
+            out-scope-comment:
+                $id: '#/properties/security-artifacts/properties/threat-model/properties/comment'
+                description: 'Additional comment to describe the out-scope list, giving more context. Maximum length 560 chars.'
+                type: string
+                pattern: '^(.|\n){1,560}$'
         if:
             properties:
                 accepts-vulnerability-reports:

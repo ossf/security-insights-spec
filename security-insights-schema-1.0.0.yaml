@@ -132,6 +132,12 @@ properties:
                 type: string
                 format: iri
                 pattern: '^https?:\/\/'
+            code-of-conduct:
+                $id: '#/properties/contribution-policy/properties/code-of-conduct'
+                description: 'Link to the project code of conduct.'
+                type: string
+                format: iri
+                pattern: '^https?:\/\/'
         required:
         - accepts-pull-requests
         type: object

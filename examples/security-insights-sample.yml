@@ -19,6 +19,7 @@ project-lifecycle:
 contribution-policy:
   accepts-pull-requests: true
   contributing-policy: https://example.com/development-policy.html
+  code-of-conduct: https://example.com/code-of-conduct.html
 documentation:
 - http://foo.bar/wiki
 distribution-points:

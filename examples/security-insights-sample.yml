@@ -97,3 +97,8 @@ dependencies:
   third-party-packages: true
   dependencies-lists:
   - https://github.com/foo/packages.json
+  sbom:
+  - sbom-file: https://foo.bar/sbom
+    sbom-name: CycloneDX
+    sbom-url: https://foo.bar
+    

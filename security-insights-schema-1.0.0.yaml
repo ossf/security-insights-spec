@@ -485,6 +485,32 @@ properties:
                         type: string
                         format: iri
                         pattern: '^https?:\/\/'
+            sbom:
+                $id: '#/properties/dependencies/properties/sbom'
+                additionalItems: false
+                items:
+                    anyOf:
+                    -   $id: '#/properties/dependencies/properties/sbom/items'
+                        additionalProperties: false
+                        properties:
+                            sbom-file:
+                                $id: '#/properties/distribution-points/items/anyOf/0/properties/sbom-file'
+                                description: 'Link to the SBOM file.'
+                                type: string
+                                format: iri
+                                pattern: '^https?:\/\/'
+                            sbom-name:
+                                $id: '#/properties/distribution-points/items/anyOf/0/properties/sbom-name'
+                                description: 'Name of the SBOM standard used.'
+                                type: string
+                            sbom-url:
+                                $id: '#/properties/distribution-points/items/anyOf/0/properties/sbom-url'
+                                description: 'Link to the SBOM standard website or documentation.'
+                                type: string
+                                format: iri
+                                pattern: '^https?:\/\/'
+                type: array
+                uniqueItems: true
         if:
             properties:
                 third-party-packages:

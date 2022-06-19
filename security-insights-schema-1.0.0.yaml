@@ -1,4 +1,3 @@
-$id: http://example.com/example.json
 $schema: http://json-schema.org/draft-07/schema
 additionalProperties: false
 description: YAML schema for security-insights.yml
@@ -360,7 +359,7 @@ properties:
                         $id: '#/properties/security-contacts/items/anyOf/0/properties/value'
                         description: 'Security contact.'
                         type: string
-                        pattern: '^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}|https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)|[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$'
+                        pattern: '^[\w+_.-]+@[\w.-]+$|https?:\/\/|[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$'
                 required:
                 - type
                 - value
@@ -424,7 +423,7 @@ properties:
                 type: array
                 uniqueItems: true
             in-scope-comment:
-                $id: '#/properties/security-artifacts/properties/threat-model/properties/comment'
+                $id: '#/properties/vulnerability-reporting/properties/in-scope-comment'
                 description: 'Additional comment to describe the in-scope list, giving more context. Maximum length 560 chars.'
                 type: string
                 pattern: '^(.|\n){1,560}$'
@@ -451,7 +450,7 @@ properties:
                 type: array
                 uniqueItems: true
             out-scope-comment:
-                $id: '#/properties/security-artifacts/properties/threat-model/properties/comment'
+                $id: '#/properties/vulnerability-reporting/properties/out-scope-comment'
                 description: 'Additional comment to describe the out-scope list, giving more context. Maximum length 560 chars.'
                 type: string
                 pattern: '^(.|\n){1,560}$'

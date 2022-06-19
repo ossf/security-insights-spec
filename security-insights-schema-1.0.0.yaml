@@ -1,4 +1,5 @@
 $schema: http://json-schema.org/draft-07/schema
+title: Security Insights Version 1.0.0 YAML Schema
 additionalProperties: false
 description: YAML schema for security-insights.yml
 properties:
@@ -10,7 +11,7 @@ properties:
                 $id: '#/properties/header/properties/schema-version'
                 description: 'Version of the SECURITY-INSIGHTS YAML Schema.'
                 type: string
-                pattern: '^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$'
+                enum: ['1.0.0']
             parent-security-yaml:
                 $id: '#/properties/header/properties/parent-security-yaml'
                 description: 'Link to SECURITY-INSIGHTS.yml'

@@ -178,8 +178,6 @@ def unwind_properties(dictionary):
             for key in item.keys():
                 if key != 'required':
                     for element in item['required']:
-                        # if security_insights_temp[key] in ['True', 'False']:
-                        #     item[key] = str(item[key])
                         if element not in requirements and security_insights_temp[key] == item[key]:
                             security_insights_generic[element] = security_insights_temp
                             if 'items' in dictionary['properties'][element]:

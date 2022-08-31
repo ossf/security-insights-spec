@@ -391,7 +391,7 @@ properties:
                 type: string
                 format: idn-email
             security-policy:
-                $id: '#/properties/vulnerability-reporting/properties/more-information'
+                $id: '#/properties/vulnerability-reporting/properties/security-policy'
                 description: 'Link to the security policy.'
                 type: string
                 format: iri
@@ -402,13 +402,13 @@ properties:
                 type: string
                 pattern: '^(-----BEGIN PGP PUBLIC KEY BLOCK-----).*([a-zA-Z0-9//\n\/\.\:\+\ \=]+).*(-----END PGP PUBLIC KEY BLOCK-----)$'
             in-scope:
-                $id: '#/properties/project-lifecycle/properties/in-scope'
+                $id: '#/properties/vulnerability-reporting/properties/in-scope'
                 description: 'In-scope vulnerability categories, according to OWASP Top 10 2021. It is recommended to specify a better in-scope list in the security policy.'
                 additionalItems: false
                 items:
-                    $id: '#/properties/project-lifecycle/properties/in-scope/items'
+                    $id: '#/properties/vulnerability-reporting/properties/in-scope/items'
                     anyOf:
-                    -   $id: '#/properties/project-lifecycle/properties/in-scope/items/anyOf/0'
+                    -   $id: '#/properties/vulnerability-reporting/properties/in-scope/items/anyOf/0'
                         type: string
                         enum: ['broken access control', 
                             'cryptographic failures',
@@ -429,13 +429,13 @@ properties:
                 type: string
                 pattern: '^(.|\n){1,560}$'
             out-scope:
-                $id: '#/properties/project-lifecycle/properties/out-scope'
+                $id: '#/properties/vulnerability-reporting/properties/out-scope'
                 description: 'Out-of-scope vulnerability categories, according to OWASP Top 10 2021. It is recommended to specify a better out-of-scope list in the security policy.'
                 additionalItems: false
                 items:
-                    $id: '#/properties/project-lifecycle/properties/out-scope/items'
+                    $id: '#/properties/vulnerability-reporting/properties/out-scope/items'
                     anyOf:
-                    -   $id: '#/properties/project-lifecycle/properties/out-scope/items/anyOf/0'
+                    -   $id: '#/properties/vulnerability-reporting/properties/out-scope/items/anyOf/0'
                         type: string
                         enum: ['broken access control', 
                             'cryptographic failures',
@@ -494,17 +494,17 @@ properties:
                         additionalProperties: false
                         properties:
                             sbom-file:
-                                $id: '#/properties/distribution-points/items/anyOf/0/properties/sbom-file'
+                                $id: '#/properties/dependencies/items/anyOf/0/properties/sbom-file'
                                 description: 'Link to the SBOM file.'
                                 type: string
                                 format: iri
                                 pattern: '^https?:\/\/'
                             sbom-name:
-                                $id: '#/properties/distribution-points/items/anyOf/0/properties/sbom-name'
+                                $id: '#/properties/dependencies/items/anyOf/0/properties/sbom-name'
                                 description: 'Name of the SBOM standard used.'
                                 type: string
                             sbom-url:
-                                $id: '#/properties/distribution-points/items/anyOf/0/properties/sbom-url'
+                                $id: '#/properties/dependencies/items/anyOf/0/properties/sbom-url'
                                 description: 'Link to the SBOM standard website or documentation.'
                                 type: string
                                 format: iri

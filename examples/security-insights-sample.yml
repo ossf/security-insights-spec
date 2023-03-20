@@ -18,6 +18,18 @@ project-lifecycle:
   - joe.bob@email.com
 contribution-policy:
   accepts-pull-requests: true
+  accepts-bot-pull-requests: true
+  bots-list:
+  - bot-name: JLLeitschuh/security-research
+    action: denied
+    comment: |
+      Lorem ipsum dolor sit amet, consectetur adipisci elit,
+      sed do eiusmod tempor incidunt ut labore et dolore magna aliqua.
+      Ut enim ad minim veniam, quis nostrum exercitationem ullamco laboriosam,
+      nisi ut aliquid ex ea commodi consequatur. Duis aute irure reprehenderit
+      in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+      sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt
+      mollit anim id est laborum
   contributing-policy: https://example.com/development-policy.html
   code-of-conduct: https://example.com/code-of-conduct.html
 documentation:

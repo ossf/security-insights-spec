@@ -178,10 +178,8 @@ properties:
                         type: string
                     package-url:
                         $id: '#/properties/distribution-points/items/anyOf/0/properties/package-url'
-                        description: 'Link to the package.'
+                        description: 'Link (PURL/URL) to the package.'
                         type: string
-                        format: iri
-                        pattern: '^https?:\/\/'
                 required:
                 - package-url
                 type: object

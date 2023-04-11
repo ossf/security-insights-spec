@@ -18,6 +18,7 @@ project-lifecycle:
   - joe.bob@email.com
 contribution-policy:
   accepts-pull-requests: true
+  accepts-bot-pull-requests: true
   contributing-policy: https://example.com/development-policy.html
   code-of-conduct: https://example.com/code-of-conduct.html
 documentation:
@@ -26,6 +27,9 @@ distribution-points:
 - ecosystem: npm
   package-name: foo
   package-url: https://example.com/foo
+- ecosystem: npm
+  package-name: foo
+  package-url: pkg:npm/foobar
 security-artifacts:
   threat-model:
     threat-model-created: true

@@ -35,7 +35,7 @@ properties:
                 format: date
             commit-hash:
                 $id: '#/properties/header/properties/commit-hash'
-                description: 'The last commit to which the SECURITY-INSIGHTS.yml refers.'
+                description: 'The earliest commit to which the SECURITY-INSIGHTS.yml refers.'
                 type: string
                 pattern: '^\b[0-9a-f]{5,40}\b$'
             project-url:

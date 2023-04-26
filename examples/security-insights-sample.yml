@@ -18,9 +18,9 @@ project-lifecycle:
   - joe.bob@email.com
 contribution-policy:
   accepts-pull-requests: true
-  accepts-bot-pull-requests: true
-  bots-list:
-  - bot-name: example/security-research
+  accepts-automated-pull-requests: true
+  automated-tools-list:
+  - automated-tool: example/security-research
     action: denied
     comment: |
       Lorem ipsum dolor sit amet, consectetur adipisci elit,

@@ -24,12 +24,8 @@ contribution-policy:
 documentation:
 - http://foo.bar/wiki
 distribution-points:
-- ecosystem: npm
-  package-name: foo
-  package-url: https://example.com/foo
-- ecosystem: npm
-  package-name: foo
-  package-url: pkg:npm/foobar
+- https://example.com/foo
+- pkg:npm/foobar
 security-artifacts:
   threat-model:
     threat-model-created: true

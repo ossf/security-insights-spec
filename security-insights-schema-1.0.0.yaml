@@ -145,9 +145,21 @@ properties:
                                 type: string
                             action:
                                 $id: '#/properties/contribution-policy/items/anyOf/0/properties/action'
-                                description: 'Define if bot actions are allowed or denied.'
+                                description: 'Define if automated actions are allowed or denied.'
                                 type: string
                                 enum: ['allowed', 'denied']
+                            path:
+                                $id: '#/properties/contribution-policy/items/anyOf/0/properties/path'
+                                description: 'Define sub-paths where the automated actions are allowed or denied.'
+                                additionalItems: false
+                                items:
+                                    $id: '#/properties/contribution-policy/items/anyOf/0/properties/path/items'
+                                    anyOf:
+                                    -   $id: '#/properties/contribution-policy/items/anyOf/0/properties/path/items/anyOf/0'
+                                        description: 'Project sub-path.'
+                                        type: string
+                                type: array
+                                uniqueItems: true
                             comment:
                                 $id: '#/properties/contribution-policy/items/anyOf/0/properties/comment'
                                 description: 'Short comment.'

@@ -22,6 +22,9 @@ contribution-policy:
   automated-tools-list:
   - automated-tool: example/security-research
     action: denied
+    path:
+    - main/foo/bar
+    - main/examples
     comment: |
       Lorem ipsum dolor sit amet, consectetur adipisci elit,
       sed do eiusmod tempor incidunt ut labore et dolore magna aliqua.

@@ -207,25 +207,8 @@ properties:
             $id: '#/properties/distribution-points/items'
             anyOf:
             -   $id: '#/properties/distribution-points/items/anyOf/0'
-                additionalProperties: false
-                properties:
-                    ecosystem:
-                        $id: '#/properties/distribution-points/items/anyOf/0/properties/ecosystem'
-                        description: 'The package manager in which the package is deployed.'
-                        type: string
-                    package-name:
-                        $id: '#/properties/distribution-points/items/anyOf/0/properties/package-name'
-                        description: 'Name of the package in the package manager.'
-                        type: string
-                    package-url:
-                        $id: '#/properties/distribution-points/items/anyOf/0/properties/package-url'
-                        description: 'Link to the package.'
-                        type: string
-                        format: iri
-                        pattern: '^https?:\/\/'
-                required:
-                - package-url
-                type: object
+                description: 'Link (PURL/URL) to the package.'
+                type: string
         type: array
         uniqueItems: true
     security-artifacts:

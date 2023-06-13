@@ -13,7 +13,7 @@ project-lifecycle:
   - https://github.com/scovetta
 contribution-policy:
   accepts-pull-requests: true
-  accepts-bot-pull-requests: true
+  accepts-automated-pull-requests: true
 distribution-points:
 - https://foo.bar/package
 - pkg:npm/foobar

@@ -13,8 +13,10 @@ project-lifecycle:
   - https://github.com/scovetta
 contribution-policy:
   accepts-pull-requests: true
+  accepts-bot-pull-requests: true
 distribution-points:
-- package-url: https://foo.bar/package
+- https://foo.bar/package
+- pkg:npm/foobar
 security-artifacts:
   threat-model:
     threat-model-created: false

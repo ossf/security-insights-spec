@@ -36,7 +36,7 @@ If you find any bugs, please open an issue or submit a pull request.
 
 ## Security
 
-If you find a security vulnerability, please report it to me privately at luigi[-dot-]gubello[-at-]protonmail.com.
+If you find a security vulnerability, please report it via [GitHub private vulnerability reporting](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability).
 
 
 

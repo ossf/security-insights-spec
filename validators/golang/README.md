@@ -26,7 +26,7 @@ If you find any bugs, please open an issue or submit a pull request.
 
 If you find a security vulnerability, please report it via [GitHub private vulnerability reporting](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability).
 
-## Authors and acknowledgment
+## Authors and Acknowledgment
 
 ossf/security-insights-spec/validators/golang is a fork of [@eddie-knight](https://github.com/eddie-knight/)'s [security-insights-validator](https://github.com/eddie-knight/security-insights-validator) (and we really want to thank for his kindness and contribution 🦄)
 

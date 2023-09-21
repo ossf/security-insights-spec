@@ -1,7 +1,5 @@
 # Security Insights Validator
 
-# Command-line Validator
-
 A Golang command-line tool to help maintainters, developers, and contributors to generate or validate the SECURITY INSIGHTS yaml file.
 
 ## Usage

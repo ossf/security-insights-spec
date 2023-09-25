@@ -609,6 +609,11 @@ properties:
                                 type: string
                                 format: iri
                                 pattern: '^https?:\/\/'
+                            sbom-creation:
+                                $id: '#/properties/dependencies/items/anyOf/0/properties/sbom-creation'
+                                description: 'Description of how the SBOM is created. Maximum length 560 characters.'
+                                type: string
+                                pattern: '^(.|\n){1,560}$'
                 type: array
                 uniqueItems: true
         if:

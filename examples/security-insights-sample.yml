@@ -113,6 +113,6 @@ dependencies:
   - https://github.com/foo/packages.json
   sbom:
   - sbom-file: https://foo.bar/sbom
-    sbom-name: CycloneDX
+    sbom-format: CycloneDX
     sbom-url: https://foo.bar
     

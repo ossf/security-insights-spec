@@ -528,8 +528,8 @@ properties:
                                 type: string
                                 format: iri
                                 pattern: '^https?:\/\/'
-                            sbom-name:
-                                $id: '#/properties/dependencies/items/anyOf/0/properties/sbom-name'
+                            sbom-format:
+                                $id: '#/properties/dependencies/items/anyOf/0/properties/sbom-format'
                                 description: 'Name of the SBOM standard used.'
                                 type: string
                             sbom-url:

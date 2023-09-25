@@ -251,8 +251,82 @@ properties:
                 required:
                 - threat-model-created
                 type: object
-        required:
-        - threat-model
+            self-assessment:
+                $id: '#/properties/security-artifacts/properties/self-assessment'
+                additionalProperties: false
+                properties:
+                    self-assessment-created:
+                        $id: '#/properties/security-artifacts/properties/self-assessment/properties/self-assessment-created'
+                        description: 'Define whether a security self assessment for the project has been created. A false value may be used to add comments regarding the status of the assessment.'
+                        type: boolean
+                    evidence-url:
+                        $id: '#/properties/security-artifacts/properties/self-assessment/properties/evidence-url'
+                        additionalItems: false
+                        items:
+                            $id: '#/properties/security-artifacts/properties/self-assessment/properties/evidence-url/items'
+                            anyOf:
+                            -   $id: '#/properties/security-artifacts/properties/self-assessment/properties/evidence-url/items/anyOf/0'
+                                description: 'Link to the evidence of the security self assessment.'
+                                type: string
+                                format: iri
+                                pattern: '^https?:\/\/'
+                        type: array
+                        uniqueItems: true
+                    comment:
+                        $id: '#/properties/security-artifacts/properties/self-assessment/properties/comment'
+                        description: 'Additional context regarding the security self assessment or its status. Maximum length 560 chars.'
+                        type: string
+                        pattern: '^(.|\n){1,560}$'
+                if:
+                    properties:
+                        self-assessment-created:
+                            const: true
+                then:
+                    required:
+                    - evidence-url
+                required:
+                - self-assessment-created
+                type: object
+            other-artifacts:
+                $id: '#/properties/security-artifacts/properties/other-artifacts'
+                anyOf:
+                -   $id: '#/properties/security-testing/items/anyOf/0'
+                    additionalProperties: false
+                    properties:
+                        artifact-name: 
+                            $id: '#/properties/security-artifacts/properties/other-artifacts/anyOf/0/properties/name'
+                            description: 'Name of the security artifact.'
+                            type: string
+                        artifact-created:
+                            $id: '#/properties/security-artifacts/properties/other-artifacts/anyOf/0/properties/artifact-created'
+                            description: 'Define whether this artifact has been created. A false value may be used to add comments regarding the status of the artifact.'
+                            type: boolean
+                        evidence-url:
+                            $id: '#/properties/security-artifacts/properties/other-artifacts/anyOf/0/properties/evidence-url'
+                            additionalItems: false
+                            items:
+                                $id: '#/properties/security-artifacts/properties/other-artifacts/anyOf/0/properties/evidence-url/items'
+                                anyOf:
+                                -   $id: '#/properties/security-artifacts/properties/other-artifacts/anyOf/0/properties/evidence-url/items/anyOf/0'
+                                    description: 'Link to the evidence of the security artifact.'
+                                    type: string
+                                    format: iri
+                                    pattern: '^https?:\/\/'
+                            type: array
+                            uniqueItems: true
+                        comment:
+                            $id: '#/properties/security-artifacts/properties/self-assessment/anyOf/0/properties/comment'
+                            description: 'Additional context regarding the security artifact or its status. Maximum length 560 chars.'
+                            type: string
+                            pattern: '^(.|\n){1,560}$'
+                    if:
+                        properties:
+                            artifact-created:
+                                const: true
+                    then:
+                        required:
+                        - evidence-url
+                    type: object
         type: object
     security-testing:
         $id: '#/properties/security-testing'

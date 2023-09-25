@@ -63,9 +63,6 @@ properties:
         required:
         - parent-security-yaml
         - expiration-date
-        - last-updated
-        - last-reviewed
-        - commit-hash
         - project-url
         - schema-version
         type: object

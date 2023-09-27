@@ -61,7 +61,6 @@ properties:
                 format: iri
                 pattern: '^https?:\/\/'
         required:
-        - parent-security-yaml
         - expiration-date
         - project-url
         - schema-version
@@ -372,9 +371,9 @@ properties:
                         uniqueItems: true
                     tool-type:
                         $id: '#/properties/security-testing/items/anyOf/0/properties/tool-type'
-                        description: 'Type of security test: `sast`, `dast`, `iast` or `fuzzer`.'
+                        description: 'Type of security test: `sast`, `dast`, `iast`, `fuzzer` or `sca`.'
                         type: string
-                        enum: ['sast', 'dast', 'iast', 'fuzzer']
+                        enum: ['sast', 'dast', 'iast', 'fuzzer', 'sca']
                     tool-url:
                         $id: '#/properties/security-testing/items/anyOf/0/properties/tool-url'
                         description: 'Link to the security test.'
@@ -616,23 +615,44 @@ properties:
                                 pattern: '^(.|\n){1,560}$'
                 type: array
                 uniqueItems: true
-        if:
-            properties:
-                third-party-packages:
-                    const: true
-        then:
-            required:
-            - dependencies-lists
-        required:
-        - third-party-packages
+            dependencies-lifecycle:
+                $id: '#/properties/dependencies/properties/dependencies-lifecycle'
+                additionalProperties: false
+                properties:
+                    policy-url:
+                        $id: '#/properties/dependencies/properties/dependencies-lifecycle/properties/policy-url'
+                        description: 'Link to the dependencies lifecycle policy.'
+                        type: string
+                        format: iri
+                        pattern: '^https?:\/\/'
+                    comment:
+                        $id: '#/properties/dependencies/properties/dependencies-lifecycle/properties/comment'
+                        description: 'Summary about the dependencies lifecycle policy, third-party packages updating process, and deprecation process. Maximum length 560 chars.'
+                        type: string
+                        pattern: '^(.|\n){1,560}$'
+                type: object
+            env-dependencies-policy:
+                $id: '#/properties/dependencies/properties/env-dependencies-policy'
+                additionalProperties: false
+                properties:
+                    policy-url:
+                        $id: '#/properties/dependencies/properties/env-dependencies-policy/properties/policy-url'
+                        description: 'Link to the enviroment dependencies policy.'
+                        type: string
+                        format: iri
+                        pattern: '^https?:\/\/'
+                    comment:
+                        $id: '#/properties/dependencies/properties/env-dependencies-policy/properties/comment'
+                        description: 'Summary about how third-party dependencies are adopted and consumed in the different environments (dev, test, prod). Maximum length 560 chars.'
+                        type: string
+                        pattern: '^(.|\n){1,560}$'
+                type: object
         type: object
 required:
 - header
 - project-lifecycle
 - contribution-policy
 - distribution-points
-- security-artifacts
 - security-contacts
 - vulnerability-reporting
-- dependencies
 type: object

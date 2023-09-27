@@ -90,6 +90,17 @@ properties:
                 type: string
                 format: iri
                 pattern: '^https?:\/\/'
+            release-cycle:
+                $id: '#/properties/project-lifecycle/properties/release-cycle'
+                description: 'Link to the project release cycle.'
+                type: string
+                format: iri
+                pattern: '^https?:\/\/'
+            release-process:
+                $id: '#/properties/project-lifecycle/properties/release-process'
+                description: 'Shortly describe the release process. Maximum length 560 chars.'
+                type: string
+                pattern: '^(.|\n){1,560}$'
             stage:
                 $id: '#/properties/project-lifecycle/properties/stage'
                 description: 'Define if the project is still active or not.'

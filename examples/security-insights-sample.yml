@@ -66,23 +66,23 @@ security-artifacts:
       sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt
       mollit anim id est laborum
   other-artifacts:
-    - artifact-name: example-artifact
-      artifact-created: true
-      evidence-url:
+    artifact-name: example-artifact
+    artifact-created: true
+    evidence-url:
       - https://foo.com/artifact.html
-      comment: |
-        Lorem ipsum dolor sit amet, consectetur adipisci elit,
-        sed do eiusmod tempor incidunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrum exercitationem ullamco laboriosam,
-        nisi ut aliquid ex ea commodi consequatur. Duis aute irure reprehenderit
-        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-        sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum
+    comment: |
+      Lorem ipsum dolor sit amet, consectetur adipisci elit,
+      sed do eiusmod tempor incidunt ut labore et dolore magna aliqua.
+      Ut enim ad minim veniam, quis nostrum exercitationem ullamco laboriosam,
+      nisi ut aliquid ex ea commodi consequatur. Duis aute irure reprehenderit
+      in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+      sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt
+      mollit anim id est laborum
 security-testing:
-- tool-type: sast
-  tool-name: CodeQL
+- tool-type: sca
+  tool-name: Dependabot
   tool-version: 1.2.3
-  tool-url: https://codeql.com
+  tool-url: https://example.org
   tool-rulesets:
   - built-in
   integration:
@@ -140,4 +140,24 @@ dependencies:
   - sbom-file: https://foo.bar/sbom
     sbom-format: CycloneDX
     sbom-url: https://foo.bar
+  dependencies-lifecycle:
+    policy-url: https://example.org
+    comment: |
+      Lorem ipsum dolor sit amet, consectetur adipisci elit,
+      sed do eiusmod tempor incidunt ut labore et dolore magna aliqua.
+      Ut enim ad minim veniam, quis nostrum exercitationem ullamco laboriosam,
+      nisi ut aliquid ex ea commodi consequatur. Duis aute irure reprehenderit
+      in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+      sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt
+      mollit anim id est laborum
+  env-dependencies-policy:
+    policy-url: https://example.org
+    comment: |
+      Lorem ipsum dolor sit amet, consectetur adipisci elit,
+      sed do eiusmod tempor incidunt ut labore et dolore magna aliqua.
+      Ut enim ad minim veniam, quis nostrum exercitationem ullamco laboriosam,
+      nisi ut aliquid ex ea commodi consequatur. Duis aute irure reprehenderit
+      in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+      sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt
+      mollit anim id est laborum
     

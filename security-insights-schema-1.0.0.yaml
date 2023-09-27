@@ -322,7 +322,7 @@ properties:
                     then:
                         required:
                         - evidence-url
-                    type: object
+                    type: array
         type: object
     security-testing:
         $id: '#/properties/security-testing'

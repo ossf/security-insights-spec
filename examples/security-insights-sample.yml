@@ -135,12 +135,8 @@ vulnerability-reporting:
   in-scope:
   - broken access control
   - other
-  in-scope-comment: |
-    Read the security policy.
   out-scope:
   - other
-  out-scope-comment: |
-    Read the security policy.
 dependencies:
   third-party-packages: true
   dependencies-lists:

@@ -10,7 +10,7 @@ header:
   changelog: https://github.com/foo/changelog.md
   license: https://git.foo/license
 project-lifecycle:
-  stage: active
+  status: active
   roadmap: https://foo.bar/roadmap.html
   bug-fixes-only: false
   core-maintainers:

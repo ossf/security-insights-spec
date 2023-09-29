@@ -101,14 +101,14 @@ properties:
                 description: 'Shortly describe the release process. Maximum length 560 chars.'
                 type: string
                 pattern: '^(.|\n){1,560}$'
-            stage:
-                $id: '#/properties/project-lifecycle/properties/stage'
+            status:
+                $id: '#/properties/project-lifecycle/properties/status'
                 description: 'Define if the project is still active or not.'
                 type: string
-                enum: ['active', 'inactive']
+                enum: ['active', 'inactive', 'concept', 'wip', 'suspended', 'abandoned', 'unsupported', 'moved']
         if:
             properties:
-                stage:
+                status:
                     const: "active"
         then:
             required:
@@ -122,7 +122,7 @@ properties:
                 required:
                 - core-maintainers
         required:
-        - stage
+        - status
         - bug-fixes-only
         type: object
     contribution-policy:

@@ -3,7 +3,7 @@ header:
   expiration-date: '2023-08-31T10:10:09.000Z'
   project-url: https://github.com/foo/bar
 project-lifecycle:
-  stage: active
+  status: active
   bug-fixes-only: false
   core-maintainers:
   - https://github.com/scovetta

@@ -533,11 +533,6 @@ properties:
                             'other']
                 type: array
                 uniqueItems: true
-            in-scope-comment:
-                $id: '#/properties/vulnerability-reporting/properties/in-scope-comment'
-                description: 'Additional comment to describe the in-scope list, giving more context. Maximum length 560 chars.'
-                type: string
-                pattern: '^(.|\n){1,560}$'
             out-scope:
                 $id: '#/properties/vulnerability-reporting/properties/out-scope'
                 description: 'Out-of-scope vulnerability categories, according to OWASP Top 10 2021. It is recommended to specify a better out-of-scope list in the security policy.'
@@ -560,9 +555,9 @@ properties:
                             'other']
                 type: array
                 uniqueItems: true
-            out-scope-comment:
-                $id: '#/properties/vulnerability-reporting/properties/out-scope-comment'
-                description: 'Additional comment to describe the out-scope list, giving more context. Maximum length 560 chars.'
+            comment:
+                $id: '#/properties/vulnerability-reporting/properties/comment'
+                description: 'Additional comment to describe the in-scope list, out-scope list, preferred contact method, or other context. Maximum length 560 chars.'
                 type: string
                 pattern: '^(.|\n){1,560}$'
         if:

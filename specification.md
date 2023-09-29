@@ -384,14 +384,12 @@ vulnerability-reporting:
   in-scope:
   - broken access control
   - other
-  in-scope-comment: |
-    Read the security policy.
   out-scope:
   - other
-  out-scope-comment: |
-    Read the security policy.
   pgp-key: |
     your-key-here
+  comment: |
+    Lorum ipsum...
 ```
 
 ### Fields
@@ -419,16 +417,12 @@ vulnerability-reporting:
 - `in-scope`
   - **Description:** In-scope vulnerability categories, according to OWASP Top 10 2021. It is recommended to specify better a in-scope list in the security policy or in bug bounty program.
   - **Type:** Array. Every element must match one of the values defined in the field `enum` of the schema.
-- `in-scope-comment`
-  - **Description:** Additional comment to describe the in-scope list to report valid vulnerabilities and security issues.
-  - **Type:** String. At most 560 characters.
 - `out-scope`
   - **Description:** Out-of-scope vulnerability categories, according to OWASP Top 10 2021. It is recommended to specify better a out-of-scope list in the security policy or in bug bounty program.
   - **Type:** Array. Every element must match one of the values defined in the field `enum` of the schema.
-- `out-scope-comment`
-  - **Description:** Additional comment to provide more context about the out-of-scope list.
+- `comment`
+  - **Descriotion:** If you have added anything to the lists of in or out of scope vulnerabilities, please explain the reasoning here. Other information may also be valuable here, such as the preferred contact method if multiple options are provided in your security policy.
   - **Type:** String. At most 560 characters.
-
 ## Dependencies
 
 The "`dependencies`" section offers an overview of the project's supply chain. It provides information on the sources and policies governing the usage of third-party artifacts, along with insights into their adoption and maintenance. Here, Security Insights consumers can easily access the SBOM file, details about its creation process, and the lifecycle policy for the dependencies.

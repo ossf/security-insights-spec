@@ -15,7 +15,6 @@ The section "`header`" holds high-level information about the project (e.g. lice
 ```yaml
 header:
   schema-version: 1.0.0
-  parent-security-yaml: https://blah.com/ossf-security.yaml
   expiration-date: '2023-08-31T10:10:09.000Z'
   last-updated: '2021-09-01'
   last-reviewed: '2022-09-01'
@@ -31,9 +30,6 @@ header:
 - `schema-version` (Required)
   - **Description:** Provide the version of the specification that you are adhering to. This information is useful to validate the YAML according to the correct schema version.
   - **Type:** String. The version must match one of the values defined in the field `enum` of the schema.
-- `parent-security-yaml`
-  - **Description:** Provide the link to the last version of the `SECUIRTY-INSIGHT.yml`. This information can be helpful if the repository or project is mirrored.
-  - **Type:** String. The provided URL must meet the IRI standard ([RFC 3987](https://www.ietf.org/rfc/rfc3987.txt)) and begin with `https://`.
 - `expiration-date` (Required) 
   - **Description:** The date this file should no longer be considered valid, and it can be at most one year from the date it was last reviewed.
   - **Type:** String. The provided value must be a datetime.

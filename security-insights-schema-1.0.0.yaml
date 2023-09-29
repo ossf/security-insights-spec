@@ -12,12 +12,6 @@ properties:
                 description: 'Version of the SECURITY-INSIGHTS YAML Schema.'
                 type: string
                 enum: ['1.0.0']
-            parent-security-yaml:
-                $id: '#/properties/header/properties/parent-security-yaml'
-                description: 'Link to SECURITY-INSIGHTS.yml'
-                type: string
-                format: iri
-                pattern: '^https?:\/\/'
             expiration-date:
                 $id: '#/properties/header/properties/expiration-date'
                 description: 'Expiration date for the SECURITY-INSIGHTS.yml. At most a year later the `last-reviewed` date.'

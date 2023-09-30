@@ -36,11 +36,11 @@ security-testing:
     Dependabot is enabled for this repo.
 security-contacts:
 - type: email
-  value: luigi.gubello@protonmail.com
+  value: security@openssf.org
 vulnerability-reporting:
   accepts-vulnerability-reports: true
   security-policy: https://github.com/ossf/security-insights-spec/security/policy
-  email-contact: luigi.gubello@protonmail.com
+  email-contact: security@openssf.org
   comment: |
     The first and best way to report a vulnerability is by using private security issues in GitHub.
 dependencies:

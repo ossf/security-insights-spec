@@ -4,4 +4,4 @@ To report a security issue or vulnerability, submit a [private vulnerability rep
 
 Our vulnerability management team will respond within 7 working days of your report. If the issue is confirmed as a vulnerability, we will open a Security Advisory and acknowledge your contributions as part of it. This project follows a 90 day disclosure timeline.
 
-Other contacts: luigi.gubello@protonmail.com
+Other contacts: security@openssf.org

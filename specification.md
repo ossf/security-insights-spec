@@ -1,14 +1,27 @@
-# Specification
+## Introduction
 
 This specification provides a mechanism for projects to report information about their security in a machine-processable way. It is formatted as a YAML file to make it easy to read and edit by humans.
 
 Values that are included within the specification may be required or optional. Optional values are reccommendations from the Open Source Security Foundation's _Identifying Security Threats Working Group_, but may not be prudent for all use cases.
 
-Example implementations can be found on the specification's [GitHub repo](https://github.com/ossf/security-insights-spec/pull/37).
+Example implementations can be found on the specification's [GitHub repository](https://github.com/ossf/security-insights-spec).
+
+Maintenance for the specification is led by the [OpenSSF Identifying Security Threats Working Group](https://github.com/ossf/wg-identifying-security-threats), and improvements are handled exclusively within the project's GitHub repository. Additional information about contribution can be found within the project's [Contribution Policy](/CONTRIBUTING.md).
+
+Improvement suggestions and clarification requests can be logged as [GitHub Issues](https://github.com/ossf/security-insights-spec/issues/new), raised as discussion on [Slack](https://openssf.slack.com/messages/security_insights/), or discussed with the community in the appropriate Working Group meeting from the [OpenSSF Community Calendar](https://calendar.google.com/calendar?cid=czYzdm9lZmhwNWk5cGZsdGI1cTY3bmdwZXNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ).
+
+This specification follows semantic versioning. Changes made to the schema on GitHub are considered to be _draft changes_ until a formal release has been made in accordance with the project's [versioning policy](./docs/versioning-policy.md).
+
+Any security-related issues related to the specification or maintenance thereof should follow the recommendations outlined in the project's [security policy](./SECURITY.md).
+
+This specification subject to the Community Specification License 1.0 available at https://github.com/CommunitySpecification/1.0.
+
+
+## Specification
 
 The following values are part of Security Insights Specification `v1.0.0`
 
-## Header
+### Header
 
 The section "`header`" holds high-level information about the project (e.g. license, changelog) and `SECURITY-INSIGHTS.yml`. This section is **required**.
 
@@ -24,8 +37,6 @@ header:
   changelog: https://github.com/foo/changelog.md
   license: https://git.foo/license
 ```
-
-### Fields
 
 - `schema-version` (Required)
   - **Description:** Provide the version of the specification that you are adhering to. This information is useful to validate the YAML according to the correct schema version.
@@ -55,7 +66,7 @@ header:
   - **Description:** URL to the project license.
   - **Type:** String. The provided URL must meet the IRI standard (RFC 3987) and begin with `https://`.
 
-## Project Lifecycle
+### Project Lifecycle
 
 The section "`project-lifecycle`" describes the life status of the project by providing information about the project's status - whether it is active or not, the roadmap, release cycle, and contact information. The purpose of this section is to help project adopters evaluate adoption risk and the maintenance status (e.g., whether maintainers are continuing to ship security fixes). This section is **required**.
 
@@ -72,8 +83,6 @@ project-lifecycle:
   release-process: |
       foo bar
 ```
-
-### Fields
 
 - `bug-fixes-only` (Required)
   - **Description:** Provide the maintenance status of the project by specifying if the maintainers fix only bugs without providing new features.
@@ -104,7 +113,7 @@ project-lifecycle:
     - Unsupported – _The project has reached a stable, usable state but the author(s) have ceased all work on it. A new maintainer may be desired._
     - Moved - _The project has been moved to a new location, and the version at that location should be considered authoritative. This status should be accompanied by a new URL._
 
-## Contribution Policy
+### Contribution Policy
 
 The "`contribution-policy`" section offers documentation outlining the project's contribution rules, requirements, and policies. It serves as a resource for the community, helping them understand how to contribute to the project. Specifically, this section clarifies whether pull requests and automated pull requests are permitted. This section is **required**.
 
@@ -123,8 +132,6 @@ contribution-policy:
   contributing-policy: https://example.com/development-policy.html
   code-of-conduct: https://example.com/code-of-conduct.html
 ```
-
-### Fields
 
 - `accepts-pull-requests` (Required)
   - **Description:** Define if the maintainers accept pull-requests or not from external contributors.
@@ -154,7 +161,7 @@ contribution-policy:
   - **Description:** URI to the project code of conduct.
   - **Type:** String. The provided URL must meet the IRI standard (RFC 3987) and begin with `https://`.
 
-## Documentation
+### Documentation
 
 The "`documentation`" section is simply a list of URIs for any kind of documentation that maintainers want to provide to the community (project adopters, contributors, security researchers, etc.).
 
@@ -163,11 +170,9 @@ documentation:
   - http://foo.bar/wiki
 ```
 
-### Fields
-
 This section is not required. It is an array containing links to the project documentation (docs, wiki, etc.). Every item must be a string that meets the IRI standard (RFC 3987) and begin with `https://`.
 
-## Distribution Points
+### Distribution Points
 
 The "`distribution-points`" section contains a list of PURLs (Package URLs) for official project releases and distributions, managed directly by the project's maintainers. This section assists Security Insights consumers in verifying the source of installed artifacts. This section is **required**.
 
@@ -178,11 +183,9 @@ distribution-points:
   - pkg:npm/foobar
 ```
 
-### Fields
-
 It is an array containing pURLs to the official releases, official released artifacts, or official packages of the project. Every item must be a string.
 
-## Security Artifacts
+### Security Artifacts
 
 The "`security-artifacts`" section provides additional security-focused documentation (e.g., threat model, self-assessment) that project maintainers can share. These documents can help the community to better evaluate the security maturity of the project.
 
@@ -208,8 +211,6 @@ security-artifacts:
       comment: |
         foo bar
 ```
-
-### Fields
 
 - `threat-model`
   - `threat-model-created` (Required)
@@ -250,7 +251,7 @@ security-artifacts:
       - **Description:** Provide shortly additional context to the linked artifact.
       - **Type:** String. At most 560 characters.
 
-## Security Testing
+### Security Testing
 
 The "`security-testing`" section comprises a list of tools and services integrated into the project for automating security tests, such as SAST tests, fuzzing, and SCA tools. While not mandatory, including this section is strongly recommended. It can offer valuable information to project adopters for assessing the existing security testing practices and to contributors for enhancing open-source testing and CI/CD.
 
@@ -270,9 +271,7 @@ security-testing:
     foo bar
 ```
 
-### Fields
-
-This section is an array.
+This section is an array of objects.
 
 - `integration` (Required)
   - **Description:** Additional context about the security test. This information can help to understand how the test works and how it is integrated into the CI/CD of the project.
@@ -304,7 +303,7 @@ This section is an array.
   - **Description:** Provide additional context on the used tool or service.
   - **Type:** String. At most 560 characters.
 
-## Security Assessments
+### Security Assessments
 
 The "`security-assessments`" section assists project consumers and the community in locating information about audits conducted by third-party authorities. It consolidates sources and provides links to documentation or audits furnished by third-party companies, which can certify the project's standards. This may include penetration test reports, security certifications, and more.
 
@@ -318,9 +317,7 @@ security-assessments:
     foo bar
 ```
 
-### Fields
-
-This section is an array.
+This section is an array of objects.
 
 - `auditor-name` (Required)
   - **Description:** Name of the third-party security auditor.
@@ -338,7 +335,7 @@ This section is an array.
   - **Description:** Provide additional context on the report, in particular, if the report document is not publicly shared.
   - **Type:** String. At most 560 characters.
 
-## Security Contacts
+### Security Contacts
 
 The "`security-contacts`" section is a list of contacts (email, phone, URLs) of the responsible persons or team for the security of the project. This section is **required**.
 
@@ -352,9 +349,7 @@ security-contacts:
   primary: false
 ```
 
-### Fields
-
-This section is an array.
+This section is an array of objects.
 
 - `primary`
   - **Description:** Define if the provided contact is a primary contact or not. 
@@ -366,7 +361,7 @@ This section is an array.
   - **Description:** Provide a valid security contact.
   - **Type:** String. The value must be an e-mail contact, a URI, or a mobile phone.
 
-## Vulnerability Reporting
+### Vulnerability Reporting
 
 The "`vulnerability-reporting`" section provides policies and procedures about how to report properly a security issue. In this section, security researchers can easily find information about the security policy, contacts, bug bounty program, and in-scope and out-of-scope areas. This section is **required**. It is strongly recommended - if the project is maintained and active - to accept vulnerability reports and have a security policy (e.g., `SECURITY.md`).
 
@@ -387,8 +382,6 @@ vulnerability-reporting:
   comment: |
     Lorum ipsum...
 ```
-
-### Fields
 
 - `accepts-vulnerability-reports` (Required)
   - **Description:** Define whether the project maintainers or security team accept security reports or not. If the project is active or maintained, it is highly recommended to set `true`.
@@ -419,7 +412,7 @@ vulnerability-reporting:
 - `comment`
   - **Descriotion:** If you have added anything to the lists of in or out of scope vulnerabilities, please explain the reasoning here. Other information may also be valuable here, such as the preferred contact method if multiple options are provided in your security policy.
   - **Type:** String. At most 560 characters.
-## Dependencies
+### Dependencies
 
 The "`dependencies`" section offers an overview of the project's supply chain. It provides information on the sources and policies governing the usage of third-party artifacts, along with insights into their adoption and maintenance. Here, Security Insights consumers can easily access the SBOM file, details about its creation process, and the lifecycle policy for the dependencies.
 
@@ -441,8 +434,6 @@ dependencies:
     comment: |
       foo bar
 ```
-
-### Fields
 
 - `third-party-packages`
   - **Description:** Define if the project uses third-party packages.

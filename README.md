@@ -6,4 +6,4 @@ Wecome to the official GitHub repository for the spec behind SECURITY-INSIGHTS.y
 
 All information regarding the maintenance, security, and consumption of the Security Insights Specification can be found in this repo within the latest version of the [official specification file](/specification.md).
 
-Don't forget to join us on slack, and visit the OpenSSF Working Group responsible for maintaining this spec, [Identifying Security Threats in Open Source Projects](https://github.com/ossf/wg-identifying-security-threats).
+Don't forget to join us on Slack, and visit the OpenSSF Working Group responsible for maintaining this spec, [Identifying Security Threats in Open Source Projects](https://github.com/ossf/wg-identifying-security-threats).

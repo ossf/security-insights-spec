@@ -1,4 +1,4 @@
-Thank you for your interest in contributing to [Project Name]. We welcome contributions to our specification document.
+Thank you for your interest in contributing to the Security Insights Specification!
 
 ## How to Contribute
 

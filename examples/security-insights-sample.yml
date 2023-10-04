@@ -13,7 +13,7 @@ project-lifecycle:
   roadmap: https://foo.bar/roadmap.html
   bug-fixes-only: false
   core-maintainers:
-  - https://github.com/scovetta
+  - github:example
   - joe.bob@email.com
   release-cycle: https://foo/release
   release-process: |

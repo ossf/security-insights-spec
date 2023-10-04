@@ -6,7 +6,7 @@ project-lifecycle:
   status: active
   bug-fixes-only: false
   core-maintainers:
-  - https://github.com/scovetta
+  - github:example
 contribution-policy:
   accepts-pull-requests: true
   accepts-automated-pull-requests: true

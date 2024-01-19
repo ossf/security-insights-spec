@@ -1,10 +1,10 @@
 # Threat Model
 
 A [STRIDE](https://docs.microsoft.com/it-it/azure/security/develop/threat-modeling-tool-threats) Threat Model 
-for SECURITY-INSIGHTS project is available both in [PDF format](docs/threat-model/SECURITY-INSIGHTS-STRIDE-threat-model.pdf) and 
-[JSON format](docs/threat-model/SECURITY-INSIGHTS-STRIDE-threat-model.json), generated using the [OWASP Threat Dragon](https://github.com/OWASP/threat-dragon) tool.
+for SECURITY-INSIGHTS project is available both in [PDF format](./SECURITY-INSIGHTS-STRIDE-threat-model.pdf) and 
+[JSON format](./SECURITY-INSIGHTS-STRIDE-threat-model.json), generated using the [OWASP Threat Dragon](https://github.com/OWASP/threat-dragon) tool.
 
-![Threat Model](docs/threat-model/SECURITY-INSIGHTS-STRIDE-threat-model.png)
+![Threat Model](./SECURITY-INSIGHTS-STRIDE-threat-model.png)
 
 ## Supply-chain
 

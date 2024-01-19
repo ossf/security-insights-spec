@@ -2,7 +2,7 @@
 
 This document would like to define the minimum required improvements and changes to release version **1.1** of the Security Insights specification.
 
-1. Create an indipendet website, with its custom top-level domain, to document the specification Security Insights.
+1. Create an independent website, with its custom top-level domain, to document the specification Security Insights.
     1. We can use the domain `securityinsights.dev.` 
 2. Improve the Security Insights specification:
     1. Support more tool families in `security-testing`(risk score checkers (e.g. Scorecard), linters, other generic scanners) ([Slack](https://openssf.slack.com/archives/C04BB493NET/p1696468506093119));

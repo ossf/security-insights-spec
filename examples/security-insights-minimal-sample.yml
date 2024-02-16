@@ -5,8 +5,8 @@ header:
 project-lifecycle:
   status: active
   bug-fixes-only: false
-  core-maintainers:
-  - github:example
+  core-team:
+  - contact: github:example
 contribution-policy:
   accepts-pull-requests: true
   accepts-automated-pull-requests: true

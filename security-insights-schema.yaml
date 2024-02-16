@@ -67,15 +67,39 @@ properties:
                 $id: '#/properties/project-lifecycle/properties/bug-fixes-only'
                 description: 'Maintainers fix bugs without implementing new features. The project is in Maintenance Mode.'
                 type: boolean
-            core-maintainers:
-                $id: '#/properties/project-lifecycle/properties/core-maintainers'
-                description: 'Maintainers contacts (e-mail, Twitter, etc).'
+            core-team:
+                $id: '#/properties/project-lifecycle/properties/core-team'
+                description: >
+                    Each core team member must have either a contact or a uri to a document. 
+                    This rule must be enforced by the tool or process using this schema.
                 additionalItems: false
                 items:
-                    $id: '#/properties/project-lifecycle/properties/core-maintainers/items'
+                    $id: '#/properties/project-lifecycle/properties/core-team/items'
                     anyOf:
-                    -   $id: '#/properties/project-lifecycle/properties/core-maintainers/items/anyOf/0'
-                        type: string
+                    -   $id: '#/properties/project-lifecycle/properties/core-team/items'
+                        additionalProperties: false
+                        properties:
+                            name:
+                                $id: '#/properties/project-lifecycle/properties/core-team/items/anyOf/0/properties/name'
+                                description: 'The name of the team or maintainer.'        
+                                type: string
+                            role:
+                                $id: '#/properties/project-lifecycle/properties/core-team/items/anyOf/0/properties/role'
+                                description: 'Description of the role of the team or maintainer.'
+                                type: string
+                            contact:
+                                $id: '#/properties/project-lifecycle/properties/core-team/items/anyOf/0/properties/contact'
+                                description: 'Maintainers contacts (e-mail, Twitter, etc), required if "uri" is not present.'
+                                type: string
+                            uri:
+                                $id: '#/properties/project-lifecycle/properties/core-team/items/anyOf/0/properties/uri'
+                                description: 'URI to a team document (e.g. team member page), required if "contact" is not present.'
+                                type: string
+                        oneOf:
+                        - required:
+                            - contact
+                        - required:
+                            - uri
                 type: array
                 uniqueItems: true
             roadmap:
@@ -106,7 +130,7 @@ properties:
                     const: "active"
         then:
             required:
-            - core-maintainers
+            - core-team
         else:
             if:
                 properties:
@@ -114,7 +138,7 @@ properties:
                         const: true
             then:
                 required:
-                - core-maintainers
+                - core-team
         required:
         - status
         - bug-fixes-only

@@ -12,6 +12,9 @@ project-lifecycle:
   status: active
   roadmap: https://foo.bar/roadmap.html
   bug-fixes-only: false
+  core-maintainers:
+  - github:example
+  - joe.bob@email.com
   core-team:
   - name: Alice White
     contact: github:example

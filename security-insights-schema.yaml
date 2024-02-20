@@ -67,11 +67,24 @@ properties:
                 $id: '#/properties/project-lifecycle/properties/bug-fixes-only'
                 description: 'Maintainers fix bugs without implementing new features. The project is in Maintenance Mode.'
                 type: boolean
+            core-maintainers:
+                $id: '#/properties/project-lifecycle/properties/core-maintainers'
+                description: |
+                    [Deprecation notice] `core-maintainers` will be deprecated in the next versions.
+                    Maintainers contacts (e-mail, Twitter, etc).
+                additionalItems: false
+                items:
+                    $id: '#/properties/project-lifecycle/properties/core-maintainers/items'
+                    anyOf:
+                    -   $id: '#/properties/project-lifecycle/properties/core-maintainers/items/anyOf/0'
+                        type: string
+                type: array
+                uniqueItems: true
             core-team:
                 $id: '#/properties/project-lifecycle/properties/core-team'
-                description: >
-                    Each core team member must have either a contact or a uri to a document. 
-                    This rule must be enforced by the tool or process using this schema.
+                description: |
+                    Maintainers or team contacts (e-mail, Mastodon, Discord, web pages, etc).
+                    Each core team member must have either a contact or a URI to a document or webpage. 
                 additionalItems: false
                 items:
                     $id: '#/properties/project-lifecycle/properties/core-team/items'

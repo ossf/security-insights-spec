@@ -95,7 +95,8 @@ project-lifecycle:
   - **Description:** Provide the maintenance status of the project by specifying if the maintainers fix only bugs without providing new features.
   - **Type:** Boolean.
 - `core-maintainers`
-  - **Description:** [Deprecation notice] _`core-maintainers` will be deprecated in the next versions._ Provide the contacts of the project maintainers (emails, social profiles, websites, etc). This information can help consumers to contact the right people.
+  - **Description:** Provide the contacts of the project maintainers (emails, social profiles, websites, etc). This information can help consumers to contact the right people.
+    - [Deprecation notice] _`core-maintainers` will be removed in v1.2.0_
   - **Type:** Array. Elements of the array are strings.
 - `core-team` (Conditionally required)
   - **Description:** Provide the contacts of the project maintainers (emails, social profiles, websites, etc) or team (web-pages, group e-mails, mailing list, etc). This information can help consumers to contact the right people.

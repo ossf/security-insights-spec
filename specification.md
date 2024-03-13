@@ -2,13 +2,13 @@
 
 This specification provides a mechanism for projects to report information about their security in a machine-processable way. It is formatted as a YAML file to make it easy to read and edit by humans.
 
-Values that are included within the specification may be required or optional. Optional values are reccommendations from the Open Source Security Foundation's _Identifying Security Threats Working Group_, but may not be prudent for all use cases.
+Values that are included within the specification may be required or optional. Optional values are reccommendations from the Open Source Security Foundation's _Metrics and Metadata Working Group_, but may not be prudent for all use cases.
 
 Example implementations can be found on the specification's [GitHub repository](https://github.com/ossf/security-insights-spec).
 
 A collection of unofficial supplemental tooling can be found in the ["SI Tooling" GitHub Repository](https://github.com/ossf/si-tooling).
 
-Maintenance for the specification is led by the [OpenSSF Identifying Security Threats Working Group](https://github.com/ossf/wg-identifying-security-threats), and improvements are handled exclusively within the project's GitHub repository. Additional information about contribution can be found within the project's [Contribution Policy](/CONTRIBUTING.md).
+Maintenance for the specification is led by the [OpenSSF Metrics and Metadata Working Group](https://github.com/ossf/wg-metrics-and-metadata), and improvements are handled exclusively within the project's GitHub repository. Additional information about contribution can be found within the project's [Contribution Policy](/CONTRIBUTING.md).
 
 Improvement suggestions and clarification requests can be logged as [GitHub Issues](https://github.com/ossf/security-insights-spec/issues/new), raised as discussion on [Slack](https://openssf.slack.com/messages/security_insights/), or discussed with the community in the appropriate Working Group meeting from the [OpenSSF Community Calendar](https://calendar.google.com/calendar?cid=czYzdm9lZmhwNWk5cGZsdGI1cTY3bmdwZXNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ).
 

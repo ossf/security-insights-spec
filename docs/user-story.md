@@ -25,8 +25,8 @@ then put under version control, provided to potential users, and updated as need
 The file's contents may then be extracted for a variety of different reasons (e.g., 
 extracted into security evaluations, etc.).
 
-This is an early version created by the OpenSSF Identifying Security Threats Working 
-Group. See the [OpenSSF Community Calendar](https://calendar.google.com/calendar?cid=czYzdm9lZmhwNWk5cGZsdGI1cTY3bmdwZXNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ).
+This is an early version created by the OpenSSF Metrics & Metadata working
+group. See the [OpenSSF Community Calendar](https://calendar.google.com/calendar?cid=czYzdm9lZmhwNWk5cGZsdGI1cTY3bmdwZXNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ).
 
 ## SECURITY-INSIGHTS.yml
 

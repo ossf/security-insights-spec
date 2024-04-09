@@ -15,6 +15,11 @@ project-lifecycle:
   core-maintainers:
   - github:example
   - joe.bob@email.com
+  core-team:
+  - name: Alice White
+    contact: github:example
+  - name: Joe Dohn
+    contact: joe.bob@email.com
   release-cycle: https://foo/release
   release-process: |
       Lorem ipsum dolor sit amet, consectetur adipisci elit,

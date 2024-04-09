@@ -69,13 +69,50 @@ properties:
                 type: boolean
             core-maintainers:
                 $id: '#/properties/project-lifecycle/properties/core-maintainers'
-                description: 'Maintainers contacts (e-mail, Twitter, etc).'
+                description: |
+                    [Deprecation notice] `core-maintainers` will be deprecated in the next versions.
+                    Maintainers contacts (e-mail, Twitter, etc).
                 additionalItems: false
                 items:
                     $id: '#/properties/project-lifecycle/properties/core-maintainers/items'
                     anyOf:
                     -   $id: '#/properties/project-lifecycle/properties/core-maintainers/items/anyOf/0'
                         type: string
+                type: array
+                uniqueItems: true
+            core-team:
+                $id: '#/properties/project-lifecycle/properties/core-team'
+                description: |
+                    Maintainers or team contacts (e-mail, Mastodon, Discord, web pages, etc).
+                    Each core team member must have either a contact or a URI to a document or webpage. 
+                additionalItems: false
+                items:
+                    $id: '#/properties/project-lifecycle/properties/core-team/items'
+                    anyOf:
+                    -   $id: '#/properties/project-lifecycle/properties/core-team/items'
+                        additionalProperties: false
+                        properties:
+                            name:
+                                $id: '#/properties/project-lifecycle/properties/core-team/items/anyOf/0/properties/name'
+                                description: 'The name of the team or maintainer.'        
+                                type: string
+                            role:
+                                $id: '#/properties/project-lifecycle/properties/core-team/items/anyOf/0/properties/role'
+                                description: 'Description of the role of the team or maintainer.'
+                                type: string
+                            contact:
+                                $id: '#/properties/project-lifecycle/properties/core-team/items/anyOf/0/properties/contact'
+                                description: 'Maintainers contacts (e-mail, Twitter, etc), required if "uri" is not present.'
+                                type: string
+                            uri:
+                                $id: '#/properties/project-lifecycle/properties/core-team/items/anyOf/0/properties/uri'
+                                description: 'URI to a team document (e.g. team member page), required if "contact" is not present.'
+                                type: string
+                        oneOf:
+                        - required:
+                            - contact
+                        - required:
+                            - uri
                 type: array
                 uniqueItems: true
             roadmap:
@@ -106,7 +143,7 @@ properties:
                     const: "active"
         then:
             required:
-            - core-maintainers
+            - core-team
         else:
             if:
                 properties:
@@ -114,7 +151,7 @@ properties:
                         const: true
             then:
                 required:
-                - core-maintainers
+                - core-team
         required:
         - status
         - bug-fixes-only

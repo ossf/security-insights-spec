@@ -8,9 +8,9 @@ header:
 project-lifecycle:
   status: active
   bug-fixes-only: false
-  core-maintainers:
-  - github:luigigubello
-  - github:eddie-knight
+  core-team:
+  - contact: github:luigigubello
+  - contact: github:eddie-knight
 contribution-policy:
   accepts-pull-requests: true
   accepts-automated-pull-requests: true

@@ -81,6 +81,11 @@ project-lifecycle:
   core-maintainers:
   - https://github.com/github
   - joe.bob@email.com
+  core-team:
+  - name: Alice White
+    contact: github:example
+  - name: Joe Dohn
+    contact: joe.bob@email.com
   release-cycle: https://foo/release
   release-process: |
       foo bar
@@ -89,10 +94,26 @@ project-lifecycle:
 - `bug-fixes-only` (Required)
   - **Description:** Provide the maintenance status of the project by specifying if the maintainers fix only bugs without providing new features.
   - **Type:** Boolean.
-- `core-maintainers` (Conditionally required)
+- `core-maintainers`
   - **Description:** Provide the contacts of the project maintainers (emails, social profiles, websites, etc). This information can help consumers to contact the right people.
+    - [Deprecation notice] _`core-maintainers` will be removed in v1.2.0_
   - **Type:** Array. Elements of the array are strings.
-  - **Condition:** This value is required if `bug-fixes-only` is `true` or if `status` is `active`.
+- `core-team` (Conditionally required)
+  - **Description:** Provide the contacts of the project maintainers (emails, social profiles, websites, etc) or team (web-pages, group e-mails, mailing list, etc). This information can help consumers to contact the right people.
+  - **Type:** Array.
+  - `name`
+    - **Description:** The name of the maintainer or the team.
+    - **Type:** String.
+  - `role`
+    - **Description:** Role of the maintainer in the project.
+    - **Type:** String.
+  - `contact` (Conditional required)
+    - **Description:** Contact of the maintaner or team (e.g. e-mail, Discord, mailing list, etc).
+    - **Type:** String.
+  - `uri` (Conditional required)
+    - **Description:** URI to the team page or team contact information (e.g. mail form page).
+    - **Type:** String. 
+  - **Condition:** This value `core-team` is required if `bug-fixes-only` is `true` or if `status` is `active`. At least one between `contact` and `uri` is required. 
 - `roadmap`
   - **Description:** URI to the project roadmap.
   - **Type:** String. The provided URL must meet the IRI standard (RFC 3987) and begin with `https://`.

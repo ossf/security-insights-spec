@@ -1,0 +1,3 @@
+{{ $path := .Get 0 }}
+{{ $content := readFile $path }}
+{{ $content | markdownify }}

@@ -4,7 +4,7 @@
 
 This specification provides a mechanism for projects to report information about their security in a machine-processable way. It is formatted as a YAML file to make it easy to read and edit by humans.
 
-The data tracked within this specification is intended to fill the gaps between simplified solutions such as `SECURITY.md` and comprehensive automated solutions such as `CycloneDX`. In that gap lay elements that must be self-reported by projects to allow end-users to make informed security decisions.
+The data tracked within this specification is intended to fill the gaps between simplified solutions such as `SECURITY.md` and comprehensive automatable solutions such as SBOMs. In that gap lay elements that must be self-reported by projects to allow end-users to make informed security decisions.
 
 As the adoption of Security Insights grows, so does the opportunity to automatically ingest it. For example, the Linux Foundation's [CLOMonitor](https://clomonitor.io/) parses a project's Security Insights file to determine whether projects have reported on select security factors prioritized by the foundation.
 

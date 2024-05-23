@@ -2,8 +2,12 @@
 
 # Security Insights Specification
 
-Wecome to the official GitHub repository for the spec behind SECURITY-INSIGHTS.yml!
+This specification provides a mechanism for projects to report information about their security in a machine-processable way. It is formatted as a YAML file to make it easy to read and edit by humans.
+
+The data tracked within this specification is intended to fill the gaps between simplified solutions such as `SECURITY.md` and comprehensive automatable solutions such as SBOMs. In that gap lay elements that must be self-reported by projects to allow end-users to make informed security decisions.
+
+As the adoption of Security Insights grows, so does the opportunity to automatically ingest it. For example, the Linux Foundation's [CLOMonitor](https://clomonitor.io/) parses a project's Security Insights file to determine whether projects have reported on select security factors prioritized by the foundation.
 
 All information regarding the maintenance, security, and consumption of the Security Insights Specification can be found in this repo within the latest version of the [official specification file](/specification.md).
 
-Don't forget to join us on Slack, and visit the OpenSSF Working Group responsible for maintaining this spec, [Metrics & Metadata](https://github.com/ossf/wg-metrics-and-metadata).
+Please use GitHub issues to discuss the maintenance of this specification, and review the [Contributor Guidelines](./CONTRIBUTING.md) for more information.

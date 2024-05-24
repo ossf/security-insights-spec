@@ -20,8 +20,6 @@ This specification subject to the Community Specification License 1.0 available 
 
 ## Table of Contents
 
-Information about each section can be found in the `specification` directory of this repository, or in the latest release.
-
 | Section | Required or Optional |
 | ------- | -------- |
 | [Header](specification/header.md) | Required |

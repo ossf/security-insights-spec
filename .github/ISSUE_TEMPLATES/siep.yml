@@ -1,0 +1,72 @@
+name: Security Insights Enhancement Proposal (SIEP)
+description: Propose a new feature or improvement to the Security Insights specification.
+title: "[SIEP] "
+labels: enhancement
+assignees: ''
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Security Insights Enhancement Proposal (SIEP)
+
+  - type: input
+    id: proposal_summary
+    attributes:
+      label: Proposal Summary
+      description: Provide a brief summary of the proposed enhancement. Explain what problem it solves and why it is necessary.
+      placeholder: Enter the proposal summary here
+      required: true
+
+  - type: textarea
+    id: detailed_design
+    attributes:
+      label: Detailed Design
+      description: Provide a detailed description of the proposal, including a design of how it will fit into the specification.
+      placeholder: Enter the detailed design here
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: Explain the potential impact of this proposal. Consider both positive and negative effects, including the risk of future breaking changes.
+      placeholder: Enter the impact here
+      required: true
+
+  - type: textarea
+    id: compatibility
+    attributes:
+      label: Compatibility
+      description: Discuss how this proposal maintains or breaks compatibility with existing versions. If there are breaking changes, explain why they are necessary and how they can be mitigated.
+      placeholder: Enter the compatibility details here
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives
+      description: List and describe any alternative phrasing or approaches that were considered, and why they were not chosen.
+      placeholder: Enter the alternatives here
+      required: true
+
+  - type: textarea
+    id: open_questions
+    attributes:
+      label: Open Questions
+      description: List any open questions or unresolved issues related to this proposal.
+      placeholder: Enter the open questions here
+      required: true
+
+  - type: dropdown
+    id: sponsoring_maintainer
+    attributes:
+      label: Sponsoring Maintainer Assigned
+      description: Select the maintainer sponsoring this proposal.
+      multiple: false
+      options:
+        - label: No Sponsor Yet
+          value: None
+        - label: Eddie Knight
+          value: @eddie-knight
+      required: true

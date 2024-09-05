@@ -23,13 +23,13 @@ This specification subject to the Community Specification License 1.0 available 
 | Section | Required or Optional |
 | ------- | -------- |
 | [Header](specification/header.md) | Required |
-| [Contribution Policy](specificaion/contribution-policy.md) | Required |
-| [Dependencies](specificaion/dependencies.md) | Optional |
-| [Distribution Points](specificaion/distribution-points.md) | Required |
-| [Documentation](specificaion/documentation.md) | Optional |
-| [Project Lifecycle](specificaion/project-lifecycle.md) | Required |
-| [Security Artifacts](specificaion/security-artifacts.md) | Optional |
-| [Security Assessments](specificaion/security-assessments.md) | Optional |
-| [Security Contacts](specificaion/security-contacts.md) | Required |
-| [Security Testing](specificaion/security-testing.md) | Optional |
-| [Vulnerability Reporting](specificaion/vulnerability-reporting.md) | Required |
+| [Contribution Policy](specification/contribution-policy.md) | Required |
+| [Dependencies](specification/dependencies.md) | Optional |
+| [Distribution Points](specification/distribution-points.md) | Required |
+| [Documentation](specification/documentation.md) | Optional |
+| [Project Lifecycle](specification/project-lifecycle.md) | Required |
+| [Security Artifacts](specification/security-artifacts.md) | Optional |
+| [Security Assessments](specification/security-assessments.md) | Optional |
+| [Security Contacts](specification/security-contacts.md) | Required |
+| [Security Testing](specification/security-testing.md) | Optional |
+| [Vulnerability Reporting](specification/vulnerability-reporting.md) | Required |

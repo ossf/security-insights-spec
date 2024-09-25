@@ -27,6 +27,7 @@ This specification subject to the Community Specification License 1.0 available 
 | [Dependencies](specification/dependencies.md) | Optional |
 | [Distribution Points](specification/distribution-points.md) | Required |
 | [Documentation](specification/documentation.md) | Optional |
+| [OpenSSF Best Practices Badge](specification/openssf-bp-badge.md) | Optional |
 | [Project Lifecycle](specification/project-lifecycle.md) | Required |
 | [Security Artifacts](specification/security-artifacts.md) | Optional |
 | [Security Assessments](specification/security-assessments.md) | Optional |

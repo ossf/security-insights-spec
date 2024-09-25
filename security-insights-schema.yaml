@@ -59,6 +59,38 @@ properties:
         - project-url
         - schema-version
         type: object
+    openssf-bp-badge:
+        $id: '#/properties/openssf-bp-badge'
+        additionalProperties: true
+        properties:
+            name:
+                $id: '#/properties/openssf-bp-badge/properties/name'
+                description: 'Short name of the project for purposes of the OpenSSF Best Practices Badge.'
+                type: string
+            description:
+                $id: '#/properties/openssf-bp-badge/properties/description'
+                description: 'Description of the project in Markdown format.'
+                type: string
+            homepage_url:
+                $id: '#/properties/openssf-bp-badge/properties/homepage_url'
+                description: 'URL of home page of project. This is where new users would typically start. For some projects this is the same as the `repo_url`.'
+                type: string
+            repo_url:
+                $id: '#/properties/openssf-bp-badge/properties/repo_url'
+                description: 'URL of public repository of project.'
+                type: string
+            license:
+                $id: '#/properties/openssf-bp-badge/properties/license'
+                description: 'SPDX license expression for the license of the project.  Note that this is *NOT* a URL.'
+                type: string
+            cpe:
+                $id: '#/properties/openssf-bp-badge/properties/cpe'
+                description: 'Common Platform Enumeration (CPE) identifier.'
+                type: string
+            implementation_languages:
+                $id: '#/properties/openssf-bp-badge/properties/implementation_languages'
+                description: 'List of implementation (programming) languages used.  If there is more than one, their names are separated by a comma.'
+                type: string
     project-lifecycle:
         $id: '#/properties/project-lifecycle'
         additionalProperties: false

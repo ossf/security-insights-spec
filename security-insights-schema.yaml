@@ -96,6 +96,1683 @@ properties:
         $id: '#/properties/openssf-bp-badge'
         additionalProperties: true
         properties:
+            access_continuity:
+                $id: #/properties/project-lifecycle/properties/access_continuity
+                description: Criterion access_continuity
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/access_continuity/properties/status
+                        description: Status of criterion access_continuity
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/access_continuity/properties/justification
+                        description: Justification of criterion access_continuity in Markdown format
+                        type: string
+            accessibility_best_practices:
+                $id: #/properties/project-lifecycle/properties/accessibility_best_practices
+                description: Criterion accessibility_best_practices
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/accessibility_best_practices/properties/status
+                        description: Status of criterion accessibility_best_practices
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/accessibility_best_practices/properties/justification
+                        description: Justification of criterion accessibility_best_practices in Markdown format
+                        type: string
+            achieve_passing:
+                $id: #/properties/project-lifecycle/properties/achieve_passing
+                description: Criterion achieve_passing
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/achieve_passing/properties/status
+                        description: Status of criterion achieve_passing
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/achieve_passing/properties/justification
+                        description: Justification of criterion achieve_passing in Markdown format
+                        type: string
+            achieve_silver:
+                $id: #/properties/project-lifecycle/properties/achieve_silver
+                description: Criterion achieve_silver
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/achieve_silver/properties/status
+                        description: Status of criterion achieve_silver
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/achieve_silver/properties/justification
+                        description: Justification of criterion achieve_silver in Markdown format
+                        type: string
+            assurance_case:
+                $id: #/properties/project-lifecycle/properties/assurance_case
+                description: Criterion assurance_case
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/assurance_case/properties/status
+                        description: Status of criterion assurance_case
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/assurance_case/properties/justification
+                        description: Justification of criterion assurance_case in Markdown format
+                        type: string
+            automated_integration_testing:
+                $id: #/properties/project-lifecycle/properties/automated_integration_testing
+                description: Criterion automated_integration_testing
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/automated_integration_testing/properties/status
+                        description: Status of criterion automated_integration_testing
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/automated_integration_testing/properties/justification
+                        description: Justification of criterion automated_integration_testing in Markdown format
+                        type: string
+            build:
+                $id: #/properties/project-lifecycle/properties/build
+                description: Criterion build
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/build/properties/status
+                        description: Status of criterion build
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/build/properties/justification
+                        description: Justification of criterion build in Markdown format
+                        type: string
+            build_common_tools:
+                $id: #/properties/project-lifecycle/properties/build_common_tools
+                description: Criterion build_common_tools
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/build_common_tools/properties/status
+                        description: Status of criterion build_common_tools
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/build_common_tools/properties/justification
+                        description: Justification of criterion build_common_tools in Markdown format
+                        type: string
+            build_floss_tools:
+                $id: #/properties/project-lifecycle/properties/build_floss_tools
+                description: Criterion build_floss_tools
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/build_floss_tools/properties/status
+                        description: Status of criterion build_floss_tools
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/build_floss_tools/properties/justification
+                        description: Justification of criterion build_floss_tools in Markdown format
+                        type: string
+            build_non_recursive:
+                $id: #/properties/project-lifecycle/properties/build_non_recursive
+                description: Criterion build_non_recursive
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/build_non_recursive/properties/status
+                        description: Status of criterion build_non_recursive
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/build_non_recursive/properties/justification
+                        description: Justification of criterion build_non_recursive in Markdown format
+                        type: string
+            build_preserve_debug:
+                $id: #/properties/project-lifecycle/properties/build_preserve_debug
+                description: Criterion build_preserve_debug
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/build_preserve_debug/properties/status
+                        description: Status of criterion build_preserve_debug
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/build_preserve_debug/properties/justification
+                        description: Justification of criterion build_preserve_debug in Markdown format
+                        type: string
+            build_repeatable:
+                $id: #/properties/project-lifecycle/properties/build_repeatable
+                description: Criterion build_repeatable
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/build_repeatable/properties/status
+                        description: Status of criterion build_repeatable
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/build_repeatable/properties/justification
+                        description: Justification of criterion build_repeatable in Markdown format
+                        type: string
+            build_reproducible:
+                $id: #/properties/project-lifecycle/properties/build_reproducible
+                description: Criterion build_reproducible
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/build_reproducible/properties/status
+                        description: Status of criterion build_reproducible
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/build_reproducible/properties/justification
+                        description: Justification of criterion build_reproducible in Markdown format
+                        type: string
+            build_standard_variables:
+                $id: #/properties/project-lifecycle/properties/build_standard_variables
+                description: Criterion build_standard_variables
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/build_standard_variables/properties/status
+                        description: Status of criterion build_standard_variables
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/build_standard_variables/properties/justification
+                        description: Justification of criterion build_standard_variables in Markdown format
+                        type: string
+            bus_factor:
+                $id: #/properties/project-lifecycle/properties/bus_factor
+                description: Criterion bus_factor
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/bus_factor/properties/status
+                        description: Status of criterion bus_factor
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/bus_factor/properties/justification
+                        description: Justification of criterion bus_factor in Markdown format
+                        type: string
+            code_of_conduct:
+                $id: #/properties/project-lifecycle/properties/code_of_conduct
+                description: Criterion code_of_conduct
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/code_of_conduct/properties/status
+                        description: Status of criterion code_of_conduct
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/code_of_conduct/properties/justification
+                        description: Justification of criterion code_of_conduct in Markdown format
+                        type: string
+            code_review_standards:
+                $id: #/properties/project-lifecycle/properties/code_review_standards
+                description: Criterion code_review_standards
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/code_review_standards/properties/status
+                        description: Status of criterion code_review_standards
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/code_review_standards/properties/justification
+                        description: Justification of criterion code_review_standards in Markdown format
+                        type: string
+            coding_standards:
+                $id: #/properties/project-lifecycle/properties/coding_standards
+                description: Criterion coding_standards
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/coding_standards/properties/status
+                        description: Status of criterion coding_standards
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/coding_standards/properties/justification
+                        description: Justification of criterion coding_standards in Markdown format
+                        type: string
+            coding_standards_enforced:
+                $id: #/properties/project-lifecycle/properties/coding_standards_enforced
+                description: Criterion coding_standards_enforced
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/coding_standards_enforced/properties/status
+                        description: Status of criterion coding_standards_enforced
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/coding_standards_enforced/properties/justification
+                        description: Justification of criterion coding_standards_enforced in Markdown format
+                        type: string
+            contribution:
+                $id: #/properties/project-lifecycle/properties/contribution
+                description: Criterion contribution
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/contribution/properties/status
+                        description: Status of criterion contribution
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/contribution/properties/justification
+                        description: Justification of criterion contribution in Markdown format
+                        type: string
+            contribution_requirements:
+                $id: #/properties/project-lifecycle/properties/contribution_requirements
+                description: Criterion contribution_requirements
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/contribution_requirements/properties/status
+                        description: Status of criterion contribution_requirements
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/contribution_requirements/properties/justification
+                        description: Justification of criterion contribution_requirements in Markdown format
+                        type: string
+            contributors_unassociated:
+                $id: #/properties/project-lifecycle/properties/contributors_unassociated
+                description: Criterion contributors_unassociated
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/contributors_unassociated/properties/status
+                        description: Status of criterion contributors_unassociated
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/contributors_unassociated/properties/justification
+                        description: Justification of criterion contributors_unassociated in Markdown format
+                        type: string
+            copyright_per_file:
+                $id: #/properties/project-lifecycle/properties/copyright_per_file
+                description: Criterion copyright_per_file
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/copyright_per_file/properties/status
+                        description: Status of criterion copyright_per_file
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/copyright_per_file/properties/justification
+                        description: Justification of criterion copyright_per_file in Markdown format
+                        type: string
+            crypto_algorithm_agility:
+                $id: #/properties/project-lifecycle/properties/crypto_algorithm_agility
+                description: Criterion crypto_algorithm_agility
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/crypto_algorithm_agility/properties/status
+                        description: Status of criterion crypto_algorithm_agility
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/crypto_algorithm_agility/properties/justification
+                        description: Justification of criterion crypto_algorithm_agility in Markdown format
+                        type: string
+            crypto_call:
+                $id: #/properties/project-lifecycle/properties/crypto_call
+                description: Criterion crypto_call
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/crypto_call/properties/status
+                        description: Status of criterion crypto_call
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/crypto_call/properties/justification
+                        description: Justification of criterion crypto_call in Markdown format
+                        type: string
+            crypto_certificate_verification:
+                $id: #/properties/project-lifecycle/properties/crypto_certificate_verification
+                description: Criterion crypto_certificate_verification
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/crypto_certificate_verification/properties/status
+                        description: Status of criterion crypto_certificate_verification
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/crypto_certificate_verification/properties/justification
+                        description: Justification of criterion crypto_certificate_verification in Markdown format
+                        type: string
+            crypto_credential_agility:
+                $id: #/properties/project-lifecycle/properties/crypto_credential_agility
+                description: Criterion crypto_credential_agility
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/crypto_credential_agility/properties/status
+                        description: Status of criterion crypto_credential_agility
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/crypto_credential_agility/properties/justification
+                        description: Justification of criterion crypto_credential_agility in Markdown format
+                        type: string
+            crypto_floss:
+                $id: #/properties/project-lifecycle/properties/crypto_floss
+                description: Criterion crypto_floss
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/crypto_floss/properties/status
+                        description: Status of criterion crypto_floss
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/crypto_floss/properties/justification
+                        description: Justification of criterion crypto_floss in Markdown format
+                        type: string
+            crypto_keylength:
+                $id: #/properties/project-lifecycle/properties/crypto_keylength
+                description: Criterion crypto_keylength
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/crypto_keylength/properties/status
+                        description: Status of criterion crypto_keylength
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/crypto_keylength/properties/justification
+                        description: Justification of criterion crypto_keylength in Markdown format
+                        type: string
+            crypto_password_storage:
+                $id: #/properties/project-lifecycle/properties/crypto_password_storage
+                description: Criterion crypto_password_storage
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/crypto_password_storage/properties/status
+                        description: Status of criterion crypto_password_storage
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/crypto_password_storage/properties/justification
+                        description: Justification of criterion crypto_password_storage in Markdown format
+                        type: string
+            crypto_pfs:
+                $id: #/properties/project-lifecycle/properties/crypto_pfs
+                description: Criterion crypto_pfs
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/crypto_pfs/properties/status
+                        description: Status of criterion crypto_pfs
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/crypto_pfs/properties/justification
+                        description: Justification of criterion crypto_pfs in Markdown format
+                        type: string
+            crypto_published:
+                $id: #/properties/project-lifecycle/properties/crypto_published
+                description: Criterion crypto_published
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/crypto_published/properties/status
+                        description: Status of criterion crypto_published
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/crypto_published/properties/justification
+                        description: Justification of criterion crypto_published in Markdown format
+                        type: string
+            crypto_random:
+                $id: #/properties/project-lifecycle/properties/crypto_random
+                description: Criterion crypto_random
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/crypto_random/properties/status
+                        description: Status of criterion crypto_random
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/crypto_random/properties/justification
+                        description: Justification of criterion crypto_random in Markdown format
+                        type: string
+            crypto_tls12:
+                $id: #/properties/project-lifecycle/properties/crypto_tls12
+                description: Criterion crypto_tls12
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/crypto_tls12/properties/status
+                        description: Status of criterion crypto_tls12
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/crypto_tls12/properties/justification
+                        description: Justification of criterion crypto_tls12 in Markdown format
+                        type: string
+            crypto_used_network:
+                $id: #/properties/project-lifecycle/properties/crypto_used_network
+                description: Criterion crypto_used_network
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/crypto_used_network/properties/status
+                        description: Status of criterion crypto_used_network
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/crypto_used_network/properties/justification
+                        description: Justification of criterion crypto_used_network in Markdown format
+                        type: string
+            crypto_verification_private:
+                $id: #/properties/project-lifecycle/properties/crypto_verification_private
+                description: Criterion crypto_verification_private
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/crypto_verification_private/properties/status
+                        description: Status of criterion crypto_verification_private
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/crypto_verification_private/properties/justification
+                        description: Justification of criterion crypto_verification_private in Markdown format
+                        type: string
+            crypto_weaknesses:
+                $id: #/properties/project-lifecycle/properties/crypto_weaknesses
+                description: Criterion crypto_weaknesses
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/crypto_weaknesses/properties/status
+                        description: Status of criterion crypto_weaknesses
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/crypto_weaknesses/properties/justification
+                        description: Justification of criterion crypto_weaknesses in Markdown format
+                        type: string
+            crypto_working:
+                $id: #/properties/project-lifecycle/properties/crypto_working
+                description: Criterion crypto_working
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/crypto_working/properties/status
+                        description: Status of criterion crypto_working
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/crypto_working/properties/justification
+                        description: Justification of criterion crypto_working in Markdown format
+                        type: string
+            dco:
+                $id: #/properties/project-lifecycle/properties/dco
+                description: Criterion dco
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/dco/properties/status
+                        description: Status of criterion dco
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/dco/properties/justification
+                        description: Justification of criterion dco in Markdown format
+                        type: string
+            delivery_mitm:
+                $id: #/properties/project-lifecycle/properties/delivery_mitm
+                description: Criterion delivery_mitm
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/delivery_mitm/properties/status
+                        description: Status of criterion delivery_mitm
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/delivery_mitm/properties/justification
+                        description: Justification of criterion delivery_mitm in Markdown format
+                        type: string
+            delivery_unsigned:
+                $id: #/properties/project-lifecycle/properties/delivery_unsigned
+                description: Criterion delivery_unsigned
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/delivery_unsigned/properties/status
+                        description: Status of criterion delivery_unsigned
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/delivery_unsigned/properties/justification
+                        description: Justification of criterion delivery_unsigned in Markdown format
+                        type: string
+            dependency_monitoring:
+                $id: #/properties/project-lifecycle/properties/dependency_monitoring
+                description: Criterion dependency_monitoring
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/dependency_monitoring/properties/status
+                        description: Status of criterion dependency_monitoring
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/dependency_monitoring/properties/justification
+                        description: Justification of criterion dependency_monitoring in Markdown format
+                        type: string
+            description_good:
+                $id: #/properties/project-lifecycle/properties/description_good
+                description: Criterion description_good
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/description_good/properties/status
+                        description: Status of criterion description_good
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/description_good/properties/justification
+                        description: Justification of criterion description_good in Markdown format
+                        type: string
+            discussion:
+                $id: #/properties/project-lifecycle/properties/discussion
+                description: Criterion discussion
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/discussion/properties/status
+                        description: Status of criterion discussion
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/discussion/properties/justification
+                        description: Justification of criterion discussion in Markdown format
+                        type: string
+            documentation_achievements:
+                $id: #/properties/project-lifecycle/properties/documentation_achievements
+                description: Criterion documentation_achievements
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/documentation_achievements/properties/status
+                        description: Status of criterion documentation_achievements
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/documentation_achievements/properties/justification
+                        description: Justification of criterion documentation_achievements in Markdown format
+                        type: string
+            documentation_architecture:
+                $id: #/properties/project-lifecycle/properties/documentation_architecture
+                description: Criterion documentation_architecture
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/documentation_architecture/properties/status
+                        description: Status of criterion documentation_architecture
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/documentation_architecture/properties/justification
+                        description: Justification of criterion documentation_architecture in Markdown format
+                        type: string
+            documentation_basics:
+                $id: #/properties/project-lifecycle/properties/documentation_basics
+                description: Criterion documentation_basics
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/documentation_basics/properties/status
+                        description: Status of criterion documentation_basics
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/documentation_basics/properties/justification
+                        description: Justification of criterion documentation_basics in Markdown format
+                        type: string
+            documentation_current:
+                $id: #/properties/project-lifecycle/properties/documentation_current
+                description: Criterion documentation_current
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/documentation_current/properties/status
+                        description: Status of criterion documentation_current
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/documentation_current/properties/justification
+                        description: Justification of criterion documentation_current in Markdown format
+                        type: string
+            documentation_interface:
+                $id: #/properties/project-lifecycle/properties/documentation_interface
+                description: Criterion documentation_interface
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/documentation_interface/properties/status
+                        description: Status of criterion documentation_interface
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/documentation_interface/properties/justification
+                        description: Justification of criterion documentation_interface in Markdown format
+                        type: string
+            documentation_quick_start:
+                $id: #/properties/project-lifecycle/properties/documentation_quick_start
+                description: Criterion documentation_quick_start
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/documentation_quick_start/properties/status
+                        description: Status of criterion documentation_quick_start
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/documentation_quick_start/properties/justification
+                        description: Justification of criterion documentation_quick_start in Markdown format
+                        type: string
+            documentation_roadmap:
+                $id: #/properties/project-lifecycle/properties/documentation_roadmap
+                description: Criterion documentation_roadmap
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/documentation_roadmap/properties/status
+                        description: Status of criterion documentation_roadmap
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/documentation_roadmap/properties/justification
+                        description: Justification of criterion documentation_roadmap in Markdown format
+                        type: string
+            documentation_security:
+                $id: #/properties/project-lifecycle/properties/documentation_security
+                description: Criterion documentation_security
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/documentation_security/properties/status
+                        description: Status of criterion documentation_security
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/documentation_security/properties/justification
+                        description: Justification of criterion documentation_security in Markdown format
+                        type: string
+            dynamic_analysis:
+                $id: #/properties/project-lifecycle/properties/dynamic_analysis
+                description: Criterion dynamic_analysis
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/dynamic_analysis/properties/status
+                        description: Status of criterion dynamic_analysis
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/dynamic_analysis/properties/justification
+                        description: Justification of criterion dynamic_analysis in Markdown format
+                        type: string
+            dynamic_analysis_enable_assertions:
+                $id: #/properties/project-lifecycle/properties/dynamic_analysis_enable_assertions
+                description: Criterion dynamic_analysis_enable_assertions
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/dynamic_analysis_enable_assertions/properties/status
+                        description: Status of criterion dynamic_analysis_enable_assertions
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/dynamic_analysis_enable_assertions/properties/justification
+                        description: Justification of criterion dynamic_analysis_enable_assertions in Markdown format
+                        type: string
+            dynamic_analysis_fixed:
+                $id: #/properties/project-lifecycle/properties/dynamic_analysis_fixed
+                description: Criterion dynamic_analysis_fixed
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/dynamic_analysis_fixed/properties/status
+                        description: Status of criterion dynamic_analysis_fixed
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/dynamic_analysis_fixed/properties/justification
+                        description: Justification of criterion dynamic_analysis_fixed in Markdown format
+                        type: string
+            dynamic_analysis_unsafe:
+                $id: #/properties/project-lifecycle/properties/dynamic_analysis_unsafe
+                description: Criterion dynamic_analysis_unsafe
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/dynamic_analysis_unsafe/properties/status
+                        description: Status of criterion dynamic_analysis_unsafe
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/dynamic_analysis_unsafe/properties/justification
+                        description: Justification of criterion dynamic_analysis_unsafe in Markdown format
+                        type: string
+            english:
+                $id: #/properties/project-lifecycle/properties/english
+                description: Criterion english
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/english/properties/status
+                        description: Status of criterion english
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/english/properties/justification
+                        description: Justification of criterion english in Markdown format
+                        type: string
+            enhancement_responses:
+                $id: #/properties/project-lifecycle/properties/enhancement_responses
+                description: Criterion enhancement_responses
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/enhancement_responses/properties/status
+                        description: Status of criterion enhancement_responses
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/enhancement_responses/properties/justification
+                        description: Justification of criterion enhancement_responses in Markdown format
+                        type: string
+            external_dependencies:
+                $id: #/properties/project-lifecycle/properties/external_dependencies
+                description: Criterion external_dependencies
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/external_dependencies/properties/status
+                        description: Status of criterion external_dependencies
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/external_dependencies/properties/justification
+                        description: Justification of criterion external_dependencies in Markdown format
+                        type: string
+            floss_license:
+                $id: #/properties/project-lifecycle/properties/floss_license
+                description: Criterion floss_license
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/floss_license/properties/status
+                        description: Status of criterion floss_license
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/floss_license/properties/justification
+                        description: Justification of criterion floss_license in Markdown format
+                        type: string
+            floss_license_osi:
+                $id: #/properties/project-lifecycle/properties/floss_license_osi
+                description: Criterion floss_license_osi
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/floss_license_osi/properties/status
+                        description: Status of criterion floss_license_osi
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/floss_license_osi/properties/justification
+                        description: Justification of criterion floss_license_osi in Markdown format
+                        type: string
+            governance:
+                $id: #/properties/project-lifecycle/properties/governance
+                description: Criterion governance
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/governance/properties/status
+                        description: Status of criterion governance
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/governance/properties/justification
+                        description: Justification of criterion governance in Markdown format
+                        type: string
+            hardened_site:
+                $id: #/properties/project-lifecycle/properties/hardened_site
+                description: Criterion hardened_site
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/hardened_site/properties/status
+                        description: Status of criterion hardened_site
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/hardened_site/properties/justification
+                        description: Justification of criterion hardened_site in Markdown format
+                        type: string
+            hardening:
+                $id: #/properties/project-lifecycle/properties/hardening
+                description: Criterion hardening
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/hardening/properties/status
+                        description: Status of criterion hardening
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/hardening/properties/justification
+                        description: Justification of criterion hardening in Markdown format
+                        type: string
+            implement_secure_design:
+                $id: #/properties/project-lifecycle/properties/implement_secure_design
+                description: Criterion implement_secure_design
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/implement_secure_design/properties/status
+                        description: Status of criterion implement_secure_design
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/implement_secure_design/properties/justification
+                        description: Justification of criterion implement_secure_design in Markdown format
+                        type: string
+            input_validation:
+                $id: #/properties/project-lifecycle/properties/input_validation
+                description: Criterion input_validation
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/input_validation/properties/status
+                        description: Status of criterion input_validation
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/input_validation/properties/justification
+                        description: Justification of criterion input_validation in Markdown format
+                        type: string
+            installation_common:
+                $id: #/properties/project-lifecycle/properties/installation_common
+                description: Criterion installation_common
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/installation_common/properties/status
+                        description: Status of criterion installation_common
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/installation_common/properties/justification
+                        description: Justification of criterion installation_common in Markdown format
+                        type: string
+            installation_development_quick:
+                $id: #/properties/project-lifecycle/properties/installation_development_quick
+                description: Criterion installation_development_quick
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/installation_development_quick/properties/status
+                        description: Status of criterion installation_development_quick
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/installation_development_quick/properties/justification
+                        description: Justification of criterion installation_development_quick in Markdown format
+                        type: string
+            installation_standard_variables:
+                $id: #/properties/project-lifecycle/properties/installation_standard_variables
+                description: Criterion installation_standard_variables
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/installation_standard_variables/properties/status
+                        description: Status of criterion installation_standard_variables
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/installation_standard_variables/properties/justification
+                        description: Justification of criterion installation_standard_variables in Markdown format
+                        type: string
+            interact:
+                $id: #/properties/project-lifecycle/properties/interact
+                description: Criterion interact
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/interact/properties/status
+                        description: Status of criterion interact
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/interact/properties/justification
+                        description: Justification of criterion interact in Markdown format
+                        type: string
+            interfaces_current:
+                $id: #/properties/project-lifecycle/properties/interfaces_current
+                description: Criterion interfaces_current
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/interfaces_current/properties/status
+                        description: Status of criterion interfaces_current
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/interfaces_current/properties/justification
+                        description: Justification of criterion interfaces_current in Markdown format
+                        type: string
+            internationalization:
+                $id: #/properties/project-lifecycle/properties/internationalization
+                description: Criterion internationalization
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/internationalization/properties/status
+                        description: Status of criterion internationalization
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/internationalization/properties/justification
+                        description: Justification of criterion internationalization in Markdown format
+                        type: string
+            know_common_errors:
+                $id: #/properties/project-lifecycle/properties/know_common_errors
+                description: Criterion know_common_errors
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/know_common_errors/properties/status
+                        description: Status of criterion know_common_errors
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/know_common_errors/properties/justification
+                        description: Justification of criterion know_common_errors in Markdown format
+                        type: string
+            know_secure_design:
+                $id: #/properties/project-lifecycle/properties/know_secure_design
+                description: Criterion know_secure_design
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/know_secure_design/properties/status
+                        description: Status of criterion know_secure_design
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/know_secure_design/properties/justification
+                        description: Justification of criterion know_secure_design in Markdown format
+                        type: string
+            license_location:
+                $id: #/properties/project-lifecycle/properties/license_location
+                description: Criterion license_location
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/license_location/properties/status
+                        description: Status of criterion license_location
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/license_location/properties/justification
+                        description: Justification of criterion license_location in Markdown format
+                        type: string
+            license_per_file:
+                $id: #/properties/project-lifecycle/properties/license_per_file
+                description: Criterion license_per_file
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/license_per_file/properties/status
+                        description: Status of criterion license_per_file
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/license_per_file/properties/justification
+                        description: Justification of criterion license_per_file in Markdown format
+                        type: string
+            maintained:
+                $id: #/properties/project-lifecycle/properties/maintained
+                description: Criterion maintained
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/maintained/properties/status
+                        description: Status of criterion maintained
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/maintained/properties/justification
+                        description: Justification of criterion maintained in Markdown format
+                        type: string
+            maintenance_or_update:
+                $id: #/properties/project-lifecycle/properties/maintenance_or_update
+                description: Criterion maintenance_or_update
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/maintenance_or_update/properties/status
+                        description: Status of criterion maintenance_or_update
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/maintenance_or_update/properties/justification
+                        description: Justification of criterion maintenance_or_update in Markdown format
+                        type: string
+            no_leaked_credentials:
+                $id: #/properties/project-lifecycle/properties/no_leaked_credentials
+                description: Criterion no_leaked_credentials
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/no_leaked_credentials/properties/status
+                        description: Status of criterion no_leaked_credentials
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/no_leaked_credentials/properties/justification
+                        description: Justification of criterion no_leaked_credentials in Markdown format
+                        type: string
+            regression_tests_added50:
+                $id: #/properties/project-lifecycle/properties/regression_tests_added50
+                description: Criterion regression_tests_added50
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/regression_tests_added50/properties/status
+                        description: Status of criterion regression_tests_added50
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/regression_tests_added50/properties/justification
+                        description: Justification of criterion regression_tests_added50 in Markdown format
+                        type: string
+            release_notes:
+                $id: #/properties/project-lifecycle/properties/release_notes
+                description: Criterion release_notes
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/release_notes/properties/status
+                        description: Status of criterion release_notes
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/release_notes/properties/justification
+                        description: Justification of criterion release_notes in Markdown format
+                        type: string
+            release_notes_vulns:
+                $id: #/properties/project-lifecycle/properties/release_notes_vulns
+                description: Criterion release_notes_vulns
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/release_notes_vulns/properties/status
+                        description: Status of criterion release_notes_vulns
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/release_notes_vulns/properties/justification
+                        description: Justification of criterion release_notes_vulns in Markdown format
+                        type: string
+            repo_distributed:
+                $id: #/properties/project-lifecycle/properties/repo_distributed
+                description: Criterion repo_distributed
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/repo_distributed/properties/status
+                        description: Status of criterion repo_distributed
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/repo_distributed/properties/justification
+                        description: Justification of criterion repo_distributed in Markdown format
+                        type: string
+            repo_interim:
+                $id: #/properties/project-lifecycle/properties/repo_interim
+                description: Criterion repo_interim
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/repo_interim/properties/status
+                        description: Status of criterion repo_interim
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/repo_interim/properties/justification
+                        description: Justification of criterion repo_interim in Markdown format
+                        type: string
+            repo_public:
+                $id: #/properties/project-lifecycle/properties/repo_public
+                description: Criterion repo_public
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/repo_public/properties/status
+                        description: Status of criterion repo_public
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/repo_public/properties/justification
+                        description: Justification of criterion repo_public in Markdown format
+                        type: string
+            repo_track:
+                $id: #/properties/project-lifecycle/properties/repo_track
+                description: Criterion repo_track
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/repo_track/properties/status
+                        description: Status of criterion repo_track
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/repo_track/properties/justification
+                        description: Justification of criterion repo_track in Markdown format
+                        type: string
+            report_archive:
+                $id: #/properties/project-lifecycle/properties/report_archive
+                description: Criterion report_archive
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/report_archive/properties/status
+                        description: Status of criterion report_archive
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/report_archive/properties/justification
+                        description: Justification of criterion report_archive in Markdown format
+                        type: string
+            report_process:
+                $id: #/properties/project-lifecycle/properties/report_process
+                description: Criterion report_process
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/report_process/properties/status
+                        description: Status of criterion report_process
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/report_process/properties/justification
+                        description: Justification of criterion report_process in Markdown format
+                        type: string
+            report_responses:
+                $id: #/properties/project-lifecycle/properties/report_responses
+                description: Criterion report_responses
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/report_responses/properties/status
+                        description: Status of criterion report_responses
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/report_responses/properties/justification
+                        description: Justification of criterion report_responses in Markdown format
+                        type: string
+            report_tracker:
+                $id: #/properties/project-lifecycle/properties/report_tracker
+                description: Criterion report_tracker
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/report_tracker/properties/status
+                        description: Status of criterion report_tracker
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/report_tracker/properties/justification
+                        description: Justification of criterion report_tracker in Markdown format
+                        type: string
+            require_2FA:
+                $id: #/properties/project-lifecycle/properties/require_2FA
+                description: Criterion require_2FA
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/require_2FA/properties/status
+                        description: Status of criterion require_2FA
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/require_2FA/properties/justification
+                        description: Justification of criterion require_2FA in Markdown format
+                        type: string
+            roles_responsibilities:
+                $id: #/properties/project-lifecycle/properties/roles_responsibilities
+                description: Criterion roles_responsibilities
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/roles_responsibilities/properties/status
+                        description: Status of criterion roles_responsibilities
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/roles_responsibilities/properties/justification
+                        description: Justification of criterion roles_responsibilities in Markdown format
+                        type: string
+            secure_2FA:
+                $id: #/properties/project-lifecycle/properties/secure_2FA
+                description: Criterion secure_2FA
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/secure_2FA/properties/status
+                        description: Status of criterion secure_2FA
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/secure_2FA/properties/justification
+                        description: Justification of criterion secure_2FA in Markdown format
+                        type: string
+            security_review:
+                $id: #/properties/project-lifecycle/properties/security_review
+                description: Criterion security_review
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/security_review/properties/status
+                        description: Status of criterion security_review
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/security_review/properties/justification
+                        description: Justification of criterion security_review in Markdown format
+                        type: string
+            signed_releases:
+                $id: #/properties/project-lifecycle/properties/signed_releases
+                description: Criterion signed_releases
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/signed_releases/properties/status
+                        description: Status of criterion signed_releases
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/signed_releases/properties/justification
+                        description: Justification of criterion signed_releases in Markdown format
+                        type: string
+            sites_https:
+                $id: #/properties/project-lifecycle/properties/sites_https
+                description: Criterion sites_https
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/sites_https/properties/status
+                        description: Status of criterion sites_https
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/sites_https/properties/justification
+                        description: Justification of criterion sites_https in Markdown format
+                        type: string
+            sites_password_security:
+                $id: #/properties/project-lifecycle/properties/sites_password_security
+                description: Criterion sites_password_security
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/sites_password_security/properties/status
+                        description: Status of criterion sites_password_security
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/sites_password_security/properties/justification
+                        description: Justification of criterion sites_password_security in Markdown format
+                        type: string
+            small_tasks:
+                $id: #/properties/project-lifecycle/properties/small_tasks
+                description: Criterion small_tasks
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/small_tasks/properties/status
+                        description: Status of criterion small_tasks
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/small_tasks/properties/justification
+                        description: Justification of criterion small_tasks in Markdown format
+                        type: string
+            static_analysis:
+                $id: #/properties/project-lifecycle/properties/static_analysis
+                description: Criterion static_analysis
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/static_analysis/properties/status
+                        description: Status of criterion static_analysis
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/static_analysis/properties/justification
+                        description: Justification of criterion static_analysis in Markdown format
+                        type: string
+            static_analysis_common_vulnerabilities:
+                $id: #/properties/project-lifecycle/properties/static_analysis_common_vulnerabilities
+                description: Criterion static_analysis_common_vulnerabilities
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/static_analysis_common_vulnerabilities/properties/status
+                        description: Status of criterion static_analysis_common_vulnerabilities
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/static_analysis_common_vulnerabilities/properties/justification
+                        description: Justification of criterion static_analysis_common_vulnerabilities in Markdown format
+                        type: string
+            static_analysis_fixed:
+                $id: #/properties/project-lifecycle/properties/static_analysis_fixed
+                description: Criterion static_analysis_fixed
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/static_analysis_fixed/properties/status
+                        description: Status of criterion static_analysis_fixed
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/static_analysis_fixed/properties/justification
+                        description: Justification of criterion static_analysis_fixed in Markdown format
+                        type: string
+            static_analysis_often:
+                $id: #/properties/project-lifecycle/properties/static_analysis_often
+                description: Criterion static_analysis_often
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/static_analysis_often/properties/status
+                        description: Status of criterion static_analysis_often
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/static_analysis_often/properties/justification
+                        description: Justification of criterion static_analysis_often in Markdown format
+                        type: string
+            test:
+                $id: #/properties/project-lifecycle/properties/test
+                description: Criterion test
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/test/properties/status
+                        description: Status of criterion test
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/test/properties/justification
+                        description: Justification of criterion test in Markdown format
+                        type: string
+            test_branch_coverage80:
+                $id: #/properties/project-lifecycle/properties/test_branch_coverage80
+                description: Criterion test_branch_coverage80
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/test_branch_coverage80/properties/status
+                        description: Status of criterion test_branch_coverage80
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/test_branch_coverage80/properties/justification
+                        description: Justification of criterion test_branch_coverage80 in Markdown format
+                        type: string
+            test_continuous_integration:
+                $id: #/properties/project-lifecycle/properties/test_continuous_integration
+                description: Criterion test_continuous_integration
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/test_continuous_integration/properties/status
+                        description: Status of criterion test_continuous_integration
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/test_continuous_integration/properties/justification
+                        description: Justification of criterion test_continuous_integration in Markdown format
+                        type: string
+            test_invocation:
+                $id: #/properties/project-lifecycle/properties/test_invocation
+                description: Criterion test_invocation
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/test_invocation/properties/status
+                        description: Status of criterion test_invocation
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/test_invocation/properties/justification
+                        description: Justification of criterion test_invocation in Markdown format
+                        type: string
+            test_most:
+                $id: #/properties/project-lifecycle/properties/test_most
+                description: Criterion test_most
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/test_most/properties/status
+                        description: Status of criterion test_most
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/test_most/properties/justification
+                        description: Justification of criterion test_most in Markdown format
+                        type: string
+            test_policy:
+                $id: #/properties/project-lifecycle/properties/test_policy
+                description: Criterion test_policy
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/test_policy/properties/status
+                        description: Status of criterion test_policy
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/test_policy/properties/justification
+                        description: Justification of criterion test_policy in Markdown format
+                        type: string
+            test_policy_mandated:
+                $id: #/properties/project-lifecycle/properties/test_policy_mandated
+                description: Criterion test_policy_mandated
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/test_policy_mandated/properties/status
+                        description: Status of criterion test_policy_mandated
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/test_policy_mandated/properties/justification
+                        description: Justification of criterion test_policy_mandated in Markdown format
+                        type: string
+            test_statement_coverage80:
+                $id: #/properties/project-lifecycle/properties/test_statement_coverage80
+                description: Criterion test_statement_coverage80
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/test_statement_coverage80/properties/status
+                        description: Status of criterion test_statement_coverage80
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/test_statement_coverage80/properties/justification
+                        description: Justification of criterion test_statement_coverage80 in Markdown format
+                        type: string
+            test_statement_coverage90:
+                $id: #/properties/project-lifecycle/properties/test_statement_coverage90
+                description: Criterion test_statement_coverage90
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/test_statement_coverage90/properties/status
+                        description: Status of criterion test_statement_coverage90
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/test_statement_coverage90/properties/justification
+                        description: Justification of criterion test_statement_coverage90 in Markdown format
+                        type: string
+            tests_are_added:
+                $id: #/properties/project-lifecycle/properties/tests_are_added
+                description: Criterion tests_are_added
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/tests_are_added/properties/status
+                        description: Status of criterion tests_are_added
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/tests_are_added/properties/justification
+                        description: Justification of criterion tests_are_added in Markdown format
+                        type: string
+            tests_documented_added:
+                $id: #/properties/project-lifecycle/properties/tests_documented_added
+                description: Criterion tests_documented_added
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/tests_documented_added/properties/status
+                        description: Status of criterion tests_documented_added
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/tests_documented_added/properties/justification
+                        description: Justification of criterion tests_documented_added in Markdown format
+                        type: string
+            two_person_review:
+                $id: #/properties/project-lifecycle/properties/two_person_review
+                description: Criterion two_person_review
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/two_person_review/properties/status
+                        description: Status of criterion two_person_review
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/two_person_review/properties/justification
+                        description: Justification of criterion two_person_review in Markdown format
+                        type: string
+            updateable_reused_components:
+                $id: #/properties/project-lifecycle/properties/updateable_reused_components
+                description: Criterion updateable_reused_components
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/updateable_reused_components/properties/status
+                        description: Status of criterion updateable_reused_components
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/updateable_reused_components/properties/justification
+                        description: Justification of criterion updateable_reused_components in Markdown format
+                        type: string
+            version_semver:
+                $id: #/properties/project-lifecycle/properties/version_semver
+                description: Criterion version_semver
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/version_semver/properties/status
+                        description: Status of criterion version_semver
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/version_semver/properties/justification
+                        description: Justification of criterion version_semver in Markdown format
+                        type: string
+            version_tags:
+                $id: #/properties/project-lifecycle/properties/version_tags
+                description: Criterion version_tags
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/version_tags/properties/status
+                        description: Status of criterion version_tags
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/version_tags/properties/justification
+                        description: Justification of criterion version_tags in Markdown format
+                        type: string
+            version_tags_signed:
+                $id: #/properties/project-lifecycle/properties/version_tags_signed
+                description: Criterion version_tags_signed
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/version_tags_signed/properties/status
+                        description: Status of criterion version_tags_signed
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/version_tags_signed/properties/justification
+                        description: Justification of criterion version_tags_signed in Markdown format
+                        type: string
+            version_unique:
+                $id: #/properties/project-lifecycle/properties/version_unique
+                description: Criterion version_unique
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/version_unique/properties/status
+                        description: Status of criterion version_unique
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/version_unique/properties/justification
+                        description: Justification of criterion version_unique in Markdown format
+                        type: string
+            vulnerabilities_critical_fixed:
+                $id: #/properties/project-lifecycle/properties/vulnerabilities_critical_fixed
+                description: Criterion vulnerabilities_critical_fixed
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/vulnerabilities_critical_fixed/properties/status
+                        description: Status of criterion vulnerabilities_critical_fixed
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/vulnerabilities_critical_fixed/properties/justification
+                        description: Justification of criterion vulnerabilities_critical_fixed in Markdown format
+                        type: string
+            vulnerabilities_fixed_60_days:
+                $id: #/properties/project-lifecycle/properties/vulnerabilities_fixed_60_days
+                description: Criterion vulnerabilities_fixed_60_days
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/vulnerabilities_fixed_60_days/properties/status
+                        description: Status of criterion vulnerabilities_fixed_60_days
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/vulnerabilities_fixed_60_days/properties/justification
+                        description: Justification of criterion vulnerabilities_fixed_60_days in Markdown format
+                        type: string
+            vulnerability_report_credit:
+                $id: #/properties/project-lifecycle/properties/vulnerability_report_credit
+                description: Criterion vulnerability_report_credit
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/vulnerability_report_credit/properties/status
+                        description: Status of criterion vulnerability_report_credit
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/vulnerability_report_credit/properties/justification
+                        description: Justification of criterion vulnerability_report_credit in Markdown format
+                        type: string
+            vulnerability_report_private:
+                $id: #/properties/project-lifecycle/properties/vulnerability_report_private
+                description: Criterion vulnerability_report_private
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/vulnerability_report_private/properties/status
+                        description: Status of criterion vulnerability_report_private
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/vulnerability_report_private/properties/justification
+                        description: Justification of criterion vulnerability_report_private in Markdown format
+                        type: string
+            vulnerability_report_process:
+                $id: #/properties/project-lifecycle/properties/vulnerability_report_process
+                description: Criterion vulnerability_report_process
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/vulnerability_report_process/properties/status
+                        description: Status of criterion vulnerability_report_process
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/vulnerability_report_process/properties/justification
+                        description: Justification of criterion vulnerability_report_process in Markdown format
+                        type: string
+            vulnerability_report_response:
+                $id: #/properties/project-lifecycle/properties/vulnerability_report_response
+                description: Criterion vulnerability_report_response
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/vulnerability_report_response/properties/status
+                        description: Status of criterion vulnerability_report_response
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/vulnerability_report_response/properties/justification
+                        description: Justification of criterion vulnerability_report_response in Markdown format
+                        type: string
+            vulnerability_response_process:
+                $id: #/properties/project-lifecycle/properties/vulnerability_response_process
+                description: Criterion vulnerability_response_process
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/vulnerability_response_process/properties/status
+                        description: Status of criterion vulnerability_response_process
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/vulnerability_response_process/properties/justification
+                        description: Justification of criterion vulnerability_response_process in Markdown format
+                        type: string
+            warnings:
+                $id: #/properties/project-lifecycle/properties/warnings
+                description: Criterion warnings
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/warnings/properties/status
+                        description: Status of criterion warnings
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/warnings/properties/justification
+                        description: Justification of criterion warnings in Markdown format
+                        type: string
+            warnings_fixed:
+                $id: #/properties/project-lifecycle/properties/warnings_fixed
+                description: Criterion warnings_fixed
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/warnings_fixed/properties/status
+                        description: Status of criterion warnings_fixed
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/warnings_fixed/properties/justification
+                        description: Justification of criterion warnings_fixed in Markdown format
+                        type: string
+            warnings_strict:
+                $id: #/properties/project-lifecycle/properties/warnings_strict
+                description: Criterion warnings_strict
+                properties:
+                    status:
+                        $id: #/properties/project-lifecycle/properties/warnings_strict/properties/status
+                        description: Status of criterion warnings_strict
+                        type: string
+                        pattern: '     ^(Met|Unmet|?|N\/A)$'
+                    justification:
+                        $id: #/properties/project-lifecycle/properties/warnings_strict/properties/justification
+                        description: Justification of criterion warnings_strict in Markdown format
+                        type: string
     project-lifecycle:
         $id: '#/properties/project-lifecycle'
         additionalProperties: false

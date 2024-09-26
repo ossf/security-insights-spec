@@ -30,9 +30,18 @@ header:
 - `commit-hash`
   - **Description:** The last commit to which the `SECURITY-INSIGHTS.yml` refers.
   - **Type:** String. The provided hash must match a SHA hash (`^\b[0-9a-f]{5,40}\b$`).
+- project-name:
+  - **Description:** Short name of the project
+  - **Type:** String.
+- project-**Description:**
+  - **Description:** Description of the project in Markdown format.
+  - **Type:** String.
 - `project-url` (Required)
   - **Description:** URI for the main project repository that this document refers to.
   - **Type:** String. The provided URL must meet the IRI standard (RFC 3987) and begin with `https://`.
+- homepage-url:
+  - **Description:** URL of home page of project. This is where new users would typically start. This may be the same as the `project-url`.
+  - **Type:** String.
 - `project-release`
   - **Description:** The release version or artifact version to which the `SECURITY-INSIGHTS.yml` refers.
   - **Type:** String.
@@ -40,5 +49,13 @@ header:
   - **Description:** URL to the project changelog.
   - **Type:** String. The provided URL must meet the IRI standard (RFC 3987) and begin with `https://`.
 - `license`
-  - **Description:** URL to the project license.
-  - **Type:** String. The provided URL must meet the IRI standard (RFC 3987) and begin with `https://`.
+  - **Description:** URL to the project license. The provided URL must meet the IRI standard (RFC 3987) and begin with `https://`.
+  - **Type:** String.
+- license-expression:
+  - **Description:** SPDX license expression for the license of the project.  Note that this is *NOT* a URL.
+  - **Type:** String.
+- cpe:
+  - **Description:** Common Platform Enumeration (CPE) identifier.
+  - **Type:** String.
+- implementation-languages:
+  - **Description:** Array of implementation (programming) languages used, as strings.  If there is more than one, sort them by use (e.g., lines of code), with most used first.

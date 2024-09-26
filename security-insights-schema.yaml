@@ -32,9 +32,23 @@ properties:
                 description: 'The last commit to which the SECURITY-INSIGHTS.yml refers.'
                 type: string
                 pattern: '^\b[0-9a-f]{5,40}\b$'
+            project-name:
+                $id: '#/properties/header/properties/project-name'
+                description: 'Short name of the project'
+                type: string
+            project-description:
+                $id: '#/properties/header/properties/project-description'
+                description: 'Description of the project in Markdown format.'
+                type: string
             project-url:
                 $id: '#/properties/header/properties/project-url'
-                description: 'Link to the open-source project.'
+                description: 'URI for the main project repository that this document refers to. The provided URL must meet the IRI standard (RFC 3987) and begin with https://.'
+                type: string
+                format: iri
+                pattern: '^https?:\/\/'
+            homepage-url:
+                $id: '#/properties/header/properties/homepage-url'
+                description: 'URL of home page of project. This is where new users would typically start. This may be the same as the `project-url`.'
                 type: string
                 format: iri
                 pattern: '^https?:\/\/'
@@ -54,6 +68,25 @@ properties:
                 type: string
                 format: iri
                 pattern: '^https?:\/\/'
+            license-expression:
+                $id: '#/properties/header/properties/license-expression'
+                description: 'SPDX license expression for the license of the project.  Note that this is *NOT* a URL.'
+                type: string
+            cpe:
+                $id: '#/properties/header/properties/cpe'
+                description: 'Common Platform Enumeration (CPE) identifier.'
+                type: string
+            implementation-languages:
+                $id: '#/properties/header/properties/implementation-languages'
+                description: 'Array of implementation (programming) languages used.  If there is more than one, sort them by use (e.g., lines of code), with most used first..'
+                items:
+                    $id: '#/properties/header/properties/implementation-languages/items'
+                    anyOf:
+                    -   $id: '#/properties/header/properties/implementation-languages/items/anyOf/0'
+                        description: 'Implementation language used.'
+                        type: string
+        type: array
+        uniqueItems: true
         required:
         - expiration-date
         - project-url
@@ -63,34 +96,6 @@ properties:
         $id: '#/properties/openssf-bp-badge'
         additionalProperties: true
         properties:
-            name:
-                $id: '#/properties/openssf-bp-badge/properties/name'
-                description: 'Short name of the project for purposes of the OpenSSF Best Practices Badge.'
-                type: string
-            description:
-                $id: '#/properties/openssf-bp-badge/properties/description'
-                description: 'Description of the project in Markdown format.'
-                type: string
-            homepage_url:
-                $id: '#/properties/openssf-bp-badge/properties/homepage_url'
-                description: 'URL of home page of project. This is where new users would typically start. For some projects this is the same as the `repo_url`.'
-                type: string
-            repo_url:
-                $id: '#/properties/openssf-bp-badge/properties/repo_url'
-                description: 'URL of public repository of project.'
-                type: string
-            license:
-                $id: '#/properties/openssf-bp-badge/properties/license'
-                description: 'SPDX license expression for the license of the project.  Note that this is *NOT* a URL.'
-                type: string
-            cpe:
-                $id: '#/properties/openssf-bp-badge/properties/cpe'
-                description: 'Common Platform Enumeration (CPE) identifier.'
-                type: string
-            implementation_languages:
-                $id: '#/properties/openssf-bp-badge/properties/implementation_languages'
-                description: 'List of implementation (programming) languages used.  If there is more than one, their names are separated by a comma.'
-                type: string
     project-lifecycle:
         $id: '#/properties/project-lifecycle'
         additionalProperties: false

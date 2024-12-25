@@ -7,7 +7,7 @@ header:
 
 project:
   name: Foo
-  homepage-url: https://foo.bar
+  homepage: https://foo.bar
   administrators:
     - name: Joe Dohn
       affiliation: Foo

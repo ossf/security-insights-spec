@@ -7,8 +7,9 @@ header: {
 }
 project: {
 	name:            string
+  funding?:        =~"^https?://[^\\s]+$"
+	"homepage":  =~"^https?://[^\\s]+$"
 	roadmap?:        =~"^https?://[^\\s]+$"
-	"homepage-url":  =~"^https?://[^\\s]+$"
 	administrators:
 	[...{
 		name:     string
@@ -56,9 +57,9 @@ project: {
 	}]
 	"vulnerability-reporting":
 	{
-		accepted:               bool
+		accepted:                bool
 		"bug-bounty-available"?: bool
-		"bug-bounty-url"?:       =~"^https?://[^\\s]+$"
+		"bug-bounty-program"?:   =~"^https?://[^\\s]+$"
 		"email-contact"?:        =~"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$"
 		"security-policy"?:      =~"^https?://[^\\s]+$"
 		"in-scope"?:             [ ...string ]
@@ -72,12 +73,12 @@ project: {
 		{
 			"self-assessment":
 			{
-				"evidence-url"?: =~"^https?://[^\\s]+$"
+				"evidence"?: =~"^https?://[^\\s]+$"
 				comment: string
 			}
 			"third-party-assessments"?: [...{
 				name:           string
-				"evidence-url": =~"^https?://[^\\s]+$"
+				"evidence": =~"^https?://[^\\s]+$"
 				date:           string
 				comment?: string
 			}]
@@ -88,11 +89,13 @@ project: {
 			primary: bool
 		}]
 		testing?: [...{
-			"tool-type":    string
-			"tool-name":    string
-			"tool-version": string
-			"tool-url":     =~"^https?://[^\\s]+$"
-			"tool-rulesets": [ ...string ]
+      name: string
+			tool: {
+        type:      string
+			  version:   string
+			  url:       =~"^https?://[^\\s]+$"
+			  rulesets?: [ ...string ]
+      }
 			integration: {
 				"ad-hoc":         bool
 				ci:               bool
@@ -133,12 +136,12 @@ repository: {
 		{
 			"self-assessment":
 			{
-				"evidence-url"?: =~"^https?://[^\\s]+$"
+				"evidence"?: =~"^https?://[^\\s]+$"
 				comment: string
 			}
 			"third-party-assessments": [...{
 				name:           string
-				"evidence-url"?: =~"^https?://[^\\s]+$"
+				"evidence"?: =~"^https?://[^\\s]+$"
 				date:           string
 				comment: string
 			}]

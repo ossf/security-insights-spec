@@ -7,8 +7,9 @@ header:
 
 project:
   name: Foo
+  homepage: https://foo.bar
+  funding: https://foo.bar/FUNDING.yml
   roadmap: https://foo.bar/roadmap.html
-  homepage-url: https://foo.bar
   administrators:
     - name: Joe Dohn
       affiliation: Foo
@@ -52,7 +53,7 @@ project:
   vulnerability-reporting:
     accepted: true
     bug-bounty-available: true
-    bug-bounty-url: https://foo.bar/bugs.html
+    bug-bounty-program: https://foo.bar/bugs.html
     email-contact: security@something.com
     security-policy: https://foo.bar/reporting.html
     in-scope:
@@ -67,12 +68,12 @@ project:
   security:
     artifacts:
       self-assessment:
-        evidence-url: https://foo.com/assessment.html
+        evidence: https://foo.com/assessment.html
         comment: |
           foo bar
       third-party-assessments:
         - name: example-artifact
-          evidence-url: https://foo.com/artifact.html
+          evidence: https://foo.com/artifact.html
           date: '2021-09-01'
           comment: |
             foo bar
@@ -84,11 +85,12 @@ project:
         value: alice.bob@email.com
         primary: false
     testing:
-      - tool-type: sca
-        tool-name: Dependabot
-        tool-version: 1.2.3
-        tool-url: https://example.org
-        tool-rulesets:
+      - name: Dependabot
+        tool:
+          type: sca
+          version: 1.2.3
+          url: https://example.org
+          rulesets:
           - built-in
         integration:
           ad-hoc: false
@@ -123,12 +125,12 @@ repository:
   security:
     artifacts:
       self-assessment:
-        evidence-url: https://foo.com/assessment.html
+        evidence: https://foo.com/assessment.html
         comment: |
           foo bar
       third-party-assessments:
         - name: example-artifact
-          evidence-url: https://foo.bar/artifact.html
+          evidence: https://foo.bar/artifact.html
           date: '2021-09-01'
           comment: |
             foo bar

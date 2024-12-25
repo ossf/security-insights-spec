@@ -11,7 +11,7 @@ project:
   homepage-url: https://foo.bar
   administrators:
     - name: Joe Dohn
-      employer: Foo
+      affiliation: Foo
       contact: joe.bob@email.com
   documentation:
     user-guide: https://foo.bar/user-guide

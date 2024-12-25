@@ -10,7 +10,7 @@ project:
   homepage-url: https://foo.bar
   administrators:
     - name: Joe Dohn
-      employer: Foo
+      affiliation: Foo
       contact: joe.bob@email.com
   vulnerability-reporting:
     accepted: true

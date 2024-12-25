@@ -2,8 +2,7 @@
 name: CI Checks
 
 on:
-  pull_request_target:
-    types: [opened, reopened, edited, synchronize]
+  pull_request:
 
 permissions:
   contents: read

@@ -13,7 +13,7 @@ project: {
 	[...{
 		name:     string
 		affiliation: string
-		contact:  =~"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$"
+		contact?:  =~"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$"
 	}]
 	documentation?: {
 		"user-guide"?:              =~"^https?://[^\\s]+$"
@@ -113,8 +113,9 @@ repository: {
 		comment?: string
 	}]
 	"core-team": [...{
-		name:    string
-		contact: string
+		name:        string
+    affiliation: string
+		contact?:    string
 	}]
 	documentation?: {
 		"contributing-guide"?: =~"^https?://[^\\s]+$"
@@ -143,8 +144,8 @@ repository: {
 			}]
 		}
 		champions?: [...{
-			name:    string
-			contact?: string
+			name:        string
+			contact?:    string
 		}]
 		testing: [...{
 			"tool-type":    string

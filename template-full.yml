@@ -110,8 +110,9 @@ repository:
       comment: |
         foo bar
   core-team:
-    - name: Alice White
-      contact: email, social, github, etc
+    - name:        Alice White
+      affiliation: Foo Bar
+      contact:     email, social, github, etc
   documentation:
     contributing-guide: https://foo.bar/contributing-guide
     review-policy: https://foo.bar/review-policy

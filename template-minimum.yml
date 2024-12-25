@@ -26,6 +26,7 @@ repository:
   accepts-automated-change-request: true
   core-team:
     - name: Alice White
+      affiliation: Foo Bar
       contact: email, social, github, etc
   license:
     url: https://foo.bar/LICENSE

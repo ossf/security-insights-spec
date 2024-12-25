@@ -1,18 +1,18 @@
-header: # r
-  schema-version: 1.0.0  # r
-  last-updated: '2021-09-01' # r
-  last-reviewed: '2022-09-01' # r
-  repo-url: https://foo.bar # r
-  repo-status: active # r
+header:
+  schema-version: 1.0.0 
+  last-updated: '2021-09-01'
+  last-reviewed: '2022-09-01'
+  repo-url: https://foo.bar
+  repo-status: active
 
-project: # r
-  name: Foo # r
+project:
+  name: Foo
   roadmap: https://foo.bar/roadmap.html
-  homepage-url: https://foo.bar # r
-  administrators: # r
-    - name: Joe Dohn # r
-      employer: Foo # r
-      contact: joe.bob@email.com # r
+  homepage-url: https://foo.bar
+  administrators:
+    - name: Joe Dohn
+      employer: Foo
+      contact: joe.bob@email.com
   documentation:
     user-guide: https://foo.bar/user-guide
     code-of-conduct: https://example.com/code-of-conduct.html
@@ -21,11 +21,11 @@ project: # r
     governance: https://foo.bar/governance
   release:
     automated-pipeline: true
-    CPE: cpe:2.3:a:foo:bar:1.2.0
     distribution-points:
       - https://example.com/foo
       - pkg:npm/foobar
     latest:
+      CPE: cpe:2.3:a:foo:bar:1.2.0
       url: https://foo.bar/release
       name: '1.2.0'
       date: '2021-09-01'
@@ -49,8 +49,8 @@ project: # r
       url: https://foo.bar/foo
       comment: |
         Bar is a subproject that is built into Foo to accomplish foobar.
-  vulnerability-reporting: # r
-    accepted: true # r
+  vulnerability-reporting:
+    accepted: true
     bug-bounty-available: true
     bug-bounty-url: https://foo.bar/bugs.html
     email-contact: security@something.com
@@ -64,11 +64,11 @@ project: # r
       your-key-here
     comment: |
       Lorum ipsum...
-  security: # r
-    artifacts: # r
-      self-assessment: # r
+  security:
+    artifacts:
+      self-assessment:
         evidence-url: https://foo.com/assessment.html
-        comment: | # r
+        comment: |
           foo bar
       third-party-assessments:
         - name: example-artifact
@@ -97,10 +97,10 @@ project: # r
         comment: |
           foo bar
 
-repository: # r
-  bug-fixes-only: false # r
-  accepts-change-request: true # r
-  accepts-automated-change-request: true # r
+repository:
+  bug-fixes-only: false
+  accepts-change-request: true
+  accepts-automated-change-request: true
   automated-tools:
     - automated-tool: example/security-research
       action: denied
@@ -109,21 +109,21 @@ repository: # r
         - main/examples
       comment: |
         foo bar
-  core-team: # r
-    - name: Alice White # r
-      contact: email, social, github, etc # r
+  core-team:
+    - name: Alice White
+      contact: email, social, github, etc
   documentation:
     contributing-guide: https://foo.bar/contributing-guide
     review-policy: https://foo.bar/review-policy
     security-policy: https://example.com/security-policy.html
-  license: # r
-    url: https://foo.bar/LICENSE # r
-    expresion: MIT # r
-  security: # r
-    artifacts: # r
-      self-assessment: # r
+  license:
+    url: https://foo.bar/LICENSE
+    expresion: MIT
+  security:
+    artifacts:
+      self-assessment:
         evidence-url: https://foo.com/assessment.html
-        comment: | # r
+        comment: |
           foo bar
       third-party-assessments:
         - name: example-artifact
@@ -132,9 +132,8 @@ repository: # r
           comment: |
             foo bar
     champions:
-      - type: email
-        value: joe.bob@email.com
-        primary: true
+      - name: Joe Bob
+        contact: joe.bob@email.com
     testing:
       - tool-type: sca
         tool-name: Dependabot

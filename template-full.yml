@@ -50,11 +50,11 @@ project: # r
       comment: |
         Bar is a subproject that is built into Foo to accomplish foobar.
   vulnerability-reporting: # r
-    accepts-vulnerability-reports: true # r
-    email-contact: security@something.com
-    security-policy: https://foo.bar/reporting.html
+    accepted: true # r
     bug-bounty-available: true
     bug-bounty-url: https://foo.bar/bugs.html
+    email-contact: security@something.com
+    security-policy: https://foo.bar/reporting.html
     in-scope:
       - broken access control
       - other
@@ -123,7 +123,7 @@ repository: # r
     artifacts: # r
       self-assessment: # r
         evidence-url: https://foo.com/assessment.html
-        comment: |
+        comment: | # r
           foo bar
       third-party-assessments:
         - name: example-artifact

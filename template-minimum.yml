@@ -1,0 +1,37 @@
+header:
+  schema-version: 1.0.0 
+  last-updated: '2021-09-01'
+  last-reviewed: '2022-09-01'
+  repo-url: https://foo.bar
+  repo-status: active
+
+project:
+  name: Foo
+  homepage-url: https://foo.bar
+  administrators:
+    - name: Joe Dohn
+      employer: Foo
+      contact: joe.bob@email.com
+  vulnerability-reporting:
+    accepted: true
+  security:
+    artifacts:
+      self-assessment:
+        comment: |
+          Project self assessment is currently underway, and will be completed by XX/XX/XXXX.
+
+repository:
+  bug-fixes-only: false
+  accepts-change-request: true
+  accepts-automated-change-request: true
+  core-team:
+    - name: Alice White
+      contact: email, social, github, etc
+  license:
+    url: https://foo.bar/LICENSE
+    expresion: MIT
+  security:
+    artifacts:
+      self-assessment:
+        comment: |
+          Self assessment not yet started for this subproject repo.

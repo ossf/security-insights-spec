@@ -1,0 +1,158 @@
+header: # r
+  schema-version: 1.0.0  # r
+  last-updated: '2021-09-01' # r
+  last-reviewed: '2022-09-01' # r
+  repo-url: https://foo.bar # r
+  repo-status: active # r
+
+project: # r
+  name: Foo # r
+  roadmap: https://foo.bar/roadmap.html
+  homepage-url: https://foo.bar # r
+  administrators: # r
+    - name: Joe Dohn # r
+      employer: Foo # r
+      contact: joe.bob@email.com # r
+  documentation:
+    user-guide: https://foo.bar/user-guide
+    code-of-conduct: https://example.com/code-of-conduct.html
+    release-process: https://foo.bar/release-process
+    provenance-verification: https://foo.bar/provenance-verification
+    governance: https://foo.bar/governance
+  release:
+    automated-pipeline: true
+    CPE: cpe:2.3:a:foo:bar:1.2.0
+    distribution-points:
+      - https://example.com/foo
+      - pkg:npm/foobar
+    latest:
+      url: https://foo.bar/release
+      name: '1.2.0'
+      date: '2021-09-01'
+      changelog: https://foo.bar/changelog.md
+      license:
+        url: https://foo.bar/license
+        expression: MIT AND Apache-2.0
+      sbom:
+        - url: https://foo.bar/sbom1
+          format: cyclonedx
+        - url: https://foo.bar/sbom2
+          format: spdx
+      provenance:
+        cryptography:
+          attestation: https://foo.bar/attestation
+          algorithm: sha256
+        vex-data: https://foo.bar/vex
+        hash-manifest: https://foo.bar/hash-manifest
+  subprojects:
+    - name: bar
+      url: https://foo.bar/foo
+      comment: |
+        Bar is a subproject that is built into Foo to accomplish foobar.
+  vulnerability-reporting: # r
+    accepts-vulnerability-reports: true # r
+    email-contact: security@something.com
+    security-policy: https://foo.bar/reporting.html
+    bug-bounty-available: true
+    bug-bounty-url: https://foo.bar/bugs.html
+    in-scope:
+      - broken access control
+      - other
+    out-scope:
+      - other
+    pgp-key: |
+      your-key-here
+    comment: |
+      Lorum ipsum...
+  security: # r
+    artifacts: # r
+      self-assessment: # r
+        evidence-url: https://foo.com/assessment.html
+        comment: | # r
+          foo bar
+      third-party-assessments:
+        - name: example-artifact
+          evidence-url: https://foo.com/artifact.html
+          date: '2021-09-01'
+          comment: |
+            foo bar
+    contacts:
+      - type: email
+        value: joe.bob@email.com
+        primary: true
+      - type: email
+        value: alice.bob@email.com
+        primary: false
+    testing:
+      - tool-type: sca
+        tool-name: Dependabot
+        tool-version: 1.2.3
+        tool-url: https://example.org
+        tool-rulesets:
+          - built-in
+        integration:
+          ad-hoc: false
+          ci: true
+          before-release: true
+        comment: |
+          foo bar
+
+repository: # r
+  bug-fixes-only: false # r
+  accepts-change-request: true # r
+  accepts-automated-change-request: true # r
+  automated-tools:
+    - automated-tool: example/security-research
+      action: denied
+      path:
+        - main/foo/bar
+        - main/examples
+      comment: |
+        foo bar
+  core-team: # r
+    - name: Alice White # r
+      contact: email, social, github, etc # r
+  documentation:
+    contributing-guide: https://foo.bar/contributing-guide
+    review-policy: https://foo.bar/review-policy
+    security-policy: https://example.com/security-policy.html
+  license: # r
+    url: https://foo.bar/LICENSE # r
+    expresion: MIT # r
+  security: # r
+    artifacts: # r
+      self-assessment: # r
+        evidence-url: https://foo.com/assessment.html
+        comment: |
+          foo bar
+      third-party-assessments:
+        - name: example-artifact
+          evidence-url: https://foo.bar/artifact.html
+          date: '2021-09-01'
+          comment: |
+            foo bar
+    champions:
+      - type: email
+        value: joe.bob@email.com
+        primary: true
+    testing:
+      - tool-type: sca
+        tool-name: Dependabot
+        tool-version: 1.2.3
+        tool-url: https://example.org
+        tool-rulesets:
+          - built-in
+        integration:
+          ad-hoc: false
+          ci: true
+          before-release: true
+        comment: |
+          foo bar
+  supply-chain: 
+    third-party-packages: true
+    lists:
+      - https://foo.bar/packages.json
+    management-policy:
+      url: https://foo.bar/dependency-management-policy
+      comment: |
+        foo bar

@@ -30,7 +30,7 @@ repository:
       contact: email, social, github, etc
   license:
     url: https://foo.bar/LICENSE
-    expresion: MIT
+    expression: MIT
   security:
     artifacts:
       self-assessment:

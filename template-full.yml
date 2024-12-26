@@ -15,7 +15,8 @@ project:
       affiliation: Foo
       contact: joe.bob@email.com
   documentation:
-    user-guide: https://foo.bar/user-guide
+    quickstart-guide: https://foo.bar/quickstart
+    detailed-guide: https://foo.bar/user-guide
     code-of-conduct: https://example.com/code-of-conduct.html
     release-process: https://foo.bar/release-process
     provenance-verification: https://foo.bar/provenance-verification
@@ -59,7 +60,7 @@ project:
     in-scope:
       - broken access control
       - other
-    out-scope:
+    out-of-scope:
       - other
     pgp-key: |
       your-key-here
@@ -85,8 +86,8 @@ project:
         value: alice.bob@email.com
         primary: false
     testing:
-      - name: Dependabot
-        tool:
+      - tool:
+          name: Dependabot
           type: sca
           version: 1.2.3
           url: https://example.org
@@ -121,7 +122,7 @@ repository:
     security-policy: https://example.com/security-policy.html
   license:
     url: https://foo.bar/LICENSE
-    expresion: MIT
+    expression: MIT
   security:
     artifacts:
       self-assessment:

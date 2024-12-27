@@ -2,8 +2,6 @@ header:
   schema-version: 1.0.0 
   last-updated: '2021-09-01'
   last-reviewed: '2022-09-01'
-  repo-url: https://foo.bar
-  repo-status: active
 
 project:
   name: Foo
@@ -19,40 +17,47 @@ project:
     detailed-guide: https://foo.bar/user-guide
     code-of-conduct: https://example.com/code-of-conduct.html
     release-process: https://foo.bar/release-process
-    provenance-verification: https://foo.bar/provenance-verification
-    governance: https://foo.bar/governance
+    signature-verification: https://foo.bar/signature-verification
   release:
     automated-pipeline: true
     distribution-points:
       - https://example.com/foo
       - pkg:npm/foobar
-    latest:
-      CPE: cpe:2.3:a:foo:bar:1.2.0
-      url: https://foo.bar/release
-      name: '1.2.0'
-      date: '2021-09-01'
-      changelog: https://foo.bar/changelog.md
-      license:
-        url: https://foo.bar/license
-        expression: MIT AND Apache-2.0
-      sbom:
-        - url: https://foo.bar/sbom1
-          format: cyclonedx
-        - url: https://foo.bar/sbom2
-          format: spdx
-      provenance:
-        cryptography:
-          attestation: https://foo.bar/attestation
-          algorithm: sha256
-        vex-data: https://foo.bar/vex
-        hash-manifest: https://foo.bar/hash-manifest
-  subprojects:
-    - name: bar
-      url: https://foo.bar/foo
+    url: https://foo.bar/release/{version}
+    changelog: https://foo.bar/release/{version}#changelog
+    license:
+      url: https://foo.bar/release/{version}#license
+      expression: MIT AND Apache-2.0
+    attestations:
+      - name: Release VEX
+        predicate-uri: https://intoto.VEX
+        location: https://foo.bar/release/{version}#vex
+        comment: Replace {version} with the actual version number for the release you want VEX data for.
+        signature:
+        # TODO: can we figure out some common terms to use as keys here?
+      - name: Release SBOM
+        predicate-uri: https://intoto.SPDX
+        location: https://foo.bar/release/{version}#spdx
+        comment: Replace {version} with the actual version number for the release you want an SBOM for.
+      - name: Maintainer Identity VSA
+        location: https://foo.bar/maintainer-identity
+        predicate-uri: https://slsa.dev/verification_summary/v1
+        comment:
+      - name: SCA Scan Results
+        location: https://foo.bar/test-results#{version}
+        predicate-uri: https://slsa.dev/test_results/{version}
+        comment: Results from SCA scan for a specific version
+  sub-repositories:
+    - name: Privateer
+      url: https://github.com/privateerproj/privateer
+      comment: |
+        Bar is a subproject that is built into Foo to accomplish foobar.
+    - name: Privateer SDK
+      url: https://github.com/privateerproj/privateer-sdk
       comment: |
         Bar is a subproject that is built into Foo to accomplish foobar.
   vulnerability-reporting:
-    accepted: true
+    reports-accepted: true
     bug-bounty-available: true
     bug-bounty-program: https://foo.bar/bugs.html
     email-contact: security@something.com
@@ -78,13 +83,6 @@ project:
           date: '2021-09-01'
           comment: |
             foo bar
-    contacts:
-      - type: email
-        value: joe.bob@email.com
-        primary: true
-      - type: email
-        value: alice.bob@email.com
-        primary: false
     testing:
       - tool:
           name: Dependabot
@@ -101,6 +99,8 @@ project:
           foo bar
 
 repository:
+  url: https://github.com/privateerproj/privateer
+  status: active
   bug-fixes-only: false
   accepts-change-request: true
   accepts-automated-change-request: true
@@ -120,41 +120,61 @@ repository:
     contributing-guide: https://foo.bar/contributing-guide
     review-policy: https://foo.bar/review-policy
     security-policy: https://example.com/security-policy.html
+    governance: https://foo.bar/governance
   license:
     url: https://foo.bar/LICENSE
     expression: MIT
   security:
-    artifacts:
-      self-assessment:
+    assessments:
+      self:
         evidence: https://foo.com/assessment.html
+        date: '2021-09-01'
         comment: |
           foo bar
-      third-party-assessments:
-        - name: example-artifact
-          evidence: https://foo.bar/artifact.html
+      third-party:
+        - evidence: https://foo.bar/artifact.html
           date: '2021-09-01'
           comment: |
             foo bar
     champions:
       - name: Joe Bob
         contact: joe.bob@email.com
-    testing:
-      - tool-type: sca
-        tool-name: Dependabot
-        tool-version: 1.2.3
-        tool-url: https://example.org
-        tool-rulesets:
+    tools:
+      - name: Dependabot
+        results:
+          ad-hoc:
+            name: Scheduled SCA Scan Results
+            predicate-uri: https://intoto.SCA
+            location: https://foo.bar/release/{version}#SCA
+            comment: Replace {version} with the actual version number for the release you want VEX data for.
+            signature: |
+              your-signature-here
+          ci:
+            name: PR SCA Scan Results
+            predicate-uri: https://intoto.SCA
+            location: https://foo.bar/release/{version}#SCA
+            comment: Replace {version} with the actual version number for the release you want VEX data for.
+            signature: |
+              your-signature-here
+          release:
+            name: Build & Release SCA Scan Results
+            predicate-uri: https://intoto.SCA
+            location: https://foo.bar/release/{version}#SCA
+            comment: Replace {version} with the actual version number for the release you want VEX data for.
+            signature: |
+              your-signature-here
+        type: sca
+        version: 1.2.3
+        rulesets:
           - built-in
         integration:
-          ad-hoc: false
+          ad-hoc: true
           ci: true
-          before-release: true
+          release: true
         comment: |
           foo bar
   supply-chain: 
-    third-party-packages: true
-    lists:
-      - https://foo.bar/packages.json
+    no-third-party-packages: false
     management-policy:
       url: https://foo.bar/dependency-management-policy
       comment: |

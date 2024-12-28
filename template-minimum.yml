@@ -1,0 +1,51 @@
+header:
+  schema-version: 1.0.0
+  last-updated: '2021-09-01'
+  last-reviewed: '2022-09-01'
+  url: https://foo.bar/kubernetes/kubernetes
+  comment: |
+    This file contains the minimum information for both project and repository.
+    It not required to include both a project and repository section if the project
+    section is intended to be inherited by repositories via header.project-si-source
+
+project:
+  name: FooBar
+  homepage: https://foo.bar
+  funding: https://foo.bar/FUNDING.yml
+  roadmap: https://foo.bar/roadmap.html
+  administrators:
+    - name: Joe Dohn
+      affiliation: Foo
+      email: joe.bob@email.com
+      social: https://bsky.com/joebob
+      primary: true
+  repositories:
+    - name: Foo
+      url: https://my.vcs/foobar/foo
+      comment: |
+        Foo is the core repo for FooBar.
+  vulnerability-reporting:
+    reports-accepted: true
+    bug-bounty-available: true
+
+repository:
+  url: https://github.com/kubernetes/kubernetes
+  status: active
+  bug-fixes-only: false
+  accepts-change-request: true
+  accepts-automated-change-request: true
+  no-third-party-packages: false
+  core-team:
+    - name:        Alice White
+      affiliation: Foo Bar
+      email:       alicewhite@email.com
+      social:      https://bsky.com/alicewhite
+      primary:     true
+  license:
+    url: https://foo.bar/LICENSE
+    expression: MIT
+  security:
+    assessments:
+      self:
+        comment: |
+          Self assessment has not yet been completed.

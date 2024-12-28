@@ -1,200 +1,191 @@
 # `repository`
 
-The `repository` object specifies repository-related configurations, including policies, team members, documentation, license, security, and supply chain information.
+The `repository` object specifies repository-related configurations, including status, policies, team members, documentation, license, releases, and security posture.
+
+This section is not required if the file is intended for use as a parent security insights file with project information to be inherited by multiple repositories.
 
 ---
 
-## `repository.bug-fixes-only`
-- **Type**: `bool`
-- **Description**: *[Add description here]*
+## `repository.status`
+
+- **Type**: `string`
+- **Matches Pattern**: `^(active|abandoned|concept|inactive|moved|suspended|unsupported|WIP)$`
+- **Description**: Indicates the repository’s current [Repo Status](https://repostatus.org). 
 
 ---
 
 ## `repository.accepts-change-request`
+
 - **Type**: `bool`
-- **Description**: *[Add description here]*
+- **Description**: Indicates whether the repository currently accepts any change requests.
 
 ---
 
 ## `repository.accepts-automated-change-request`
+
 - **Type**: `bool`
-- **Description**: *[Add description here]*
+- **Description**: Indicates whether the repository accepts automated or machine-generated change requests.
 
 ---
 
-## `repository.automated-tools` (optional)
-A list of objects describing automated tools.
+## `repository.bug-fixes-only`
 
-### `automated-tools[].automated-tool`
-- **Type**: `string`
-- **Description**: *[Add description here]*
+- **Type**: `bool`
+- **Description**: Specifies whether the repository only accepts bug-fixes and not feature work.
 
-### `automated-tools[].action`
-- **Type**: `string`
-- **Description**: *[Add description here]*
+---
 
-### `automated-tools[].path`
-- **Type**: `string list`
-- **Description**: *[Add description here]*
+## `repository.no-third-party-packages`
 
-### `automated-tools[].comment` (optional)
-- **Type**: `string`
-- **Description**: *[Add description here]*
+- **Type**: `bool`
+- **Description**: Indicates whether the repository universally avoids package dependencies from outside of the project.
+
+---
+
+## `repository.url`
+
+- **Type**: [URL]
+- **Description**: The main URL for this repository.
 
 ---
 
 ## `repository.core-team`
-A list of objects representing core team members.
 
-### `core-team[].name`
-- **Type**: `string`
-- **Description**: *[Add description here]*
-
-### `core-team[].affiliation`
-- **Type**: `string`
-- **Description**: *[Add description here]*
-
-### `core-team[].contact` (optional)
-- **Type**: `string`
-- **Description**: *[Add description here]*
-
----
-
-## `repository.documentation` (optional)
-An object referencing documentation URLs.  
-Each field, if present, must match `^https?://[^\\s]+$`:
-
-- **`documentation.contributing-guide`** (optional)
-- **`documentation.review-policy`** (optional)
-- **`documentation.security-policy`** (optional)
-
-For each key:
-- **Type**: `string`  
-- **Description**: *[Add description here]*  
+- **Type**: `slice` of [contacts]
+- **Description**: A list of core team members for this repository, such as maintainers or approvers.
 
 ---
 
 ## `repository.license`
-An object specifying the repository license details.
 
-### `license.url`
-- **Type**: `string`
-- **Matches Pattern**: `^https?://[^\\s]+$`
-- **Description**: *[Add description here]*
-
-### `license.expresion`
-- **Type**: `string`
-- **Description**: *[Add description here]*
+- **Type**: [License]
+- **Description**: The license information for this repository.
 
 ---
 
-## `repository.security` (optional)
-An object describing repository security-related artifacts, champions, and testing.
+## `repository.security`
 
-### `security.artifacts`
-#### `artifacts.self-assessment`
-- **`self-assessment.evidence`** (optional)
+An object describing security-related artifacts, champions, and tooling for the repository.
+
+### `repository.security.assessments`
+
+An object describing security assessments for the repository.
+
+- `repository.security.assessments.self`
+  - **Type**: [Assessment]
+  - **Description**: Results of the contributor team's assessment of software produced by this repository.
+- `repository.security.assessments.third-party` (optional)
+  - **Type**: `slice` of [Assessment]
+  - **Description**: Results of third-party assessments of software produced by this repository.
+
+## `repository.security.champions` (optional)
+
+- **Type**: `slice` of [Contact]
+- **Description**: A list of core team members who advocate for continuous improvement of security practices. These individuals may take responsibility for security reviews, training, interfacing with stakeholders on security topics, or other similar activities.
+
+### `repository.security.tools`
+
+A list of objects describing security-related tools used in the repository.
+
+- `tools[].name`
   - **Type**: `string`
-  - **Matches Pattern**: `^https?://[^\\s]+$`
-  - **Description**: *[Add description here]*
-
-- **`self-assessment.comment`**
+  - **Description**: The name of the tool.
+- `tools[].type`
   - **Type**: `string`
-  - **Description**: *[Add description here]*
-
-#### `artifacts.third-party-assessments`
-A list of objects describing third-party assessments.
-
-- **`third-party-assessments[].name`**
+  - **Matches Pattern**: `^(fuzzing|container|secret|SCA|SAST|other)$`
+  - **Description**: The general category or type of the tool.
+- `tools[].version` (optional)
   - **Type**: `string`
-  - **Description**: *[Add description here]*
-
-- **`third-party-assessments[].evidence`** (optional)
+  - **Description**: The version of the tool that is used.
+- `tools[].comment` (optional)
   - **Type**: `string`
-  - **Matches Pattern**: `^https?://[^\\s]+$`
-  - **Description**: *[Add description here]*
-
-- **`third-party-assessments[].date`**
-  - **Type**: `string`
-  - **Description**: *[Add description here]*
-
-- **`third-party-assessments[].comment`**
-  - **Type**: `string`
-  - **Description**: *[Add description here]*
+  - **Description**: Additional notes about the tool’s usage or configuration.
+- `tools[].rulesets`
+  - **Type**: `slice` of `string`
+  - **Description**: The set of rules or configurations applied by the tool. If customization is not enabled, the only value here should be "default".
+- `tools[].integration`
+  - `integration.adhoc`
+    - **Type**: `bool`
+    - **Description**: Indicates whether the tool is used in a scheduled process or supports an on-demand.
+  - `integration.ci`
+    - **Type**: `bool`
+    - **Description**: Indicates whether the tool is used in the continuous integration process.
+  - `integration.release`
+    - **Type**: `bool`
+    - **Description**: Indicates whether the tool is run before or during the release process.
+- `tools[].results`
+  - `results.adhoc` (optional)
+    - **Type**: [Attestation]
+    - **Description**: Results of scheduled or on-demand security scans.
+  - `results.ci` (optional)
+    - **Type**: [Attestation]
+    - **Description**: Results of security scans run in the continuous integration process.
+  - `results.release` (optional)
+    - **Type**: [Attestation]
+    - **Description**: Results of security scans run in the build and release process.
 
 ---
 
-### `repository.security.champions` (optional)
-A list of objects describing security champions.
+## `repository.documentation` (optional)
 
-- **`champions[].name`**
-  - **Type**: `string`
-  - **Description**: *[Add description here]*
+An object referencing documentation URLs.
 
-- **`champions[].contact`** (optional)
-  - **Type**: `string`
-  - **Description**: *[Add description here]*
+- **`documentation.contributing-guide`** (optional)  
+  - **Type**: [URL]
+  - **Description**: The URL to a guide for proper contributions.
 
----
+- **`documentation.dependency-management-policy`** (optional)  
+  - **Type**: [URL]
+  - **Description**: The URL to information about how dependencies are managed in this repository.
 
-### `repository.security.testing`
-A list of objects describing the testing tools and approaches.
+- **`documentation.governance`** (optional)  
+  - **Type**: [URL]
+  - **Description**: The URL to any governance documents regarding roles, responsibilities, processes, and decision-making.
 
-- **`testing[].tool-type`**
-  - **Type**: `string`
-  - **Description**: *[Add description here]*
+- **`documentation.review-policy`** (optional)  
+  - **Type**: [URL]
+  - **Description**: The URL to a guide for proper change reviews.
 
-- **`testing[].tool-name`**
-  - **Type**: `string`
-  - **Description**: *[Add description here]*
-
-- **`testing[].tool-version`**
-  - **Type**: `string`
-  - **Description**: *[Add description here]*
-
-- **`testing[].tool-url`**
-  - **Type**: `string`
-  - **Matches Pattern**: `^https?://[^\\s]+$`
-  - **Description**: *[Add description here]*
-
-- **`testing[].tool-rulesets`**
-  - **Type**: `string list`
-  - **Description**: *[Add description here]*
-
-- **`testing[].integration`**
-  - **`integration.ad-hoc`**: `bool`  
-  - **`integration.ci`**: `bool`  
-  - **`integration.before-release`**: `bool`
-  - **Description**: *[Add description here]*
-
-- **`testing[].comment`**
-  - **Type**: `string`
-  - **Description**: *[Add description here]*
+- **`documentation.security-policy`** (optional)  
+  - **Type**: [URL]
+  - **Description**: The URL with information about the repository's security, including the policy for reporting security vulnerabilities.
 
 ---
 
-## `repository.supply-chain` (optional)
-An object describing the supply chain management for the repository.
+## `repository.release` (optional)
 
-### `supply-chain.third-party-packages`
+An object describing release-related details for this repository.
+
+### `release.automated-pipeline`
+
 - **Type**: `bool`
-- **Description**: *[Add description here]*
+- **Description**: Indicates if the repository uses an automated release pipeline.
 
-### `supply-chain.lists`
-- **Type**: `string list`
-- **Description**: *[Add description here]*
+### `release.distribution-points`
 
-### `supply-chain.management-policy`
-An object describing management policy details.
+- **Type**: `slice` of [Link]
+- **Description**: A list of links describing where the repository’s releases are distributed. This may be the VCS releases page, a package manager, or other distribution points.
 
-- **`management-policy.url`**
-  - **Type**: `string`
-  - **Description**: *[Add description here]*
+### `release.changelog` (optional)
 
-- **`management-policy.comment`**
-  - **Type**: `string`
-  - **Description**: *[Add description here]*
+- **Type**: [URL]
+- **Description**: A URL to the repository’s release changelog. The URL value should include placeholders such as `{version}` if relevant.
+
+### `release.license` (optional)
+
+- **Type**: [License]
+- **Description**: An object describing the license details specifically for releases. This should be used when the release license differs from the repository license.
+
+### `release.attestations` (optional)
+
+- **Type**: `slice` of [Attestation]
+- **Description**: A list of attestations for the repository’s releases.
 
 ---
 
-> **Note**: Each field should be assigned a value consistent with its specified data type and/or regular expression pattern. Fields not marked as optional are required.
+[Assessment]: ./aliases.md#assessment
+[contacts]: ./aliases.md#contact
+[Contact]: ./aliases.md#contact
+[License]: ./aliases.md#license
+[Link]: ./aliases.md#link
+[URL]: ./aliases.md#url

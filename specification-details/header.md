@@ -1,53 +1,51 @@
-# Header
+# `header`
 
-The `header` object provides high-level information about the project schema.
-
-This section is **required**.
-
-```yaml
-header:
-  schema-version: 1.0.0 
-  last-updated: '2021-09-01'
-  last-reviewed: '2022-09-01'
-  repo-url: https://foo.bar
-  repo-status: active
-```
-
-
-## `header.schema-version`
-- **Type**: `string`
-- **Description**: *[Add description here]*
-- **Example**: *[Add example here]*
-
----
-
-## `header.last-updated`
-- **Type**: `string`
-- **Description**: *[Add description here]*
-- **Example**: *[Add example here]*
+The `header` object captures high-level metadata about the schema.
 
 ---
 
 ## `header.last-reviewed`
-- **Type**: `string`
-- **Description**: *[Add description here]*
-- **Example**: *[Add example here]*
+
+- **Type**: [Date]
+- **Description**: The date when the document or data was last reviewed.
 
 ---
 
-## `header.repo-url`
-- **Type**: `string`
-- **Matches Pattern**: `^https?://[^\\s]+$`
-- **Description**: *[Add description here]*
-- **Example**: *[Add example here]*
+## `header.last-updated`
+
+- **Type**: [Date]
+- **Description**: The date when this document or data was last updated.
 
 ---
 
-## `header.repo-status`
+## `header.schema-version`
+
 - **Type**: `string`
-- **Description**: *[Add description here]*
-- **Example**: *[Add example here]*
+- **Description**: Represents the version of this schema.
 
 ---
 
-> **Note**: Each field should be assigned a value consistent with its specified data type and/or regular expression pattern. Fields not marked as optional are required.
+## `header.url`
+
+- **Type**: [URL]
+- **Description**: The primary reference URL for this schema’s origin or repository.
+
+---
+
+## `header.comment` (optional)
+
+- **Type**: `string`
+- **Description**: Additional information about the schema.
+
+---
+
+## `header.project-si-source` (optional)
+
+- **Type**: [URL]
+- **Description**: A URL to the security insights file that contains project information for this file to inherit.
+
+---
+
+[URL]: #url
+[Email]: #email
+[Date]: #date

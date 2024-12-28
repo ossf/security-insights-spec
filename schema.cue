@@ -98,7 +98,7 @@ repository?: {
 
   "core-team": [...#Contact]
 
-  license:                            #License
+  license: #License
 
   security: {
     assessments: {
@@ -144,9 +144,8 @@ repository?: {
 
     "distribution-points": [...#Link]
 
-    changelog?: #URL
-    
-    license?:   #License
+    changelog?:    #URL
+    license?:      #License
 
     attestations?: [...#Attestation]
   }

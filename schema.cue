@@ -1,176 +1,145 @@
-header: {
-  "schema-version": string
-  "last-updated":   string
-  "last-reviewed":  string
-  "repo-url":       =~"^https?://[^\\s]+$"
-  "repo-status":    string
+//// Definitions ////
+
+#URL: =~"^https?://[^\\s]+$"
+#Email: =~"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$"
+
+#Assessment: {
+  evidence?: #URL
+  date?:     string
+  comment:   string
 }
-project: {
+
+#Attestation: {
   name:            string
-  funding?:        =~"^https?://[^\\s]+$"
-  "homepage":  =~"^https?://[^\\s]+$"
-  roadmap?:        =~"^https?://[^\\s]+$"
-  administrators:
-  [...{
-    name:     string
-    affiliation: string
-    contact?:  =~"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$"
-  }]
-  documentation?: {
-    "quickstart-guide":         =~"^https?://[^\\s]+$"
-    "detailed-guide"?:          =~"^https?://[^\\s]+$"
-    "code-of-conduct"?:         =~"^https?://[^\\s]+$"
-    "release-process"?:         =~"^https?://[^\\s]+$"
-    "provenance-verification"?: =~"^https?://[^\\s]+$"
-    governance?:                =~"^https?://[^\\s]+$"
-  }
-  release?: {
-    "automated-pipeline": bool
-    "distribution-points": [ ...string ]
-    latest: {
-      CPE:       string // example: cpe:2.3:a:foo:bar:1.2.0
-      url:       =~"^https?://[^\\s]+$"
-      name:      string
-      date:      string
-      changelog?: =~"^https?://[^\\s]+$"
-      license?: {
-        url:        =~"^https?://[^\\s]+$"
-        expression: string
-      }
-      sbom?: [...{
-        url:    =~"^https?://[^\\s]+$"
-        format: string
-      }]
-      provenance?: {
-        cryptography?: {
-          attestation: =~"^https?://[^\\s]+$"
-          algorithm:   string
-        }
-        "vex-data"?:      =~"^https?://[^\\s]+$"
-        "hash-manifest"?: =~"^https?://[^\\s]+$"
-      }
-    }
-  }
-  subprojects?: [...{
+  "predicate-uri": #URL
+  location:        #URL
+  comment:         string
+}
+
+#Contact: {
+  name:         string
+  affiliation?: string
+  email?:       #Email
+  social?:      string
+  primary:      bool
+}
+
+#License: {
+  url:        #URL
+  expression: string
+}
+
+#Link: {
+  uri:     string
+  comment: string
+}
+
+//// Schema ////
+
+header: {
+  "last-updated":      string
+  "last-reviewed":     string
+  "schema-version":    string
+  url:                 #URL
+  comment?:            string
+  "parent-si-source"?: #URL
+}
+
+project?: {
+  name:      string
+  homepage:  #URL
+  funding:   #URL
+  roadmap:   #URL
+
+  administrators: [...#Contact]
+
+  repositories: [...{
     name:    string
-    url:     =~"^https?://[^\\s]+$"
+    url:     #URL
     comment: string
   }]
-  "vulnerability-reporting":
-  {
-    accepted:                bool
-    "bug-bounty-available"?: bool
-    "bug-bounty-program"?:   =~"^https?://[^\\s]+$"
-    "email-contact"?:        =~"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$"
-    "security-policy"?:      =~"^https?://[^\\s]+$"
-    "in-scope"?:             [ ...string ]
-    "out-of-scope"?:            [ ...string ]
-    "pgp-key"?:              string
-    comment?:                string
+
+  "vulnerability-reporting": {
+    "reports-accepted":       bool
+    "bug-bounty-available":   bool
+    "bug-bounty-program"?:     #URL
+    "security-policy"?:        #URL
+    "pgp-key"?:                string
+    contact:                  #Contact
+    comment?:                  string
+
+    "in-scope"?:               [...string]
+    "out-of-scope"?:           [...string]
   }
-  security:
-  {
-    artifacts:
-    {
-      "self-assessment":
-      {
-        evidence?: =~"^https?://[^\\s]+$"
-        date?:     string
-        comment:   string
-      }
-      "third-party-assessments"?: [...{
-        name:       string
-        "evidence": =~"^https?://[^\\s]+$"
-        date:       string
-        comment?:   string
-      }]
-    }
-    contacts?: [...{
-      value:   string
-      primary: bool
-    }]
-    testing?: [...{
-      tool: {
-        name:      string
-        type:      string
-        version?:   string
-        url:       =~"^https?://[^\\s]+$"
-        rulesets?: [ ...string ]
-      }
-      integration: {
-        "ad-hoc":         bool
-        ci:               bool
-        "before-release": bool
-      }
-      comment?: string
-    }]
+
+  documentation?: {
+    "quickstart-guide"?:       #URL
+    "detailed-guide"?:        #URL
+    "code-of-conduct"?:       #URL
+    "release-process"?:       #URL
+    "signature-verification"?: #URL
   }
 }
-repository: {
+
+repository?: {
+  "accepts-change-request":           bool
+  "accepts-automated-change-request": bool
   "bug-fixes-only":                   bool
-  "accepts-change-request":           bool 
-  "accepts-automated-change-request": bool 
-  "automated-tools"?: [...{
-    "automated-tool": string
-    action:           string
-    path: [ ...string ]
-    comment?: string
-  }]
-  "core-team": [...{
-    name:        string
-    affiliation: string
-    contact?:    string
-  }]
+  "no-third-party-packages":          bool
+  status:                             string
+  url:                                #URL
+
+  license:                            #License
+
+  "core-team": [...#Contact]
+
   documentation?: {
-    "contributing-guide"?: =~"^https?://[^\\s]+$"
-    "review-policy"?:      =~"^https?://[^\\s]+$"
-    "security-policy"?:    =~"^https?://[^\\s]+$"
+    "contributing-guide"?:           #URL
+    "dependency-management-policy"?: #URL
+    governance?:                     #URL
+    "review-policy"?:                #URL
+    "security-policy"?:              #URL
   }
-  license:
-  {
-    url:       =~"^https?://[^\\s]+$"
-    expression: string                
+
+  release?: {
+    "automated-pipeline": bool
+
+    "distribution-points": [...#Link]
+
+    changelog?:            #URL
+    
+    license?: #License
+
+    attestations?: [...#Attestation]
   }
-  security?:
-  {
-    artifacts:
-    {
-      "self-assessment":
-      {
-        "evidence"?: =~"^https?://[^\\s]+$"
-        comment: string
-      }
-      "third-party-assessments": [...{
-        name:           string
-        "evidence"?: =~"^https?://[^\\s]+$"
-        date:           string
-        comment: string
-      }]
+
+  security: {
+    assessments: {
+      self: #Assessment
+      "third-party": [...#Assessment]
     }
-    champions?: [...{
-      name:        string
-      contact?:    string
-    }]
-    testing: [...{
-      "tool-type":    string
-      "tool-name":    string
-      "tool-version": string
-      "tool-url":     string
-      "tool-rulesets": [ ...string ]
+
+    champions?: [...#Contact]
+
+    tools?: [...{
+      name: string
+      type:    string
+      version?: string
+      comment?: string
+
+      rulesets: [...string]
+
       integration: {
-        "ad-hoc":         bool
-        ci:               bool
-        "before-release": bool
+        adhoc:   bool
+        ci:      bool
+        release: bool
       }
-      comment: string
+
+      results: {
+        adhoc?: #Attestation
+        ci?: #Attestation
+        release?: #Attestation
+      }
     }]
-  }
-  "supply-chain"?: {
-    "third-party-packages": bool
-    lists: [ ...string ]
-    "management-policy": {
-      url: string
-      comment: string
-    }
   }
 }

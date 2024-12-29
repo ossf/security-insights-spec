@@ -1,6 +1,6 @@
 # Aliases
 
-The following aliases are used throughout the schema.
+The following aliases are used throughout the schema for consistency.
 
 ## `assessment`
 

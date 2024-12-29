@@ -52,10 +52,10 @@ header: {
 }
 
 project?: {
-  name:      string
-  homepage:  #URL
-  funding:   #URL
-  roadmap:   #URL
+  name:        string
+  homepage?:   #URL
+  roadmap?:    #URL
+  funding?:    #URL
 
   administrators: [...#Contact]
 
@@ -66,8 +66,8 @@ project?: {
   }]
 
   "vulnerability-reporting": {
-    "reports-accepted":       bool
-    "bug-bounty-available":   bool
+    "reports-accepted":        bool
+    "bug-bounty-available":    bool
     "bug-bounty-program"?:     #URL
     contact?:                  #Contact
     comment?:                  string
@@ -79,22 +79,22 @@ project?: {
   }
 
   documentation?: {
-    "detailed-guide"?:        #URL
-    "code-of-conduct"?:       #URL
+    "detailed-guide"?:         #URL
+    "code-of-conduct"?:        #URL
     "quickstart-guide"?:       #URL
-    "release-process"?:       #URL
+    "release-process"?:        #URL
     "signature-verification"?: #URL
   }
 }
 
 repository?: {  
   status: "active" | "abandoned" | "concept" | "inactive" | "moved" | "suspended" | "unsupported" | "WIP"
-
-  "accepts-change-request":           bool
-  "accepts-automated-change-request": bool
-  "bug-fixes-only":                   bool
-  "no-third-party-packages":          bool
   url:                                #URL
+
+  "accepts-change-request":            bool
+  "accepts-automated-change-request":  bool
+  "bug-fixes-only"?:                   bool
+  "no-third-party-packages"?:          bool
 
   "core-team": [...#Contact]
 

@@ -2,33 +2,30 @@
 
 The `project` object describes the overall project, including basic info, documentation links, repositories, vulnerability reporting, and security details.
 
+This field is not required if `header.project-si-source` is supplied.
+
+## Required vs Optional Fields
+
+Required if `project` is present:
+
+- `name`
+- `administrators`
+- `repositories`
+- `vulnerability-reporting`
+
+Optional:
+
+- `homepage`
+- `funding`
+- `roadmap`
+- `documentation`
+
 ---
 
 ## `project.name`
 
 - **Type**: `string`
 - **Description**: The name of the project.
-
----
-
-## `project.homepage`
-
-- **Type**: [URL]
-- **Description**: A path to the project’s landing page. This may be a project website, a version control system repository, or a project/organization page in the VCS.
-
----
-
-## `project.funding`
-
-- **Type**: [URL]
-- **Description**: A URL to information about sponsorships, donations, or other funding topics.
-
----
-
-## `project.roadmap`
-
-- **Type**: [URL]
-- **Description**: A URL pointing to a roadmap or schedule for planned features and releases.
 
 ---
 
@@ -134,3 +131,30 @@ An object containing references to key documentation URLs.
 
 - **Type**: [URL]
 - **Description**: URL to documentation explaining how to verify digital signatures on assets.
+
+---
+
+## `project.homepage` (optional)
+
+- **Type**: [URL]
+- **Description**: A path to the project’s landing page. This may be a project website, a version control system repository, or a project/organization page in the VCS.
+
+---
+
+## `project.funding` (optional)
+
+- **Type**: [URL]
+- **Description**: A URL to information about sponsorships, donations, or other funding topics.
+
+---
+
+## `project.roadmap` (optional)
+
+- **Type**: [URL]
+- **Description**: A URL pointing to a roadmap or schedule for planned features and releases.
+
+---
+
+[URL]: ./aliases.md#url
+[Contact]: ./aliases.md#contact
+[contacts]: ./aliases.md#contact

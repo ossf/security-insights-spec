@@ -89,8 +89,8 @@ project?: {
 
 repository?: {  
   status: "active" | "abandoned" | "concept" | "inactive" | "moved" | "suspended" | "unsupported" | "WIP"
-  url:                                #URL
-
+  
+  url:                                 #URL
   "accepts-change-request":            bool
   "accepts-automated-change-request":  bool
   "bug-fixes-only"?:                   bool

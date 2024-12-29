@@ -10,9 +10,6 @@ header:
 
 project:
   name: FooBar
-  homepage: https://foo.bar
-  funding: https://foo.bar/FUNDING.yml
-  roadmap: https://foo.bar/roadmap.html
   administrators:
     - name: Joe Dohn
       affiliation: Foo
@@ -29,12 +26,10 @@ project:
     bug-bounty-available: true
 
 repository:
-  url: https://github.com/kubernetes/kubernetes
+  url: https://my.vcs/foobar/foo
   status: active
-  bug-fixes-only: false
   accepts-change-request: true
   accepts-automated-change-request: true
-  no-third-party-packages: false
   core-team:
     - name:        Alice White
       affiliation: Foo Bar

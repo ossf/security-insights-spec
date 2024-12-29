@@ -2,7 +2,26 @@
 
 The `repository` object specifies repository-related configurations, including status, policies, team members, documentation, license, releases, and security posture.
 
-This section is not required if the file is intended for use as a parent security insights file with project information to be inherited by multiple repositories.
+This section is not required if the file is intended for use as a parent security insights file with project information to be inherited by multiple repositories via their respective `header.project-si-source`.
+
+## Required vs Optional Fields
+
+Required if `repository` is present:
+
+- `status`
+- `url`
+- `accepts-change-request`
+- `accepts-automated-change-request`
+- `core-team`
+- `license`
+- `security`
+
+Optional top-level fields:
+
+- `documentation`
+- `release`
+- `bug-fixes-only` (assume false if not present)
+- `no-third-party-packages` (assume false if not present)
 
 ---
 

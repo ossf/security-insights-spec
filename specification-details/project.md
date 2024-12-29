@@ -31,7 +31,7 @@ Optional:
 
 ## `project.administrators`
 
-- **Type**: `slice` of [contacts]
+- **Type**: `slice` of [Contact]
 - **Description**: A list of individuals who have administrative access to the project's resources.
 
 ---
@@ -157,4 +157,3 @@ An object containing references to key documentation URLs.
 
 [URL]: ./aliases.md#url
 [Contact]: ./aliases.md#contact
-[contacts]: ./aliases.md#contact

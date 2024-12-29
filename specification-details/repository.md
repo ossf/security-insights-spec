@@ -70,7 +70,7 @@ Optional top-level fields:
 
 ## `repository.core-team`
 
-- **Type**: `slice` of [contacts]
+- **Type**: `slice` of [Contact]
 - **Description**: A list of core team members for this repository, such as maintainers or approvers.
 
 ---
@@ -203,7 +203,6 @@ An object describing release-related details for this repository.
 ---
 
 [Assessment]: ./aliases.md#assessment
-[contacts]: ./aliases.md#contact
 [Contact]: ./aliases.md#contact
 [License]: ./aliases.md#license
 [Link]: ./aliases.md#link

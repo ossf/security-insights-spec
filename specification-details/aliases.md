@@ -97,13 +97,18 @@ A list of objects describing various release attestations or artifacts.
 
 ## Validation Types
 
-- `date`
+### `date`
+
   - **Type**: `string`
   - **Description**: A date in ISO 8601 format (`YYYY-MM-DD`).
-- `email`
+
+### `email`
+
   - **Type**: `string`
   - **Matches Pattern**: `^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$`
-- `url`
+
+### `url`
+
   - **Type**: `string`
   - **Matches Pattern**: `^https?://[^\\s]+$`
 

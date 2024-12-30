@@ -1,5 +1,5 @@
 header:
-  schema-version: 1.0.0
+  schema-version: 2.0.0
   last-updated: '2021-09-01'
   last-reviewed: '2022-09-01'
   url: https://foo.bar/kubernetes/kubernetes

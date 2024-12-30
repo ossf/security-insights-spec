@@ -1,4 +1,4 @@
-# Aliases
+# Aliases _(v2.0.0)_
 
 The following aliases are used throughout the schema for consistency.
 

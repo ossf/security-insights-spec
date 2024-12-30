@@ -1,0 +1,50 @@
+header:
+  schema-version: 1.0.0
+  last-updated: '2021-09-01'
+  last-reviewed: '2022-09-01'
+  url: https://github.com/ossf/security-insights-spec
+  comment: This file contains the security information for the Security Insights project.
+
+project:
+  name: Security Insights
+  administrators:
+    - name: Christopher Robinson
+      affiliation: Linux Foundation
+      primary: true
+  repositories:
+    - name: Security Insights
+      url: https://github.com/ossf/security-insights-spec
+      comment: |
+        Security Insights is the core repo for the Security Insights project.
+  vulnerability-reporting:
+    reports-accepted: true
+    bug-bounty-available: false
+
+repository:
+  status: active
+  url: https://github.com/ossf/security-insights-spec
+  accepts-change-request: true
+  accepts-automated-change-request: false
+  no-third-party-packages: true
+  core-team:
+    - name:        Eddie Knight
+      affiliation: Sonatype
+      primary:     true
+  license:
+    url: https://github.com/ossf/security-insights-spec/blob/main/LICENSE
+    expression: MIT AND Community Specification License 1.0
+  security:
+    assessments:
+      self:
+        evidence: https://github.com/ossf/security-insights-spec/blob/main/docs/threat-model
+        comment: |
+          A light-weight threat model was completed when the project was first started,
+          and it remains accurate to-date.
+  documentation:
+    contributing-guide: https://github.com/ossf/security-insights-spec/blob/main/.github/CONTRIBUTING.md
+    governance: https://github.com/ossf/security-insights-spec/blob/main/docs/GOVERNANCE.md
+  release:
+    automated-pipeleine: false
+    distribution-points:
+      - uri:  https://github.com/ossf/security-insights-spec/releases
+        comment: GitHub Release Page

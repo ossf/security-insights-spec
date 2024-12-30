@@ -1,4 +1,4 @@
-# `repository`
+# `repository` _(v2.0.0)_
 
 The `repository` object specifies repository-related configurations, including status, policies, team members, documentation, license, releases, and security posture.
 

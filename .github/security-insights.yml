@@ -43,3 +43,8 @@ repository:
   documentation:
     contributing-guide: https://github.com/ossf/security-insights-spec/blob/main/.github/CONTRIBUTING.md
     governance: https://github.com/ossf/security-insights-spec/blob/main/docs/GOVERNANCE.md
+  release:
+    automated-pipeleine: false
+    distribution-points:
+      - uri:  https://github.com/ossf/security-insights-spec/releases
+        comment: GitHub Release Page

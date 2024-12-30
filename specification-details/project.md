@@ -1,4 +1,4 @@
-# `project`
+# `project` _(v2.0.0)_
 
 The `project` object describes the overall project, including basic info, documentation links, repositories, vulnerability reporting, and security details.
 

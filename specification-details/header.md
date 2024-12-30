@@ -1,4 +1,4 @@
-# `header`
+# `header` _(v2.0.0)_
 
 The `header` object captures high-level metadata about the schema.
 

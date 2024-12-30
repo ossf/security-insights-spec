@@ -16,9 +16,9 @@ import (
 }
 
 #Attestation: {
-  name:            string
-  location:        #URL
-  "predicate-uri": string
+  name:             string
+  location:         #URL
+  "predicate-uri":  string
   comment?:         string
 }
 

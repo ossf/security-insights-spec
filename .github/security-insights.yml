@@ -1,5 +1,5 @@
 header:
-  schema-version: 1.0.0
+  schema-version: 2.0.0
   last-updated: '2024-12-31'
   last-reviewed: '2025-01-01'
   url: https://github.com/ossf/security-insights-spec

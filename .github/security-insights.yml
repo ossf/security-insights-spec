@@ -1,7 +1,7 @@
 header:
   schema-version: 1.0.0
-  last-updated: '2021-09-01'
-  last-reviewed: '2022-09-01'
+  last-updated: '2024-12-31'
+  last-reviewed: '2025-01-01'
   url: https://github.com/ossf/security-insights-spec
   comment: This file contains the security information for the Security Insights project.
 

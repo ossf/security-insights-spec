@@ -97,7 +97,7 @@ An object describing security assessments for the repository.
   - **Type**: `slice` of [Assessment]
   - **Description**: Results of third-party assessments of software produced by this repository.
 
-## `repository.security.champions` (optional)
+### `repository.security.champions` (optional)
 
 - **Type**: `slice` of [Contact]
 - **Description**: A list of core team members who advocate for continuous improvement of security practices. These individuals may take responsibility for security reviews, training, interfacing with stakeholders on security topics, or other similar activities.

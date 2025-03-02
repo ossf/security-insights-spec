@@ -10,7 +10,7 @@ The data tracked within this specification is intended to fill the gaps between 
 
 Projects should include a `security-insights.yml` file in the root of their repository, or in the appropriate source forge directory such as `.github/` or `.gitlab/`. Users should assume the contents of that file will be updated any time the relevant information changes.
 
-To ensure you are adhering to an official version of the specification, please refer to the `specification.md` in the [latest release](https://github.com/ossf/security-insights/releases/latest), which is a versioned compilation of all details.
+To ensure you are adhering to an official version of the specification, please refer to the `specification.md` in the [latest release](https://github.com/ossf/security-insights-spec/releases/latest), which is a versioned compilation of all details.
 
 This repository often remains unchanged from the latest release, but may diverge as incremental development takes place in preparation for an upcoming release. Any differences between the latest release and the main branch should only be considered previews of the next release.
 
@@ -25,6 +25,6 @@ The specification maintenance occurs in the following places:
 - `template-full.yml`: Contains a template that includes all possible fields
 - `template-minimal.yml`: Contains a template that includes only the required fields
 
-Discussion and feedback should take place in [GitHub Issues](https://github.com/ossf/security-insights/issues). 
+Discussion and feedback should take place in [GitHub Issues](https://github.com/ossf/security-insights-spec/issues). 
 
 Because this specification recieves light maintenance and infrequent updates, beginning in 2025 we ask that you follow the [Security Insights Enhancement Proposal](./docs/GOVERNANCE.md#security-insights-enhancement-proposals) process to explore potential changes to the specification.

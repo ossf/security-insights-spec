@@ -1,8 +1,7 @@
 name: Security Insights Enhancement Proposal (SIEP)
 description: Propose a new feature or improvement to the Security Insights specification.
 title: "[SIEP] "
-labels: enhancement
-assignees: ''
+labels: "enhancement"
 
 body:
   - type: markdown
@@ -16,6 +15,7 @@ body:
       label: Proposal Summary
       description: Provide a brief summary of the proposed enhancement. Explain what problem it solves and why it is necessary.
       placeholder: Enter the proposal summary here
+    validations:
       required: true
 
   - type: textarea
@@ -24,6 +24,7 @@ body:
       label: Detailed Design
       description: Provide a detailed description of the proposal, including a design of how it will fit into the specification.
       placeholder: Enter the detailed design here
+    validations:
       required: true
 
   - type: textarea
@@ -32,6 +33,7 @@ body:
       label: Impact
       description: Explain the potential impact of this proposal. Consider both positive and negative effects, including the risk of future breaking changes.
       placeholder: Enter the impact here
+    validations:
       required: true
 
   - type: textarea
@@ -40,6 +42,7 @@ body:
       label: Compatibility
       description: Discuss how this proposal maintains or breaks compatibility with existing versions. If there are breaking changes, explain why they are necessary and how they can be mitigated.
       placeholder: Enter the compatibility details here
+    validations:
       required: true
 
   - type: textarea
@@ -48,6 +51,7 @@ body:
       label: Alternatives
       description: List and describe any alternative phrasing or approaches that were considered, and why they were not chosen.
       placeholder: Enter the alternatives here
+    validations:
       required: true
 
   - type: textarea
@@ -56,6 +60,7 @@ body:
       label: Open Questions
       description: List any open questions or unresolved issues related to this proposal.
       placeholder: Enter the open questions here
+    validations:
       required: true
 
   - type: dropdown
@@ -69,4 +74,5 @@ body:
           value: None
         - label: Eddie Knight
           value: "@eddie-knight"
+    validations:
       required: true

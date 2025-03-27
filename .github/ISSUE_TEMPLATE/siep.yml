@@ -68,5 +68,5 @@ body:
         - label: No Sponsor Yet
           value: None
         - label: Eddie Knight
-          value: @eddie-knight
+          value: "@eddie-knight"
       required: true

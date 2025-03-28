@@ -112,8 +112,13 @@ A list of objects describing various release attestations or artifacts.
   - **Type**: `string`
   - **Matches Pattern**: `^https?://[^\\s]+$`
 
+### `schemaversion`
+
+  - **Type**: `string`
+  - **Matches Pattern**: `^[1-9]+\\.[0-9]+\\.[0-9]+$`
 ---
 
 [URL]: #url
 [Email]: #email
 [Date]: #date
+[SchemaVersion]: #schemaversion

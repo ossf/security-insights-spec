@@ -20,7 +20,7 @@ The `header` object captures high-level metadata about the schema.
 
 ## `header.schema-version`
 
-- **Type**: `string`
+- **Type**: [SchemaVersion]
 - **Description**: Represents the version of this schema.
 
 ---
@@ -49,3 +49,4 @@ The `header` object captures high-level metadata about the schema.
 [URL]: ./aliases.md#url
 [Email]: ./aliases.md#email
 [Date]: ./aliases.md#date
+[SchemaVersion]: ./aliases.md#schemaversion

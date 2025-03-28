@@ -7,6 +7,7 @@ import (
 #URL: =~"^https?://[^\\s]+$"
 #Email: =~"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$"
 #Date: time.Format("2006-01-02")
+#SchemaVersion: =~"^[1-9]+\\.[0-9]+\\.[0-9]+$"
 
 #Assessment: {
   comment:   string
@@ -45,7 +46,7 @@ import (
 header: {
   "last-reviewed":      #Date
   "last-updated":       #Date
-  "schema-version":     string
+  "schema-version":     #SchemaVersion
   url:                  #URL
   comment?:             string
   "project-si-source"?: #URL

@@ -96,7 +96,7 @@ repository?: {
   "bug-fixes-only"?:                   bool
   "no-third-party-packages"?:          bool
 
-  "core-team": [...#Contact]
+  "core-team": [#Contact, ...]
 
   license: #License
 
@@ -114,7 +114,7 @@ repository?: {
       version?: string
       comment?: string
 
-      rulesets: [...string]
+      rulesets: ["default"] | [...string]
 
       integration: {
         adhoc:   bool
@@ -142,7 +142,7 @@ repository?: {
   release?: {
     "automated-pipeline": bool
 
-    "distribution-points": [...#Link]
+    "distribution-points": [#Link, ...]
 
     changelog?:    #URL
     license?:      #License

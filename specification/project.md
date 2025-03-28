@@ -128,6 +128,11 @@ An object containing references to key documentation URLs.
 - **Type**: [URL]
 - **Description**: URL describing how releases are planned, prepared, and published.
 
+### `project.documentation.support-policy` (optional)
+
+- **Type**: [URL]
+- **Description**: URL to documentation describing how releases are supported. See [Recommendations for publishing End-of-life dates and support timelines](https://endoflife.date/recommendations) for best practices.
+
 ### `project.documentation.signature-verification` (optional)
 
 - **Type**: [URL]

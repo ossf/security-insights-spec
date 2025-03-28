@@ -29,6 +29,7 @@ project:
     detailed-guide: https://example.com/user-guide
     code-of-conduct: https://example.com/code-of-conduct.html
     release-process: https://example.com/release-process
+    support-policy: https://example.com/support-policy
     signature-verification: https://example.com/signature-verification
   repositories:
     - name: Foo

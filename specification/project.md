@@ -32,13 +32,13 @@ Optional:
 ## `project.administrators`
 
 - **Type**: `slice` of [Contact]
-- **Description**: A list of individuals who have administrative access to the project's resources.
+- **Description**: A list of 1 or more individuals who have administrative access to the project's resources.
 
 ---
 
 ## `project.repositories`
 
-A list repositories that are part of this project, including the repository this file is published in.
+A list of 1 or more repositories that are part of this project, including the repository this file is published in.
 
 - `repositories[].name`
   - **Type**: `string`

@@ -1,7 +1,8 @@
 name: Security Insights Enhancement Proposal (SIEP)
 description: Propose a new feature or improvement to the Security Insights specification.
 title: "[SIEP] "
-labels: "enhancement"
+labels:
+  - enhancement
 
 body:
   - type: markdown

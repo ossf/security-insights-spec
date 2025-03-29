@@ -25,6 +25,7 @@ project:
     detailed-guide: https://foo.bar/user-guide
     code-of-conduct: https://example.com/code-of-conduct.html
     release-process: https://foo.bar/release-process
+    release-support-guide: https://foo.bar/releases
     signature-verification: https://foo.bar/signature-verification
   repositories:
     - name: Foo

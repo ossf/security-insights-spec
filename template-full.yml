@@ -14,6 +14,10 @@ project:
   homepage: https://foo.bar
   funding: https://foo.bar/FUNDING.yml
   roadmap: https://foo.bar/roadmap.html
+  steward:
+    uri: https://foo.bar
+    comment: |
+      Some description of the relationship between this project and its steward.
   administrators:
     - name: Joe Dohn
       affiliation: Foo

@@ -19,6 +19,7 @@ Optional:
 - `funding`
 - `roadmap`
 - `documentation`
+- `steward`
 
 ---
 
@@ -155,5 +156,11 @@ An object containing references to key documentation URLs.
 
 ---
 
+## `project.steward` (optional)
+
+- **Type**: [Link]
+- **Description**: This field is to communicate the relationship between the project and "a legal person, other than a manufacturer, that has the purpose or objective of systematically providing support on a sustained basis for the development of specific products with digital elements, qualifying as free and open-source software and intended for commercial activities, and that ensures the viability of those products" This definition is drawn from the [European Union Cyber Resilience Act, Article 3](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng#art_3).
+
 [URL]: ./aliases.md#url
 [Contact]: ./aliases.md#contact
+[Link]: ./aliases.md#link

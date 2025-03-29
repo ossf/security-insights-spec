@@ -57,13 +57,13 @@ project?: {
   roadmap?:    #URL
   funding?:    #URL
 
-  administrators: [...#Contact]
+  administrators: [#Contact, ...]
 
-  repositories: [...{
+  repositories: [{
     name:    string
     comment: string
     url:     #URL
-  }]
+  }, ...]
 
   "vulnerability-reporting": {
     "reports-accepted":        bool

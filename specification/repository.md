@@ -71,7 +71,7 @@ Optional top-level fields:
 ## `repository.core-team`
 
 - **Type**: `slice` of [Contact]
-- **Description**: A list of core team members for this repository, such as maintainers or approvers.
+- **Description**: A list of 1 or more core team members for this repository, such as maintainers or approvers.
 
 ---
 
@@ -183,7 +183,7 @@ An object describing release-related details for this repository.
 ### `release.distribution-points`
 
 - **Type**: `slice` of [Link]
-- **Description**: A list of links describing where the repository’s releases are distributed. This may be the VCS releases page, a package manager, or other distribution points.
+- **Description**: A list of 1 or more links describing where the repository’s releases are distributed. This may be the VCS releases page, a package manager, or other distribution points.
 
 ### `release.changelog` (optional)
 

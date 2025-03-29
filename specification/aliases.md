@@ -99,26 +99,26 @@ A list of objects describing various release attestations or artifacts.
 
 ### `date`
 
-  - **Type**: `string`
-  - **Description**: A date in ISO 8601 format (`YYYY-MM-DD`).
+- **Type**: `string`
+- **Description**: A date in ISO 8601 format (`YYYY-MM-DD`).
 
 ### `email`
 
-  - **Type**: `string`
-  - **Matches Pattern**: `^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$`
+- **Type**: `string`
+- **Matches Pattern**: `^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$`
 
 ### `url`
 
-  - **Type**: `string`
-  - **Matches Pattern**: `^https?://[^\\s]+$`
+- **Type**: `string`
+- **Matches Pattern**: `^https?://[^\\s]+$`
 
 ### `schemaversion`
 
-  - **Type**: `string`
-  - **Matches Pattern**: `^[1-9]+\\.[0-9]+\\.[0-9]+$`
+- **Type**: `string`
+- **Matches Pattern**: `^[1-9]+\\.[0-9]+\\.[0-9]+$`
+
 ---
 
 [URL]: #url
 [Email]: #email
 [Date]: #date
-[SchemaVersion]: #schemaversion

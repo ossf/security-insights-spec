@@ -47,6 +47,5 @@ The `header` object captures high-level metadata about the schema.
 ---
 
 [URL]: ./aliases.md#url
-[Email]: ./aliases.md#email
 [Date]: ./aliases.md#date
 [SchemaVersion]: ./aliases.md#schemaversion

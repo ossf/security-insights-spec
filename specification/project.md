@@ -19,6 +19,7 @@ Optional:
 - `funding`
 - `roadmap`
 - `documentation`
+- `steward`
 
 ---
 
@@ -155,5 +156,11 @@ An object containing references to key documentation URLs.
 
 ---
 
+## `project.steward` (optional)
+
+- **Type**: [Link]
+- **Description**: A link and description of the relationship this project has with a parent entity, such as an open source foundation.
+
 [URL]: ./aliases.md#url
 [Contact]: ./aliases.md#contact
+[Link]: ./aliases.md#link

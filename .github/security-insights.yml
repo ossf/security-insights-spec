@@ -16,6 +16,11 @@ project:
       url: https://github.com/ossf/security-insights-spec
       comment: |
         Security Insights is the core repo for the Security Insights project.
+  steward:
+    - uri: https://openssf.org
+      comment: |
+        The Security Insights Specification is a copyright of the Open Source Security Foundation (OpenSSF)
+        and it is maintained by volunteers under the oversight of the OpenSSF.
   vulnerability-reporting:
     reports-accepted: true
     bug-bounty-available: false

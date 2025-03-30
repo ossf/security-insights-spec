@@ -53,10 +53,11 @@ header: {
 }
 
 project?: {
-  name:        string
-  homepage?:   #URL
-  roadmap?:    #URL
-  funding?:    #URL
+  name:      string
+  homepage?: #URL
+  roadmap?:  #URL
+  funding?:  #URL
+  steward?:  #Link
 
   administrators: [#Contact, ...]
 

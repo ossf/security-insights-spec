@@ -1,3 +1,4 @@
+package security_insights_spec
 //// Definitions ////
 
 import (
@@ -42,114 +43,115 @@ import (
 }
 
 //// Schema ////
-
-header: {
-  "last-reviewed":      #Date
-  "last-updated":       #Date
-  "schema-version":     #SchemaVersion
-  url:                  #URL
-  comment?:             string
-  "project-si-source"?: #URL
-}
-
-project?: {
-  name:      string
-  homepage?: #URL
-  roadmap?:  #URL
-  funding?:  #URL
-  steward?:  #Link
-
-  administrators: [#Contact, ...]
-
-  repositories: [{
-    name:    string
-    comment: string
-    url:     #URL
-  }, ...]
-
-  "vulnerability-reporting": {
-    "reports-accepted":        bool
-    "bug-bounty-available":    bool
-    "bug-bounty-program"?:     #URL
-    contact?:                  #Contact
-    comment?:                  string
-    "security-policy"?:        #URL
-    "pgp-key"?:                string
-
-    "in-scope"?:               [...string]
-    "out-of-scope"?:           [...string]
+#v2: {
+  header: {
+    "last-reviewed":      #Date
+    "last-updated":       #Date
+    "schema-version":     #SchemaVersion
+    url:                  #URL
+    comment?:             string
+    "project-si-source"?: #URL
   }
 
-  documentation?: {
-    "detailed-guide"?:         #URL
-    "code-of-conduct"?:        #URL
-    "quickstart-guide"?:       #URL
-    "release-process"?:        #URL
-    "support-policy"?:         #URL
-    "signature-verification"?: #URL
-  }
-}
+  project?: {
+    name:      string
+    homepage?: #URL
+    roadmap?:  #URL
+    funding?:  #URL
+    steward?:  #Link
 
-repository?: {  
-  status: "active" | "abandoned" | "concept" | "inactive" | "moved" | "suspended" | "unsupported" | "WIP"
-  
-  url:                                 #URL
-  "accepts-change-request":            bool
-  "accepts-automated-change-request":  bool
-  "bug-fixes-only"?:                   bool
-  "no-third-party-packages"?:          bool
+    administrators: [#Contact, ...]
 
-  "core-team": [#Contact, ...]
+    repositories: [{
+      name:    string
+      comment: string
+      url:     #URL
+    }, ...]
 
-  license: #License
+    "vulnerability-reporting": {
+      "reports-accepted":        bool
+      "bug-bounty-available":    bool
+      "bug-bounty-program"?:     #URL
+      contact?:                  #Contact
+      comment?:                  string
+      "security-policy"?:        #URL
+      "pgp-key"?:                string
 
-  security: {
-    assessments: {
-      self: #Assessment
-      "third-party"?: [...#Assessment]
+      "in-scope"?:               [...string]
+      "out-of-scope"?:           [...string]
     }
 
-    champions?: [...#Contact]
-
-    tools?: [...{
-      name:     string
-      type: "fuzzing" | "container" | "secret" | "SCA" | "SAST" | "other"
-      version?: string
-      comment?: string
-
-      rulesets: ["default"] | [...string]
-
-      integration: {
-        adhoc:   bool
-        ci:      bool
-        release: bool
-      }
-
-      results: {
-        adhoc?: #Attestation
-        ci?: #Attestation
-        release?: #Attestation
-      }
-
-    }]
+    documentation?: {
+      "detailed-guide"?:         #URL
+      "code-of-conduct"?:        #URL
+      "quickstart-guide"?:       #URL
+      "release-process"?:        #URL
+      "support-policy"?:         #URL
+      "signature-verification"?: #URL
+    }
   }
 
-  documentation?: {
-    "contributing-guide"?:           #URL
-    "dependency-management-policy"?: #URL
-    governance?:                     #URL
-    "review-policy"?:                #URL
-    "security-policy"?:              #URL
-  }
+  repository?: {
+    status: "active" | "abandoned" | "concept" | "inactive" | "moved" | "suspended" | "unsupported" | "WIP"
 
-  release?: {
-    "automated-pipeline": bool
+    url:                                 #URL
+    "accepts-change-request":            bool
+    "accepts-automated-change-request":  bool
+    "bug-fixes-only"?:                   bool
+    "no-third-party-packages"?:          bool
 
-    "distribution-points": [#Link, ...]
+    "core-team": [#Contact, ...]
 
-    changelog?:    #URL
-    license?:      #License
+    license: #License
 
-    attestations?: [...#Attestation]
+    security: {
+      assessments: {
+        self: #Assessment
+        "third-party"?: [...#Assessment]
+      }
+
+      champions?: [...#Contact]
+
+      tools?: [...{
+        name:     string
+        type: "fuzzing" | "container" | "secret" | "SCA" | "SAST" | "other"
+        version?: string
+        comment?: string
+
+        rulesets: ["default"] | [...string]
+
+        integration: {
+          adhoc:   bool
+          ci:      bool
+          release: bool
+        }
+
+        results: {
+          adhoc?: #Attestation
+          ci?: #Attestation
+          release?: #Attestation
+        }
+
+      }]
+    }
+
+    documentation?: {
+      "contributing-guide"?:           #URL
+      "dependency-management-policy"?: #URL
+      governance?:                     #URL
+      "review-policy"?:                #URL
+      "security-policy"?:              #URL
+    }
+
+    release?: {
+      "automated-pipeline": bool
+
+      "distribution-points": [#Link, ...]
+
+      changelog?:    #URL
+      license?:      #License
+
+      attestations?: [...#Attestation]
+    }
   }
 }

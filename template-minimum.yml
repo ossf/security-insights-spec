@@ -2,7 +2,7 @@ header:
   schema-version: 2.0.0
   last-updated: '2021-09-01'
   last-reviewed: '2022-09-01'
-  url: https://foo.bar/kubernetes/kubernetes
+  url: https://example.com/kubernetes/kubernetes
   comment: |
     This file contains the minimum information for both project and repository.
     It not required to include both a project and repository section if the project
@@ -13,12 +13,12 @@ project:
   administrators:
     - name: Joe Dohn
       affiliation: Foo
-      email: joe.bob@email.com
-      social: https://bsky.com/joebob
+      email: joe.bob@example.com
+      social: https://social.example.com/joebob
       primary: true
   repositories:
     - name: Foo
-      url: https://my.vcs/foobar/foo
+      url: https://vcs.example.com/foobar/foo
       comment: |
         Foo is the core repo for FooBar.
   vulnerability-reporting:
@@ -26,7 +26,7 @@ project:
     bug-bounty-available: true
 
 repository:
-  url: https://my.vcs/foobar/foo
+  url: https://vcs.example.com/foobar/foo
   status: active
   accepts-change-request: true
   accepts-automated-change-request: true
@@ -34,10 +34,10 @@ repository:
     - name:        Alice White
       affiliation: Foo Bar
       email:       alicewhite@email.com
-      social:      https://bsky.com/alicewhite
+      social:      https://social.example.com/alicewhite
       primary:     true
   license:
-    url: https://foo.bar/LICENSE
+    url: https://example.com/LICENSE
     expression: MIT
   security:
     assessments:

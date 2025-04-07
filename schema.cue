@@ -85,6 +85,7 @@ project?: {
     "code-of-conduct"?:        #URL
     "quickstart-guide"?:       #URL
     "release-process"?:        #URL
+    "support-policy"?:         #URL
     "signature-verification"?: #URL
   }
 }

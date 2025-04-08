@@ -17,10 +17,9 @@ project:
       comment: |
         Security Insights is the core repo for the Security Insights project.
   steward:
-    - uri: https://openssf.org
+      uri: https://openssf.org
       comment: |
-        The Security Insights Specification is a copyright of the Open Source Security Foundation (OpenSSF)
-        and it is maintained by volunteers under the oversight of the OpenSSF.
+        The Security Insights Specification is a copyright of the Open Source Security Foundation (OpenSSF) and it is maintained by volunteers under the oversight of the OpenSSF.
   vulnerability-reporting:
     reports-accepted: true
     bug-bounty-available: false
@@ -49,7 +48,7 @@ repository:
     contributing-guide: https://github.com/ossf/security-insights-spec/blob/main/.github/CONTRIBUTING.md
     governance: https://github.com/ossf/security-insights-spec/blob/main/docs/GOVERNANCE.md
   release:
-    automated-pipeleine: false
+    automated-pipeline: false
     distribution-points:
       - uri:  https://github.com/ossf/security-insights-spec/releases
         comment: GitHub Release Page

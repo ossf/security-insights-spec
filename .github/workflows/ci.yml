@@ -8,22 +8,17 @@ permissions:
   contents: read
 
 jobs:
-  main:
-    name: Validate Template with Schema
+  ci:
+    name: CI checks
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4.2.2
 
       - name: Setup Cue
         uses: cue-lang/setup-cue@v1.0.0
-        with:
-          cue-version: 0.11.0
-      
-      - name: Validate our security-insights.yml
-        run: cue vet .github/security-insights.yml schema.cue
 
-      - name: Validate template-full.yml
-        run: cue vet template-full.yml schema.cue
+      - name: Validate schema.cue
+        run: make lintcue
 
-      - name: Validate template-minimum.yml
-        run: cue vet template-minimum.yml schema.cue
+      - name: Validate example files against schema
+        run: make lintyml

@@ -16,6 +16,8 @@ The Security Insights Specification uses a semantic versioning (SemVer) scheme t
 
 ## 3. Version Release Process
 
+Whenever a new version of the specification is released, a new version of the ossf/si-tooling project should also be released.
+
 ### 3.1. Major Releases
 
 A major release (e.g., from `1.X.X` to `2.X.X`) signifies significant changes that may require a substantial update to the Security Insights specification. Major releases may include:

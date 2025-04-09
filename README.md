@@ -27,4 +27,4 @@ The specification maintenance occurs in the following places:
 
 Discussion and feedback should take place in [GitHub Issues](https://github.com/ossf/security-insights-spec/issues). 
 
-Because this specification recieves light maintenance and infrequent updates, beginning in 2025 we ask that you follow the [Security Insights Enhancement Proposal](./docs/GOVERNANCE.md#security-insights-enhancement-proposals) process to explore potential changes to the specification.
+Because this specification receives light maintenance and infrequent updates, beginning in 2025 we ask that you follow the [Security Insights Enhancement Proposal](./docs/GOVERNANCE.md#security-insights-enhancement-proposals) process to explore potential changes to the specification.

@@ -1,0 +1,28 @@
+# Repository template for a multi-repository project
+# This file would be stored in the https://vcs.example.com/foobar/bar repository
+header:
+  schema-version: 2.0.0
+  last-updated: '2025-03-01'
+  last-reviewed: '2025-04-01'
+  url: https://example.com/kubernetes/kubernetes
+  project-si-source: https://vcs.example.com/foobar/foo/security-insights.yml
+
+repository:
+  url: https://vcs.example.com/foobar/bar
+  status: active
+  accepts-change-request: true
+  accepts-automated-change-request: true
+  core-team:
+    - name:        Alice White
+      affiliation: Foo Bar
+      email:       alicewhite@email.com
+      social:      https://social.example.com/alicewhite
+      primary:     true
+  license:
+    url: https://example.com/LICENSE
+    expression: MIT
+  security:
+    assessments:
+      self:
+        comment: |
+          Self assessment has not yet been completed.

@@ -17,6 +17,9 @@ jobs:
       - name: Setup Cue
         uses: cue-lang/setup-cue@v1.0.0
 
+      - name: Validate our security-insights.yml
+        run: cue vet .github/security-insights.yml schema.cue -d '#v2'
+
       - name: Validate template-full.yml
         run: cue vet template-full.yml schema.cue -d '#v2'
 

@@ -1,7 +1,7 @@
 header:
   schema-version: 2.0.0
-  last-updated: '2021-09-01'
-  last-reviewed: '2022-09-01'
+  last-updated: '2025-03-01'
+  last-reviewed: '2025-04-01'
   url: https://example.com/foo/bar
   comment: |
     This file contains all possible information for both project and repository,

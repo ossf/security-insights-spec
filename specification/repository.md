@@ -203,6 +203,7 @@ An object describing release-related details for this repository.
 ---
 
 [Assessment]: ./aliases.md#assessment
+[Attestation]: ./aliases.md#attestation
 [Contact]: ./aliases.md#contact
 [License]: ./aliases.md#license
 [Link]: ./aliases.md#link

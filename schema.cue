@@ -1,9 +1,9 @@
 package security_insights_spec
-@go("si") // this doesn't appropriately override the package name in the generated code currently due to a bug in cue
 
 import (
   "time"
 )
+@go("si")
 
 #URL: =~"^https?://[^\\s]+$"
 #Email: =~"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$"

@@ -18,5 +18,7 @@ lintyml:
 cuegen:
 	@echo "  >  Generating types from cue schema ..."
 	@cue exp gengotypes schema.cue
+	@echo "  >  vet the generated go types ..."
+	@go vet cue_types_gen.go
 
 PHONY: lintcue lintyml cuegen

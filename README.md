@@ -14,7 +14,7 @@ We hope your project appreciates the value the specification provides and makes 
 
 Projects adopting the specification in a single project repository should be able to get started and produce a useful `security-insights.yml` in about 30 minutes by consulting the [`template-minimum.yml`](template-minimum.yml).
 
-If your project has multiple repositories, you can apply the specification across all of them quickly by reusing the `project` definition from a single source. Consult [`template-multi-repository-project.yml`](template-multi-repository-project.yml) and [`template-multi-repository-project-reuse.yml`](template-multi-repository-project-reuse.yml) that are relevant to this use case.
+If your project has multiple repositories, you can define a detailed and centralized insights file in one repository and then reuse the `project` definition from that across other files. The consuming insights files must provide a URL in `header.project-si-source` that points to the parent insights file. The URL provided must respond to an unauthenticated GET request and return a valid security insights file using a content-type of "text/plain" or "application/yaml". See [`template-multi-repository-project.yml`](template-multi-repository-project.yml) and [`template-multi-repository-project-reuse.yml`](template-multi-repository-project-reuse.yml) that demonstrate how this use case can be implemented.
 
 Projects should include a `security-insights.yml` file in the root of their repository, or in the appropriate source forge directory such as `.github/` or `.gitlab/`.
 
@@ -64,4 +64,3 @@ Examples are also available to provide further context to the specification deta
 - `template-multi-repository-project-reuse.yml`: Contains a template for a secondary repository of a multi-repository project
 
 Discussion and feedback should take place in [GitHub Issues](https://github.com/ossf/security-insights-spec/issues). We ask that you follow the [Security Insights Enhancement Proposal](./docs/GOVERNANCE.md#security-insights-enhancement-proposals) process to explore potential changes to the specification.
-

@@ -104,7 +104,7 @@ import (
   // The date when the document or data was last updated.
   "last-updated":       #Date @go(LastUpdated)
   
-  // The version of the schema being used.
+  // The version of the Security Insights schema being used.
   "schema-version":     #SchemaVersion @go(SchemaVersion)
   
   // The primary reference URL for this schema’s origin or repository.
@@ -113,7 +113,7 @@ import (
   // Additional information about the schema.
   comment?:             string
   
-  // A URL to the security insights file that contains project information for this file to inherit.
+  // A URL to the security insights file that contains project information for this file to inherit. The URL provided here should respond to an unauthenticated GET request and return a valid security insights file using a content-type of "text/plain" or "application/yaml". This is useful for projects that are part of a larger organization or ecosystem, where much of the security insights data is shared across multiple projects.
   "project-si-source"?: #URL @go(ProjectSISource)
 }
 

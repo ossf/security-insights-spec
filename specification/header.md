@@ -42,7 +42,7 @@ The `header` object captures high-level metadata about the schema.
 ## `header.project-si-source` (optional)
 
 - **Type**: [URL]
-- **Description**: A URL to the security insights file that contains project information for this file to inherit.
+- **Description**: A URL to the security insights file that contains project information for this file to inherit. The URL provided here should respond to an unauthenticated GET request and return a valid security insights file using a content-type of "text/plain" or "application/yaml". This is useful for projects that are part of a larger organization or ecosystem, where much of the security insights data is shared across multiple projects.
 
 ---
 

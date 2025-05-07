@@ -5,7 +5,7 @@ header:
   last-updated: '2025-03-01'
   last-reviewed: '2025-04-01'
   url: https://example.com/kubernetes/kubernetes
-  project-si-source: https://vcs.example.com/foobar/foo/security-insights.yml
+  project-si-source: https://raw.githubusercontent.com/example/repo/refs/heads/main/security-insights.yml
 
 repository:
   url: https://vcs.example.com/foobar/bar
